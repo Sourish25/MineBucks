@@ -1,126 +1,94 @@
 # MineBucks
 
-**Automated Revenue & Analytics Tracker for Modrinth Creators**
+**Comprehensive Revenue & Analytics Tracker for Minecraft Mod Creators**
 
-MineBucks is an open-source Android application designed to provide comprehensive financial tracking and statistical analysis for mod developers on the Modrinth platform. It automates the retrieval of revenue data, bridging the gap between platform availability and user accessibility.
-
----
-
-## 🏗️ Technical Architecture
-
-The application is engineered using modern Android development standards, ensuring scalability, maintainability, and battery efficiency.
-
-* **Language**: Kotlin
-* **Architecture Pattern**: MVVM (Model-View-ViewModel) with Clean Architecture principles.
-* **UI Framework**: Jetpack Compose (Material Design 3).
-* **Dependency Injection**: Hilt (Dagger).
-* **Asynchronous Processing**: Kotlin Coroutines & Flow.
-* **Local Persistence**: Room Database (SQLite).
-* **Network Layer**: Retrofit (API) & Jsoup (DOM Parsing).
+MineBucks is an open-source Android utility developed to solve the fragmentation of revenue tracking in the Minecraft modding ecosystem. It automates data retrieval from Modrinth and CurseForge, providing a unified dashboard for creators to monitor their earnings without manual aggregation.
 
 ---
 
-## ⚙️ Engineering Challenges & Implementations
+## 1. Project Origins & The Problem
 
-### 1. Retrieval of Reward Points (Scraping Implementation)
+As active mod developers in the Minecraft community, we faced a recurring daily inefficiency. Every morning involved a manual workflow:
 
-**Problem**: The official Modrinth API (`v2`) currently exposes public statistics (downloads, followers) and transaction history (`/payouts`), but it **does not** provide an endpoint for the real-time "Current Reward Points" or "Wallet Balance".
+1. Navigate to the Modrinth dashboard to check balance.
+2. Navigate to the CurseForge Authors portal to check Reward Points.
+3. Manually sum the totals.
+4. Perform currency conversion (USD/Points to INR) to understand actual earnings.
 
-**Solution**:
-To bypass this limitation, we implemented a secure client-side scraper.
-
-1. **Authenticated Request**: The application utilizes the user's secure session token to make a request to the Modrinth dashboard (`modrinth.com/dashboard/revenue`).
-2. **DOM Parsing**: Using **Jsoup**, the application creates a semantic model of the dashboard HTML and extracts the specific balance integer located within the revenue container class.
-3. **Resilience**: The parsing logic is encapsulated in a dedicated repository interactors, allowing for rapid updates if the platform's DOM structure changes.
-
-### 2. Authentication Mechanism (WebView Interception)
-
-**Problem**: Implementing a full OAuth2 flow requires a callback server, and manual Personal Access Token (PAT) generation is a significant friction point for end-users.
-
-**Implementation**:
-
-* The app instances a sandboxed `WebView` targeting the official login portal.
-* It utilizes a `JavascriptInterface` bridge to monitor the authentication state.
-* Upon successful login, the application securely intercepts the `auth_token` from the browser's local storage or cookies.
-* **Security**: The token is immediately encrypted using Android's `EncryptedSharedPreferences` and is never transmitted to any third-party server.
-
-### 3. Battery-Optimized Background Synchronization
-
-**Requirement**: Users require timely updates on revenue changes without significant battery impact.
-
-**Implementation**:
-
-* **WorkManager**: We utilize `PeriodicWorkRequest` configured for a 6-hour interval.
-* **Constraints**: Jobs are strictly constrained to `NetworkType.CONNECTED`. The application adheres to Android's "Doze" mode guidelines, ensuring zero wake-locks are held when the device is idle.
-* **Delta Logic**: Notifications are only triggered if the `current_balance` > `last_known_balance`.
+This repetitive process was inefficient and lacked historical data tracking. We attempted to find existing solutions, but none offered the passive, unified monitoring we required. Thus, MineBucks was architected to be a "Set and Forget" solution that runs silently in the background, utilizing Android's WorkManager to fetch, aggregate, and notify us of financial changes.
 
 ---
 
-## 📊 Feature Overview
+## 2. Engineering Journey & Technical Challenges
 
-### Revenue Visualization
+Developing MineBucks revealed significant gaps in the available public APIs for both major platforms.
 
-* **Vico Graphing Engine**: The app renders historical revenue data using a custom implementation of the Vico library.
-* **Data Normalization**: Raw data points are smoothed to visualize trends effectively, filtering out daily fluctuations.
-* **Local Caching**: All historical data is persisted in a relational Room database, allowing for offline analysis.
+### 2.1. The Modrinth API Dilemma
 
-### Passive Widget System
+Our initial approach was to strictly use the official Modrinth API. However, we encountered severe versioning inconsistencies:
 
-* The architecture includes a Home Screen Widget that observes the database source of truth.
-* It does **not** run its own background service. Instead, it relies on `BroadcastReceiver` updates from the main sync worker, ensuring 0% additional battery consumption.
+* **API v1 & v2**: Documentation suggested endpoints for user revenue, but in practice, these returned consistent `404 Not Found` errors or were deprecated without replacements.
+* **API v3**: While stable for public statistics (downloads, checking project status), it restricts financial data. We eventually found a method to retrieve the "Total Wallet Balance", but granular data (daily income history) remains inaccessible via the public API.
 
----
+**Current Implementation**: We utilize a hybrid approach, using API v3 for project data and a secure, authenticated scraper for financial details that the API omits.
 
-## 📖 User Guide: Authentication
+### 2.2. The CurseForge "Black Box"
 
-MineBucks supports two methods of authentication:
+CurseForge proved even more challenging. The platform provides **no public API endpoint** for retrieving a user's current "Reward Points" balance. The data is strictly server-side rendered on the Authors Dashboard.
 
-### Method 1: Web Login (Standard)
+**The Solution: On-Device Scraping engine**
+To retrieve this data without violating user trust (i.e., asking for passwords), we built a custom Web Scraping Engine within the app:
 
-1. Select "Login with Modrinth".
-2. Authenticate via the secure browser window.
-3. The application will automatically detect functionality and redirect to the dashboard.
-
-### Method 2: Manual API Token (Advanced)
-
-For users preferring granular control, a Personal Access Token (PAT) can be manually provided.
-
-**Required API Scopes:**
-To function correctly, the generated token must include the following permissions:
-
-| Scope | Purpose |
-| :--- | :--- |
-| `USER_READ` | Identification of the account profile. |
-| `PROJECTS_READ` | Retrieval of mod lists and statistics. |
-| `PAYOUTS_READ` | Access to transaction history. |
-| `ANALYTICS_READ` | (Optional) Access to detailed graph data points. |
+* **Internal Browser**: We embedded a WebKit WebView that acts as a portal to `authors.curseforge.com`.
+* **Google Login Bypass**: CurseForge uses Google OAuth. Standard WebViews are blocked by Google ("This browser or app may not be secure"). We engineered a workaround by dynamically injecting a specific Mobile User-Agent string during the login phase, tricking Google's security checks into allowing the authentication flow.
+* **DOM Injection**: Once the dashboard loads, the app injects a JavaScript payload to search the DOM for the specific `div` containing the reward points integer.
 
 ---
 
-## 🤝 Contributing
+## 3. Implemented Features
 
-We welcome contributions from the community. Please adhere to the following guidelines:
-
-### Critical Areas for Contribution
-
-1. **CurseForge Integration**: We are seeking contributors with experience in the CurseForge/Overwolf API to implement a parallel revenue tracking module.
-2. **Localization**: Translations for `values-xx/strings.xml` are needed for broader accessibility.
-3. **Scraper Robustness**: Improvements to the Jsoup parsing logic to handle edge cases or UI changes on the host platform.
-
-### Development Setup
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/Sourish25/MineBucks.git
-    ```
-
-2. Open in Android Studio (Hedgehog or later recommended).
-3. Sync Gradle dependencies.
+* **Unified Dashboard**: Aggregates data from both platforms into a single view.
+* **Background Synchronization**: Uses Android WorkManager to fetch data every 6 hours (Network Dependent).
+* **Battery Efficiency**: Designed to respect Android Doze mode. The app consumes 0% battery when idle.
+* **Smart Notifications**: You are only notified if your revenue *increases*.
+* **Privacy-First**: All tokens and cookies are stored locally using `EncryptedSharedPreferences`. No data is ever sent to our servers.
 
 ---
 
-## 📄 License
+## 4. Usage Guide (Step-by-Step)
 
-This project is licensed under the **MIT License**.
-*Disclaimer: This application is a third-party tool and is not affiliated with, endorsed by, or sponsored by Modrinth.*
+### Step 1: Modrinth Configuration
+
+Can be done in two ways. The most reliable method is providing a Personal Access Token (PAT).
+
+**How to generate a PAT:**
+
+1. Go to [Modrinth Settings > API Keys](https://modrinth.com/settings/api).
+2. Create a new key (Name it "MineBucks").
+3. **Required Scopes** (You must select these):
+    * `USER_READ`: To identify your account.
+    * `PROJECTS_READ`: To list your mods.
+    * `PAYOUTS_READ`: To access wallet balance.
+    * `ANALYTICS_READ`: To fetch download stats.
+4. Copy the generated key and paste it into MineBucks.
+
+### Step 2: CurseForge Configuration
+
+1. Open the "CurseForge" section in the app.
+2. Press "Login". This opens the internal secure browser.
+3. Log in using your standard methods (Google, GitHub, etc.).
+4. Once the dashboard loads, the app will automatically detect your Reward Points, save your session cookies, and close the browser.
+
+---
+
+## 5. Future Roadmap
+
+1. **Daily Income APIs**: We aim to reverse-engineer the internal graphing APIs of both platforms to provide true "Daily Income" charts, rather than just tracking the Total Balance history.
+2. **Currency Localization**: Automatic conversion of Modrinth USD and CurseForge Points into the user's local currency (EUR, INR, GBP) using a live exchange rate API.
+3. **Widget Interactivity**: dedicated "Refresh" buttons on the widgets for instant updates.
+
+---
+
+## 6. License
+
+This project is open-source under the MIT License. Contributions are welcome, especially regarding parsing logic updates if platform DOMs change.
