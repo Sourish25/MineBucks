@@ -235,7 +235,7 @@ fun DashboardScreen(
                 Text("GitHub", color = MaterialTheme.colorScheme.secondary)
             }
             Spacer(modifier = Modifier.width(16.dp))
-            TextButton(onClick = { uriHandler.openUri("https://ko-fi.com/sourish") }) {
+            TextButton(onClick = { uriHandler.openUri("https://ko-fi.com/sourish25") }) {
                 Text("Ko-fi", color = MaterialTheme.colorScheme.secondary)
             }
         }
