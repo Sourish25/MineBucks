@@ -13,7 +13,7 @@ As active mod developers in the Minecraft community, we faced a recurring daily 
 1. Navigate to the Modrinth dashboard to check balance.
 2. Navigate to the CurseForge Authors portal to check Reward Points.
 3. Manually sum the totals.
-4. Perform currency conversion (USD/Points to INR) to understand actual earnings.
+4. Perform currency conversion (USD/Points to Your Country's Currency) to understand actual earnings.
 
 This repetitive process was inefficient and lacked historical data tracking. We attempted to find existing solutions, but none offered the passive, unified monitoring we required. Thus, MineBucks was architected to be a "Set and Forget" solution that runs silently in the background, utilizing Android's WorkManager to fetch, aggregate, and notify us of financial changes.
 
@@ -59,11 +59,9 @@ To retrieve this data without violating user trust (i.e., asking for passwords),
 
 ### Step 1: Modrinth Configuration
 
-Can be done in two ways. The most reliable method is providing a Personal Access Token (PAT).
-
 **How to generate a PAT:**
 
-1. Go to [Modrinth Settings > API Keys](https://modrinth.com/settings/api).
+1. Go to [Modrinth Settings > Personal access tokens](https://modrinth.com/settings/pats).
 2. Create a new key (Name it "MineBucks").
 3. **Required Scopes** (You must select these):
     * `USER_READ`: To identify your account.
