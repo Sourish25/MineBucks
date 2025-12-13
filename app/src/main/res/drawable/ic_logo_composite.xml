@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Cross (At Bottom, Tinted via Inset Wrapper) -->
-    <item android:drawable="@drawable/ic_logo_part_cross" />
-    
-    <!-- Arc (On Top) -->
-    <item android:drawable="@drawable/ic_logo_part_arc" />
-</layer-list>

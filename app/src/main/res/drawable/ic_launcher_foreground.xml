@@ -1,12 +1,52 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="2000"
-    android:viewportHeight="2000">
-  <path
-      android:pathData="M2281.498,500L2281.498,1500C2281.498,1931.321 1931.321,2281.498 1500,2281.498L500,2281.498C68.679,2281.498 -281.498,1931.321 -281.498,1500L-281.498,500C-281.498,68.679 68.679,-281.498 500,-281.498L1500,-281.498C1931.321,-281.498 2281.498,68.679 2281.498,500Z"
-      android:fillColor="#FF9FF5"/>
-  <path
-      android:pathData="M678.501,1707.412C671.374,1701.022 667.188,1691.981 666.927,1682.412C666.666,1672.843 670.353,1663.587 677.122,1656.818C721.911,1612.011 815.055,1518.867 863.923,1469.998C880.884,1453.038 907.84,1451.416 926.712,1466.221C986.988,1513.409 1061.649,1539.418 1138.992,1539.418C1329.12,1539.418 1483.48,1385.058 1483.48,1194.93C1483.48,1117.399 1457.344,1042.563 1409.951,982.2C1395.325,963.624 1396.901,937.045 1413.619,920.326C1462.226,871.695 1555.456,778.465 1600.526,733.396C1607.391,726.53 1616.779,722.793 1626.484,723.061C1636.189,723.33 1645.356,727.581 1651.831,734.815C1764.946,860.904 1827.968,1024.668 1827.968,1194.93C1827.968,1575.186 1519.248,1883.906 1138.992,1883.906C968.556,1883.906 804.632,1820.756 678.501,1707.412Z"
-      android:fillColor="#F763E8"/>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+
+    <!-- ZOOMED & CENTERED PIXEL ART -->
+    <!-- Viewport 108x108. Safe Zone Center: 54,54. -->
+
+    <!-- User Request: "Zoom out a bit" (Scale < 1.0) and "Center around money".
+         The Money is in the lower body. So we must shift the block UP.
+    -->
+
+    <group android:pivotX="54" android:pivotY="54" android:scaleX="0.88" android:scaleY="0.88" android:translateY="-12">
+        <!-- Scale 0.88 (Zoom out). Translate Y -12 (Shift Block Up to center Money). -->
+
+        <!-- 1. DIRT BASE (Background) -->
+        <path android:fillColor="#FF866043" android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+
+        <!-- 2. INNER FRAME -->
+        <!-- 2. INNER FRAME REMOVED (Clean Dirt) -->
+
+        <!-- 3. CENTER DIRT -->
+        <path android:fillColor="#FF9E7B5C" android:pathData="M9,36 L99,36 L99,99 L9,99 Z" />
+
+        <!-- 4. GRASS TOP (Faded) -->
+        <path android:fillColor="#FF7CB342" android:pathData="M0,0 L108,0 L108,27 L0,27 Z" />
+        <!-- Grass Shadow -->
+        <path android:fillColor="#FF558B2F" android:pathData="M0,21 L108,21 L108,27 L0,27 Z" />
+
+        <!-- 5. BANKNOTE (Target Center) -->
+        <!-- Originally at Y=67 (approx). Shifting block up by 12 puts it at 55. Accurate. -->
+        <group android:translateX="54" android:translateY="67">
+            <group android:translateX="-27" android:translateY="-13" android:scaleX="1.5" android:scaleY="1.5">
+                <!-- Banknote Base -->
+                <path android:fillColor="#FFC5E1A5" android:pathData="M0,0 L36,0 L36,18 L0,18 Z" />
+
+                <!-- Banknote Border -->
+                <path android:fillColor="#FF558B2F" android:pathData="
+                        M0,0 L36,0 L36,18 L0,18 Z
+                        M3,3 L33,3 L33,15 L3,15 Z
+                    " android:fillType="evenOdd" />
+
+                <!-- Center Symbol: '5' -->
+                <path android:fillColor="#FF33691E" android:pathData="
+                        M16,5 L22,5 L22,7 L18,7 L18,8 L22,8 L22,12 L16,12 L16,10 L20,10 L20,9 L16,9 Z
+                    " />
+
+                <!-- Side Dots -->
+                <path android:fillColor="#FF33691E" android:pathData="M6,6 L8,6 L8,8 L6,8 Z M6,10 L8,10 L8,12 L6,12 Z M28,6 L30,6 L30,8 L28,8 Z M28,10 L30,10 L30,12 L28,12 Z" />
+            </group>
+        </group>
+
+    </group>
+
 </vector>

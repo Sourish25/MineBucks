@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24" android:tint="?attr/colorControlNormal">
+
+    <!-- Solid 3D Isometric Cube -->
+    <!-- Mimics a clean Minecraft Block -->
+
+    <!-- Top Face (Lightest) -->
+    <path android:fillColor="#FF000000" android:fillAlpha="0.3" android:pathData="M12,2 L21.5,7.5 L12,13 L2.5,7.5 Z" />
+
+    <!-- Left Face (Medium Dark) -->
+    <path android:fillColor="#FF000000" android:fillAlpha="0.5" android:pathData="M2.5,7.5 L12,13 L12,23 L2.5,17.5 Z" />
+
+    <!-- Right Face (Darkest) -->
+    <path android:fillColor="#FF000000" android:fillAlpha="0.8" android:pathData="M12,13 L21.5,7.5 L21.5,17.5 L12,23 Z" />
+
+</vector>
