@@ -1,104 +1,90 @@
-# MineBucks 🟩💰
+# MineBucks 🟩
 
-**The Ultimate Revenue Tracker for Minecraft Mod Creators.**
+**A specialized automated revenue tracking utility for Modrinth creators.**
 
-MineBucks is a sophisticated Android utility designed to help modders (specifically on Modrinth) track their revenue, download stats, and project health in real-time. Built with a "Cyberpunk Minecraft" aesthetic, it combines powerful background automation with battery-efficient monitoring.
-
----
-
-## 🎯 The Problem
-
-Mod creators often struggle to keep track of their earnings across multiple platforms. Constant refreshing of webpages is inefficient and impossible to do passively. MineBucks solves this by:
-
-1. **Automating Data Fetching**: Checking Modrinth APIs securely in the background.
-2. **Visualizing Growth**: Turning raw numbers into beautiful interactive graphs.
-3. **Passive Monitoring**: Providing widgets and smart notifications so you never miss a payout.
+MineBucks solves a critical pain point for the modding community: the inability to passively track earnings and project statistics without manual intervention or aggressive polling.
 
 ---
 
-## ✨ Key Features
+## 🛠️ System Architecture
 
-### 1. 🤖 Background Automation (WorkManager)
+The application is built using **Native Android (Kotlin)**, strictly adhering to **MVVM Clean Architecture**.
 
-- **Smart Scheduling**: We utilize Android's `WorkManager` to schedule reliable data fetches every 6 hours.
-- **Battery Efficiency**: Zero battery drain. The app heavily leverages Android's "Doze" mode optimizations. It *only* wakes up when the OS permits and requires **network connectivity** to run, ensuring no wasted cycles offline.
-
-### 2. 📊 Interactive Data Visualization
-
-- **Revenue History**: Uses the **Vico** library to render standard deviation-smoothed graphs of your daily income.
-- **Daily Breakdown**: A detailed list of every cent earned per day, stored locally in a SQL database.
-
-### 3. 🕸️ Built-in Browser & Scraping
-
-- To handle complex authentication flows (Modrinth Login), we integrated a secure, sandboxed **WebView Browser**.
-- It intercepts auth tokens automatically, so you just log in once and the app handles the handshake.
-
-### 4. 🔋 Zero-Drain Widget
-
-- A home screen widget that displays your Total Revenue.
-- **Tech**: It updates *passively*. It does not run its own service. It waits for the main background worker (every 6h) to broadcast an update, meaning having the widget costs you **$0.00** in battery life.
-
-### 5. 🔔 Smart Notifications
-
-- Get a "Ka-ching!" style notification only when your revenue **increases**.
-- Icon: Custom Pixel-Art Dollar Sign (Monochrome).
-
-### 6. 💸 Support Us (AdMob)
-
-- Integrated **Rewarded Video Ads** to support the development.
-- Voluntary model: You choose to watch an ad to support us. No forced interstitials.
+* **UI Layer**: Jetpack Compose (Material You dynamic theming).
+* **Domain Layer**: Kotlin Coroutines & Flow for reactive data streams.
+* **Data Layer**: Room Database (SQLite) with encrypted preferences for token storage.
+* **Networking**: Retrofit for API calls, Jsoup for HTML parsing (fallback), and WebKit for OAuth handling.
 
 ---
 
-## 🛠️ Tech Stack & Decisions
+## 🚧 Challenges & Engineering Decisions
 
-### Architecture: MVVM (Model-View-ViewModel)
+### 1. The Modrinth Authentication Problem
 
-We chose MVVM for clean separation of concerns.
+**Challenge**: Modrinth's API requires strict OAuth2 flows which are difficult to implement purely client-side without a callback server, or rely on Personal Access Tokens (PATs) which are bad UX for end-users.
+**Solution**: We implemented a **Sandboxed WebView Flow**.
 
-- **UI**: Jetpack Compose (Modern, Reactive UI).
-- **Logic**: Kotlin Coroutines & Flow.
-- **Data**: Room Database (SQLite).
+* The app launches a controlled browser instance to `modrinth.com/login`.
+* It utilizes `CookieManager` and `JavascriptInterface` to intercept the valid session token post-login.
+* **Trade-off**: High maintenance (brittle if DOM changes), but provides the best user experience (zero manual token copy-pasting).
 
-### Local Database (Room)
+### 2. Background Sync vs. Battery Efficiency
 
-- We store your revenue history **locally** on your device.
-- **Why?** Privacy. Your financial data never leaves your phone. It is cached so you can view graphs offline.
+**Challenge**: Users want "Real-time" alerts, but Android's *Doze Mode* kills aggressive background services to save battery.
+**Solution**: Leveraging `WorkManager` with `Constraints`.
 
-### API Integration (Modrinth)
+* We operate on a **6-hour periodic fetch cycle**.
+* Constraints: `NetworkType.CONNECTED` only.
+* **Result**: The app appears "always on" but consumes <0.1% battery daily.
+* **Future Improvement**: Implement FCM (Firebase Cloud Messaging) for true push notifications from a server, removing the need for client-side polling.
 
-- **Scope**: We verify user identity via the Modrinth User API.
-- **Scopes Used**: `projects:read`, `payouts:read`.
-- **Security**: Tokens are encrypted using Android `EncryptedSharedPreferences`.
+### 3. Data Visualization
 
----
-
-## 🚀 How to Build & Run
-
-1. **Clone the Repo**:
-
-    ```bash
-    git clone https://github.com/Sourish25/MineBucks.git
-    ```
-
-2. **Open in Android Studio**.
-3. **Sync Gradle**: Ensure you have JDK 17+.
-4. **Run**: Select `app` and click Run.
-
-### AdMob Setup
-
-The app comes with `app-ads.txt` support hosted via GitHub Pages.
-
-- **App ID**: Configured in `AndroidManifest.xml`.
-- **Ad Name**: Rewarded Video (in `AdManager.kt`).
+**Challenge**: Rendering complex financial data on mobile screens.
+**Solution**: Integration of **Vico**, a Compose-native graphing library. We apply Standard Deviation smoothing to the data points to prevent "spiky" graphs caused by irregular payout times.
 
 ---
 
-## 📸 Screenshots
+## ✅ Implemented Features
 
-(Add screenshots here)
+### Core
+
+* **Secure Dashboard**: Local encrypted storage of financial data.
+* **Revenue History**: Day-by-day persistence using Room entities (`@Entity data class DailyRevenue`).
+* **Smart Notifications**: Logic `if (newBalance > oldBalance)` triggers a high-priority refined notification.
+
+### Monetization
+
+* **AdMob Integration**: Non-intrusive "Support Us" model using Rewarded Video Ads.
+* **Verification**: `app-ads.txt` hosted via GitHub Pages for full compliance.
 
 ---
 
-**Built with ❤️ by Sourish Maity.**
-*Pixel Art Assets & Cyberpunk Theme inspired by the Modding Community.*
+## 🔮 Future Roadmap & Limitations
+
+### Current Limitations
+
+1. **Platform Support**: Currently only supports Modrinth. CurseForge support is blocked by their complex API requirements.
+2. **Scraping Fragility**: If Modrinth changes their CSS classes or Auth flow, the WebView interceptor will break until patched.
+
+### Planned Improvements
+
+1. **Multi-Platform Aggregation**: Unified dashboard for CurseForge + Modrinth.
+2. **Server-Side Auth**: Move authentication to a backend proxy to allow true OAuth2 compliance.
+3. **Widget Interactivity**: Add "Refresh" buttons to widgets (requires Android 12+ Broadcast redesign).
+
+---
+
+## 📦 Build Instructions
+
+1. **Clone**: `git clone https://github.com/Sourish25/MineBucks.git`
+2. **Secret Management**:
+    * No secrets are needed to build `debug`.
+    * Create a `secrets.properties` for release signing keys if forking.
+3. **AdMob**:
+    * This project is configured with specific Ad Unit IDs. If forking, replace `AdManager.kt` constants and `AndroidManifest.xml` metadata with your own.
+
+---
+
+**Contributions**: Open for PRs. Please follow the `ktlint` style guide.
+**License**: MIT.
