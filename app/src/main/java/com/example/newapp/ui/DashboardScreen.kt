@@ -178,36 +178,35 @@ fun DashboardScreen(
         }
         
         // History Section
-        if (uiState.history.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(24.dp))
-            Text(
-                text = "Revenue History",
-                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-                color = MaterialTheme.colorScheme.onBackground
-            )
-            
-            RevenueHistoryGraph(
-                history = uiState.history,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(220.dp),
-                // Colors handled by defaults now (Material Scheme)
-            )
-            
-            Spacer(modifier = Modifier.height(24.dp))
-            
-            Text(
-                text = "Recent Activity",
-                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                color = MaterialTheme.colorScheme.onBackground
-            )
-            
-            RevenueHistoryList(
-                history = uiState.history.takeLast(7), // Show last 7 days strictly
-                currency = uiState.targetCurrency,
-                modifier = Modifier.fillMaxWidth()
-            )
-        }
+        // Always show history section, even if empty (UI handles empty state)
+        Spacer(modifier = Modifier.height(24.dp))
+        Text(
+            text = "Revenue History",
+            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        
+        RevenueHistoryGraph(
+            history = uiState.history,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(220.dp),
+            // Colors handled by defaults now (Material Scheme)
+        )
+        
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        Text(
+            text = "Recent Activity",
+            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        
+        RevenueHistoryList(
+            history = uiState.history.takeLast(7), // Show last 7 days strictly
+            currency = uiState.targetCurrency,
+            modifier = Modifier.fillMaxWidth()
+        )
         
         Spacer(modifier = Modifier.height(32.dp))
         

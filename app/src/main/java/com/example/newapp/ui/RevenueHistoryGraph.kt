@@ -26,7 +26,19 @@ fun RevenueHistoryGraph(
     lineColor: Color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
     gradientColor: Color = androidx.compose.material3.MaterialTheme.colorScheme.tertiary
 ) {
-    if (history.isEmpty()) return
+    if (history.isEmpty()) {
+        androidx.compose.foundation.layout.Box(
+            modifier = modifier,
+            contentAlignment = androidx.compose.ui.Alignment.Center
+        ) {
+            androidx.compose.material3.Text(
+                text = "No graph data available",
+                style = androidx.compose.material3.MaterialTheme.typography.bodyMedium,
+                color = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        return
+    }
 
     // Transform Data to Vico Entries
     // Sort by timestamp just in case
