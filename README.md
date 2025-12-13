@@ -1,128 +1,126 @@
-# MineBucks 🟩💰
+# MineBucks
 
-**The Ultimate Revenue & Stats Tracker for Minecraft Mod Creators.**
+**Automated Revenue & Analytics Tracker for Modrinth Creators**
 
-> *Built by Modders, for Modders.*
-
-MineBucks is an open-source Android utility designed to solve the "Black Box" problem of modding revenue. It allows creators on Modrinth to track their earnings, observing trends, and get notified of payouts without constantly refreshing a webpage.
+MineBucks is an open-source Android application designed to provide comprehensive financial tracking and statistical analysis for mod developers on the Modrinth platform. It automates the retrieval of revenue data, bridging the gap between platform availability and user accessibility.
 
 ---
 
-## 🛑 The Engineering Challenges (Read This First)
+## 🏗️ Technical Architecture
 
-Building MineBucks wasn't just about calling an API. We faced multiple platform limitations that required creative (and sometimes hacky) engineering solutions. If you are a developer looking to contribute, understanding these is crucial.
+The application is engineered using modern Android development standards, ensuring scalability, maintainability, and battery efficiency.
 
-### 1. The "Missing Data" Dilemma 🕵️‍♂️
-
-**Problem**: The official Modrinth API is fantastic for *public* stats (downloads, followers), but it **DOES NOT** provide an endpoint for "Current Account Balance" or "Pending Payouts".
-
-* We checked the docs: `payouts` endpoint relates to *transactions*, not the live "wallet" balance.
-* We asked the community: "It's hidden in the dashboard HTML."
-
-**Solution: The Hybrid Scraper**
-We had to build a custom scraper logic.
-
-1. **Auth**: We cannot plain-text scrape because the dashboard is behind a login wall.
-2. **Implementation**: We use a background `OkHttp` call that mimics the browser's headers, injecting the User's Auth Token (intercepted during login) to fetch the raw HTML of the dashboard.
-3. **Parsing**: We use **Jsoup** to hunt for specific DIV classes (e.g., `.stat-value`, `.revenue-box`) to extracting the string `"$124.50"`.
-
-**Limitation**: This is **fragile**. If Modrinth changes their CSS class names tomorrow, the "Balance" feature breaks.
-
-* **Contribution Needed**: A robust, server-side parser or official API advocacy.
-
-### 2. The Authentication Heist 🔐
-
-**Problem**: Modrinth uses strict OAuth2 or PATs (Personal Access Tokens). Asking a mobile user to "Go to PC > Settings > Developer > Generate Token > Select Scopes > Copy > Email to Phone > Paste" is a UX nightmare.
-**Solution**: **WebView Token Interception**.
-
-* We load `modrinth.com/login` in a sandboxed, invisible WebView.
-* The user logs in with GitHub/Discord as normal.
-* We attach a `CookieManager` listener. As soon as the browser receives the session cookie `connect.sid` or the LocalStorage key `auth_token`, we **intercept it**.
-* We then encrypt this token into Android's `EncryptedSharedPreferences`.
-
-### 3. Battery Life vs. Real-Time Anxiety 🔋
-
-**Problem**: Users want to know *instantly* when they make money.
-**Solution**: We compromised for **Standardization**.
-
-* Android's **Doze Mode** kills background apps that network too often.
-* We use **WorkManager** with a `PeriodicWorkRequest` of **6 Hours**.
-* **Optimization**: The worker has a `CONSTRAINT_NETWORK_CONNECTED`. If you are in a subway (offline), the app won't wake up, saving battery. It only wakes when data flow is possible.
+* **Language**: Kotlin
+* **Architecture Pattern**: MVVM (Model-View-ViewModel) with Clean Architecture principles.
+* **UI Framework**: Jetpack Compose (Material Design 3).
+* **Dependency Injection**: Hilt (Dagger).
+* **Asynchronous Processing**: Kotlin Coroutines & Flow.
+* **Local Persistence**: Room Database (SQLite).
+* **Network Layer**: Retrofit (API) & Jsoup (DOM Parsing).
 
 ---
 
-## 📚 User Guide: How to Get Started
+## ⚙️ Engineering Challenges & Implementations
 
-### Option A: The "Lazy" Login (Recommended)
+### 1. Retrieval of Reward Points (Scraping Implementation)
 
-1. Open MineBucks.
-2. Click **"Login with Modrinth"**.
-3. Enter your credentials in the official login page.
-4. **Done**. The app automates the rest.
+**Problem**: The official Modrinth API (`v2`) currently exposes public statistics (downloads, followers) and transaction history (`/payouts`), but it **does not** provide an endpoint for the real-time "Current Reward Points" or "Wallet Balance".
 
-### Option B: Manual PAT (For the Paranoid)
+**Solution**:
+To bypass this limitation, we implemented a secure client-side scraper.
 
-If you prefer total control, you can feed the app a PAT.
+1. **Authenticated Request**: The application utilizes the user's secure session token to make a request to the Modrinth dashboard (`modrinth.com/dashboard/revenue`).
+2. **DOM Parsing**: Using **Jsoup**, the application creates a semantic model of the dashboard HTML and extracts the specific balance integer located within the revenue container class.
+3. **Resilience**: The parsing logic is encapsulated in a dedicated repository interactors, allowing for rapid updates if the platform's DOM structure changes.
 
-1. Go to **Modrinth.com > Settings > API Keys**.
-2. Create a Key named `MineBucks`.
-3. **REQUIRED SCOPES**:
-    * `USER_READ`: To know who you are.
-    * `PROJECTS_READ`: To list your mods.
-    * `PAYOUTS_READ`: To see your transaction history.
-    * `ANALYTICS_READ`: To graph your downloads.
-4. Copy the key and paste it into the "Manual Token" field in the app.
+### 2. Authentication Mechanism (WebView Interception)
 
----
+**Problem**: Implementing a full OAuth2 flow requires a callback server, and manual Personal Access Token (PAT) generation is a significant friction point for end-users.
 
-## ✨ Feature Deep Dive
+**Implementation**:
 
-### 1. Revenue History Graph 📈
+* The app instances a sandboxed `WebView` targeting the official login portal.
+* It utilizes a `JavascriptInterface` bridge to monitor the authentication state.
+* Upon successful login, the application securely intercepts the `auth_token` from the browser's local storage or cookies.
+* **Security**: The token is immediately encrypted using Android's `EncryptedSharedPreferences` and is never transmitted to any third-party server.
 
-We don't just show "Total". We realized that accurate trend analysis matters.
+### 3. Battery-Optimized Background Synchronization
 
-* The app takes a snapshot of your revenue every day at 00:00.
-* It stores this in a local **Room Database (SQLite)**.
-* We use the **Vico Graphing Library** to render this history.
-* **Smoothing**: We apply a Bezier curve variance so the graph looks organic, not jagged.
+**Requirement**: Users require timely updates on revenue changes without significant battery impact.
 
-### 2. Passive Widget 📱
+**Implementation**:
 
-* Most widgets drain battery because they run their own update timers.
-* **Ours does not**. It connects to the main App Database. It only updates when the *Master Worker* (the 6-hour job) finishes.
-* **Cost**: 0% extra battery.
-
-### 3. Smart Notifications 🔔
-
-* The app compares `LastKnownBalance` vs `CurrentBalance`.
-* If `Current > LastKnown`, it triggers a notification.
-* **Icon**: We designed a custom 8-bit Pixel Art Dollar sign to match the Minecraft aesthetic.
+* **WorkManager**: We utilize `PeriodicWorkRequest` configured for a 6-hour interval.
+* **Constraints**: Jobs are strictly constrained to `NetworkType.CONNECTED`. The application adheres to Android's "Doze" mode guidelines, ensuring zero wake-locks are held when the device is idle.
+* **Delta Logic**: Notifications are only triggered if the `current_balance` > `last_known_balance`.
 
 ---
 
-## 🤝 How to Contribute (We Need You!)
+## 📊 Feature Overview
 
-This project is open source because maintaining a scraper is a community effort.
+### Revenue Visualization
 
-### Top Priority Issues
+* **Vico Graphing Engine**: The app renders historical revenue data using a custom implementation of the Vico library.
+* **Data Normalization**: Raw data points are smoothed to visualize trends effectively, filtering out daily fluctuations.
+* **Local Caching**: All historical data is persisted in a relational Room database, allowing for offline analysis.
 
-1. **Add CurseForge Support**: Their API is strictly hashed. We need someone with CFCore knowledge to reverse-engineer a safe read-only access method.
-2. **Backup/Restore**: Currently, if you uninstall, you lose your "History" (Graph data). We need a "Export to JSON" feature.
-3. **Localization**: Translating the UI into Spanish, Russian, and Chinese (huge modding communities).
+### Passive Widget System
 
-### Tech Stack for Devs
-
-* **Language**: Kotlin (100%).
-* **Architecture**: MVVM + Clean Architecture.
-* **UI**: Jetpack Compose.
-* **DI**: Hilt (Dagger).
-* **Async**: Coroutines + Flow.
+* The architecture includes a Home Screen Widget that observes the database source of truth.
+* It does **not** run its own background service. Instead, it relies on `BroadcastReceiver` updates from the main sync worker, ensuring 0% additional battery consumption.
 
 ---
 
-## 📄 License & Legal
+## 📖 User Guide: Authentication
 
-* **License**: MIT (Free to fork, modify, and resell).
-* **Disclaimer**: This app is not affiliated with Modrinth or Mojang. It is a third-party tool. Use at your own risk.
+MineBucks supports two methods of authentication:
 
-**Built with ❤️ (and too much coffee) by Sourish Maity.**
+### Method 1: Web Login (Standard)
+
+1. Select "Login with Modrinth".
+2. Authenticate via the secure browser window.
+3. The application will automatically detect functionality and redirect to the dashboard.
+
+### Method 2: Manual API Token (Advanced)
+
+For users preferring granular control, a Personal Access Token (PAT) can be manually provided.
+
+**Required API Scopes:**
+To function correctly, the generated token must include the following permissions:
+
+| Scope | Purpose |
+| :--- | :--- |
+| `USER_READ` | Identification of the account profile. |
+| `PROJECTS_READ` | Retrieval of mod lists and statistics. |
+| `PAYOUTS_READ` | Access to transaction history. |
+| `ANALYTICS_READ` | (Optional) Access to detailed graph data points. |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community. Please adhere to the following guidelines:
+
+### Critical Areas for Contribution
+
+1. **CurseForge Integration**: We are seeking contributors with experience in the CurseForge/Overwolf API to implement a parallel revenue tracking module.
+2. **Localization**: Translations for `values-xx/strings.xml` are needed for broader accessibility.
+3. **Scraper Robustness**: Improvements to the Jsoup parsing logic to handle edge cases or UI changes on the host platform.
+
+### Development Setup
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/Sourish25/MineBucks.git
+    ```
+
+2. Open in Android Studio (Hedgehog or later recommended).
+3. Sync Gradle dependencies.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+*Disclaimer: This application is a third-party tool and is not affiliated with, endorsed by, or sponsored by Modrinth.*
