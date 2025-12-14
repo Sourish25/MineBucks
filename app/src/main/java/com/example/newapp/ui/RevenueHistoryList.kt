@@ -16,21 +16,16 @@ import java.util.Locale
 
 @Composable
 fun RevenueHistoryList(
-    history: List<RevenueSnapshot>,
+    history: List<DailyRevenue>, // Updated type
     currency: String,
     modifier: Modifier = Modifier
 ) {
-    // Show only last 7 entries for brevity, or all if preferred. 
-    // User asked for "On this day...", implying a daily breakdown.
-    // Let's reverse to show newest first.
-    val sortedHistory = remember(history) { history.sortedByDescending { it.timestamp } }
-
     Column(modifier = modifier) {
-        if (sortedHistory.isEmpty()) {
-            Text("No history available yet.", style = MaterialTheme.typography.bodyMedium)
+        if (history.isEmpty()) {
+            Text("No recent activity.", style = MaterialTheme.typography.bodyMedium)
         } else {
-            sortedHistory.forEach { snapshot ->
-                HistoryItem(snapshot, currency)
+            history.forEach { daily ->
+                HistoryItem(daily, currency)
                 HorizontalDivider(color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
             }
         }
@@ -38,10 +33,9 @@ fun RevenueHistoryList(
 }
 
 @Composable
-fun HistoryItem(snapshot: RevenueSnapshot, currency: String) {
-    val total = snapshot.modrinthRevenue + snapshot.curseForgeRevenue
-    val dateString = remember(snapshot.timestamp) {
-        val date = Date(snapshot.timestamp)
+fun HistoryItem(daily: DailyRevenue, currency: String) {
+    val dateString = remember(daily.dateMillis) {
+        val date = Date(daily.dateMillis)
         SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(date)
     }
 
@@ -66,7 +60,7 @@ fun HistoryItem(snapshot: RevenueSnapshot, currency: String) {
         }
         
         Text(
-            text = "+${formatCurrency(total, currency)}",
+            text = (if (daily.amount >= 0) "+" else "") + formatCurrency(daily.amount, currency),
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
             color = MaterialTheme.colorScheme.primary
         )

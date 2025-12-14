@@ -19,6 +19,8 @@ import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material.icons.filled.Warning // Added import
+import androidx.compose.material.icons.automirrored.filled.ArrowForward // Added import
+import androidx.compose.material.icons.automirrored.filled.ArrowBack // Added import
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.sp
@@ -187,12 +189,36 @@ fun DashboardScreen(
         )
         
         RevenueHistoryGraph(
-            history = uiState.history,
+            dailyHistory = uiState.dailyHistory,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(220.dp),
             // Colors handled by defaults now (Material Scheme)
         )
+        
+        // Navigation Buttons
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = { viewModel.previousWeek() }) {
+                Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Previous Week")
+            }
+            
+            Text(
+                text = if (uiState.currentWeekOffset == 0) "Current Week" else "${kotlin.math.abs(uiState.currentWeekOffset)} Week(s) Ago",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            
+            IconButton(
+                onClick = { viewModel.nextWeek() },
+                enabled = uiState.currentWeekOffset < 0
+            ) {
+                Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Next Week")
+            }
+        }
         
         Spacer(modifier = Modifier.height(24.dp))
         
@@ -203,7 +229,7 @@ fun DashboardScreen(
         )
         
         RevenueHistoryList(
-            history = uiState.history.takeLast(7), // Show last 7 days strictly
+            history = uiState.dailyRecents, // Show daily increments
             currency = uiState.targetCurrency,
             modifier = Modifier.fillMaxWidth()
         )
@@ -230,7 +256,7 @@ fun DashboardScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
-            TextButton(onClick = { uriHandler.openUri("https://github.com/Sourish-Maity") }) {
+            TextButton(onClick = { uriHandler.openUri("https://github.com/Sourish25") }) {
                 Text("GitHub", color = MaterialTheme.colorScheme.secondary)
             }
             Spacer(modifier = Modifier.width(16.dp))

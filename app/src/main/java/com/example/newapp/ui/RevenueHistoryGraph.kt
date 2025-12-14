@@ -21,12 +21,12 @@ import java.util.Locale
 
 @Composable
 fun RevenueHistoryGraph(
-    history: List<RevenueSnapshot>,
+    dailyHistory: List<DailyRevenue>,
     modifier: Modifier = Modifier,
     lineColor: Color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
     gradientColor: Color = androidx.compose.material3.MaterialTheme.colorScheme.tertiary
 ) {
-    if (history.isEmpty()) {
+    if (dailyHistory.isEmpty()) {
         androidx.compose.foundation.layout.Box(
             modifier = modifier,
             contentAlignment = androidx.compose.ui.Alignment.Center
@@ -41,15 +41,11 @@ fun RevenueHistoryGraph(
     }
 
     // Transform Data to Vico Entries
-    // Sort by timestamp just in case
-    val sortedHistory = remember(history) { history.sortedBy { it.timestamp } }
-    
-    // Map snapshots to Chart Entries (x = index, y = total revenue)
-    val entries = remember(sortedHistory) {
-        sortedHistory.mapIndexed { index, snapshot ->
+    val entries = remember(dailyHistory) {
+        dailyHistory.mapIndexed { index, daily ->
             FloatEntry(
                 x = index.toFloat(),
-                y = (snapshot.modrinthRevenue + snapshot.curseForgeRevenue).toFloat()
+                y = daily.amount.toFloat()
             )
         }
     }
@@ -82,9 +78,9 @@ fun RevenueHistoryGraph(
         bottomAxis = com.patrykandpatrick.vico.compose.axis.horizontal.rememberBottomAxis(
             valueFormatter = { value, _ ->
                 val index = value.toInt()
-                if (index in sortedHistory.indices) {
-                    val date = Date(sortedHistory[index].timestamp)
-                    SimpleDateFormat("MM/dd", Locale.getDefault()).format(date)
+                if (index in dailyHistory.indices) {
+                    val date = Date(dailyHistory[index].dateMillis)
+                    SimpleDateFormat("EEE", Locale.getDefault()).format(date) // Day Name (Mon, Tue)
                 } else {
                     ""
                 }

@@ -65,7 +65,7 @@ class RevenueWorker(
              // Let's proceed with capturing the snapshot.
 
             // 3. Get User ID (Updated by repository.getModrinthRevenue)
-            val userId = dataStoreManager.userId.first() ?: "unknown_user"
+            val userId = dataStoreManager.userId.first() ?: "unknown"
             
             // 4. Create Snapshot
             val snapshot = RevenueSnapshot(
