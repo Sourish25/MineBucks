@@ -32,7 +32,7 @@ fun RevenueHistoryGraph(
             contentAlignment = androidx.compose.ui.Alignment.Center
         ) {
             androidx.compose.material3.Text(
-                text = "No graph data available",
+                text = androidx.compose.ui.res.stringResource(com.example.newapp.R.string.no_graph_data),
                 style = androidx.compose.material3.MaterialTheme.typography.bodyMedium,
                 color = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant
             )

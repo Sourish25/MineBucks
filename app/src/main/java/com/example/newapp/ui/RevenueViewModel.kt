@@ -46,7 +46,10 @@ import androidx.lifecycle.viewmodel.CreationExtras
         // NEW: Daily Aggregation
         val dailyHistory: List<DailyRevenue> = emptyList(),
         val dailyRecents: List<DailyRevenue> = emptyList(), // New Field
-        val currentWeekOffset: Int = 0 // 0 = Current Week, -1 = Previous, etc.
+        val currentWeekOffset: Int = 0, // 0 = Current Week, -1 = Previous, etc.
+        val isMock: Boolean = false, // Debug Flag
+        val error: String? = null, // One-time error message (e.g. "Network Unavailable")
+        val connectionError: Boolean = false // Persistent connection status
     )
 
     class RevenueViewModel(
@@ -137,7 +140,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
 
         // 2. Calculate Daily Earnings (Diffs)
         // Group by Day
-        val dailyMap = mutableMapOf<Long, Double>()
+
         val calendar = java.util.Calendar.getInstance()
         
         // Sort oldest to newest
@@ -153,14 +156,15 @@ import androidx.lifecycle.viewmodel.CreationExtras
         // Wait, snapshots happen multiple times a day. We want "End of Day Total" - "Start of Day Total"?
         // Simpler: "Earning(Day) = Max(Day) - Max(Day-1)"
         
-        // Helper to zero-out time for grouping
+        // Helper to zero-out time for grouping (UTC)
         fun getDayStart(time: Long): Long {
-            calendar.timeInMillis = time
-            calendar.set(java.util.Calendar.HOUR_OF_DAY, 0)
-            calendar.set(java.util.Calendar.MINUTE, 0)
-            calendar.set(java.util.Calendar.SECOND, 0)
-            calendar.set(java.util.Calendar.MILLISECOND, 0)
-            return calendar.timeInMillis
+            val utcCalendar = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+            utcCalendar.timeInMillis = time
+            utcCalendar.set(java.util.Calendar.HOUR_OF_DAY, 0)
+            utcCalendar.set(java.util.Calendar.MINUTE, 0)
+            utcCalendar.set(java.util.Calendar.SECOND, 0)
+            utcCalendar.set(java.util.Calendar.MILLISECOND, 0)
+            return utcCalendar.timeInMillis
         }
         
         val dailyMaxTotals = sorted
@@ -202,12 +206,12 @@ import androidx.lifecycle.viewmodel.CreationExtras
         calendar.timeInMillis = today
         // Set to Sunday of this week
         calendar.set(java.util.Calendar.DAY_OF_WEEK, java.util.Calendar.SUNDAY)
-        val currentWeekStart = calendar.timeInMillis
+
         
         // Apply Offset
         calendar.add(java.util.Calendar.WEEK_OF_YEAR, weekOffset)
         val targetWeekStart = calendar.timeInMillis
-        val targetWeekEnd = targetWeekStart + (7 * 24 * 60 * 60 * 1000) // 7 days later
+        // val targetWeekEnd = targetWeekStart + (7 * 24 * 60 * 60 * 1000) // Unused
         
         // Filter dailyEarnings that fall within [targetWeekStart, targetWeekEnd)
         // AND Fill in missing days with 0.0
@@ -240,16 +244,17 @@ import androidx.lifecycle.viewmodel.CreationExtras
             history = convertedHistory,
             dailyHistory = weeklyData, // Expose the 7-day list
             dailyRecents = dailyEarnings.sortedByDescending { it.dateMillis }.take(7), // New Field
-            currentWeekOffset = weekOffset
+            currentWeekOffset = weekOffset,
+            isMock = com.example.newapp.BuildConfig.FLAVOR == "mock"
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), RevenueUiState())
 
-    fun getGreeting(): String {
+    fun getGreeting(): Int {
         val hour = java.util.Calendar.getInstance().get(java.util.Calendar.HOUR_OF_DAY)
         return when (hour) {
-            in 0..11 -> "Good Morning"
-            in 12..16 -> "Good Afternoon"
-            else -> "Good Evening"
+            in 0..11 -> com.example.newapp.R.string.greeting_morning
+            in 12..16 -> com.example.newapp.R.string.greeting_afternoon
+            else -> com.example.newapp.R.string.greeting_evening
         }
     }
     
@@ -270,60 +275,99 @@ import androidx.lifecycle.viewmodel.CreationExtras
             try {
                 // Fetch Modrinth
                 val modResult = try {
-                    repository.getModrinthRevenue() // Now returns RevenueResult
+                    repository.getModrinthRevenue() 
                 } catch (e: Exception) {
                     e.printStackTrace()
-                    RevenueRepository.RevenueResult(0.0, 0.0)
+                    null // Return null on failure
                 }
                 
                 val cfRevenue = try {
                     repository.getCurseForgeRevenueInUSD()
                 } catch (e: Exception) {
                     e.printStackTrace()
-                    0.0
+                    null // Return null on failure
                 }
                 
+                // If Modrinth Failed (Network), mark connection error even if CF (Local) is fine
+                var isConnectionError = false
+                if (modResult == null) {
+                    isConnectionError = true
+                }
+
+                // If BOTH failed, stop here and keep old data.
+                if (modResult == null && cfRevenue == null) {
+                     _apiState.value = _apiState.value.copy(
+                         isLoading = false,
+                         error = "Failed to refresh. Check your internet connection.",
+                         connectionError = true // Mark failure
+                     )
+                     return@launch
+                }
+                
+                // Use valid data or defaults
+                val validModResult = modResult ?: RevenueRepository.RevenueResult(0.0, 0.0) 
+                val validCfRevenue = cfRevenue ?: 0.0
+
                 // Convert
-                val totalUSD = modResult.totalAmount + cfRevenue
+                val totalUSD = validModResult.totalAmount + validCfRevenue
                 
                 val totalConverted = repository.convertCurrency(totalUSD)
-                val modConverted = repository.convertCurrency(modResult.totalAmount)
-                val mod24hConverted = repository.convertCurrency(modResult.last24Hours)
-                val cfConverted = repository.convertCurrency(cfRevenue)
+                val modConverted = repository.convertCurrency(validModResult.totalAmount)
+                val mod24hConverted = repository.convertCurrency(validModResult.last24Hours)
+                val cfConverted = repository.convertCurrency(validCfRevenue)
                 
     // 4. Update Widget
                 com.example.newapp.widget.RevenueWidget.updateRevenueWidget(context, totalConverted, uiState.value.targetCurrency)
 
-                // 5. SAVE SNAPSHOT (Critical Fix)
+                // 5. SAVE SNAPSHOT (Optimized)
                 val currentUserId = dataStoreManager.userId.first() ?: "unknown"
-                val currentCurrency = dataStoreManager.targetCurrency.first() ?: "USD"
                 
                 if (currentUserId != "unknown") {
-                    val snapshot = com.example.newapp.data.database.RevenueSnapshot(
-                        timestamp = System.currentTimeMillis(),
-                        modrinthRevenue = modResult.totalAmount, // Store RAW (USD)
-                        curseForgeRevenue = cfRevenue,           // Store RAW (USD)
-                        currency = "USD", // We store in USD to allow dynamic conversion later
-                        userId = currentUserId
-                    )
-                    revenueDao.insertSnapshot(snapshot)
+                    // Check last snapshot to avoid spam
+                    val lastSnapshot = revenueDao.getLatestSnapshot(currentUserId)
+                    val currentTotal = validModResult.totalAmount + validCfRevenue
+                    val lastTotal = (lastSnapshot?.modrinthRevenue ?: 0.0) + (lastSnapshot?.curseForgeRevenue ?: 0.0)
+                    val timeDiff = System.currentTimeMillis() - (lastSnapshot?.timestamp ?: 0L)
+                    
+                    // Save if: No previous data OR Value Changed OR > 1 Hour passed
+                    if (lastSnapshot == null || kotlin.math.abs(currentTotal - lastTotal) > 0.001 || timeDiff > 3600000) {
+                         val snapshot = com.example.newapp.data.database.RevenueSnapshot(
+                            timestamp = System.currentTimeMillis(),
+                            modrinthRevenue = validModResult.totalAmount, // Store RAW (USD)
+                            curseForgeRevenue = validCfRevenue,           // Store RAW (USD)
+                            currency = "USD", // We store in USD to allow dynamic conversion later
+                            userId = currentUserId
+                        )
+                        revenueDao.insertSnapshot(snapshot)
+                    }
                 }
-
+                
+                // On Success final block, clear error
                 _apiState.value = _apiState.value.copy(
                     modrinthRevenue = modConverted,
                     modrinthRevenueLast24h = mod24hConverted,
                     curseForgeRevenueUSD = cfConverted,
                     totalRevenue = totalConverted,
-                    isLoading = false
+                    isLoading = false,
+                    error = null, // Clear error
+                    connectionError = isConnectionError // Set based on Modrinth Result
                 )
             } catch (e: Exception) {
                 e.printStackTrace()
-                _apiState.value = _apiState.value.copy(isLoading = false)
+                _apiState.value = _apiState.value.copy(
+                    isLoading = false,
+                    error = "Unexpected error: ${e.localizedMessage}",
+                    connectionError = true // Mark as persistent error
+                )
             }
         }
     }
     
-    // ... (rest of methods: getDebugInfo, saveModrinthToken, etc. - UNCHANGED)
+    fun clearError() {
+        _apiState.value = _apiState.value.copy(error = null)
+    }
+    
+    // ... (rest of methods)
     fun getDebugInfo(onResult: (String) -> Unit) {
         viewModelScope.launch {
             val info = repository.getRawModrinthResponse()
@@ -395,13 +439,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
             @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
                 val application = checkNotNull(extras[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY]) as ModRevenueApplication
-                val repository = RevenueRepository(
-                    com.example.newapp.data.network.ModrinthClient.service, 
-                    application.dataStoreManager,
-                    application.database.revenueDao()
-                )
-                
-                return RevenueViewModel(repository, application.dataStoreManager, application.database.revenueDao(), application.applicationContext) as T
+                return RevenueViewModel(application.repository, application.dataStoreManager, application.database.revenueDao(), application.applicationContext) as T
             }
         }
     }

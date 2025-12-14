@@ -101,6 +101,41 @@ To retrieve this data without violating user trust (i.e., asking for passwords),
 
 ---
 
+## 7. Technical Architecture & Libraries
+
+MineBucks is built with modern Android development standards, ensuring robustness and maintainability.
+
+### Core Architecture
+
+* **Language**: 100% Kotlin.
+* **UI Framework**: Jetpack Compose (Material3 Design).
+* **Architecture Pattern**: MVVM (Model-View-ViewModel) with Unidirectional Data Flow (UDF).
+* **Asynchronicity**: Kotlin Coroutines & Flow.
+
+### Key Libraries & Dependencies
+
+* **Networking**:
+  * `Retrofit2` & `OkHttp3`: For robust communication with the Modrinth API v3.
+  * `Kotlinx Serialization`: For type-safe JSON parsing.
+* **Persistence**:
+  * `Room Database`: Stores historical revenue snapshots for graphing and offline access.
+  * `Jetpack DataStore`: Securely handles user preferences and session tokens.
+* **Background Processing**:
+  * `WorkManager`: Schedules periodic (6-hour) background syncs that respect battery constraints (Doze mode) and network availability.
+* **UI Components**:
+  * `Vico`: A lightweight, composable charting library for the Revenue History graph.
+  * `Glance`: For building responsive Home Screen Widgets.
+* **Security**:
+  * `EncryptedSharedPreferences`: Encrypts sensitive tokens (PATs) and cookies at rest.
+
+### Inner Workings
+
+* **Modrinth Data**: Fetched directly via `Retrofit`. We aggregate `wallet` endpoints (authenticated) and `project` endpoints (public) to build a complete financial profile.
+* **CurseForge Data**: Scraped via a headless `WebView`. The app injects Javascript to extract the `reward-points-text` element, parses it, and stores it in `DataStore`. This bypasses the lack of a public API while maintaining security (sessions are local-only).
+* **Data Integrity**: We generate a deterministic `userId` using SHA-256 hashing of the Modrinth Token. This ensures that even if you reinstall the app, your data remains isolated and consistent without requiring a centralized login server.
+
+---
+
 ## 6. License
 
 This project is open-source under the MIT License. Contributions are welcome, especially regarding parsing logic updates if platform DOMs change.

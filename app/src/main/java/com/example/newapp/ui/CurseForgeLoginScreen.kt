@@ -35,6 +35,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.res.stringResource
+import com.example.newapp.R
 import java.util.UUID
 
 // --- Data Models ---
@@ -190,6 +192,17 @@ fun CurseForgeLoginScreen(
         
         tabs.add(newTab)
         activeTabId = newTab.id
+    }
+
+    // --- Cleanup on Dispose ---
+    DisposableEffect(Unit) {
+        onDispose {
+            tabs.forEach { tab ->
+                tab.webView.stopLoading()
+                tab.webView.destroy()
+            }
+            tabs.clear()
+        }
     }
 
     // --- Main UI Composables ---

@@ -1,3 +1,88 @@
 <resources>
     <string name="app_name">MineBucks</string>
+    <string name="settings">Settings</string>
+    <string name="session_expired_title">CurseForge Session Expired. Please reconnect in Settings.</string>
+    <string name="total_revenue">Total Revenue</string>
+    <string name="last_24h">Last 24h</string>
+    <string name="breakdown">Breakdown</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Revenue History</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="no_recent_activity">No recent activity.</string>
+    <string name="support_us_thanks">Thanks for supporting us! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">No graph data available</string>
+    <string name="current_week">Current Week</string>
+    <string name="weeks_ago">%d Week(s) Ago</string>
+    <string name="greeting_morning">Good Morning</string>
+    <string name="greeting_afternoon">Good Afternoon</string>
+    <string name="greeting_evening">Good Evening</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_general">General</string>
+    <string name="settings_pref_currency">Preferred Currency</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">About Developer</string>
+    <string name="settings_token_current">Current Token</string>
+    <string name="settings_token_update">Update Access Token</string>
+    <string name="settings_token_placeholder">Enter new token</string>
+    <string name="settings_token_btn">Update Token</string>
+    <string name="settings_token_generate">Generate New Token</string>
+    <string name="settings_cf_connect">Connect CurseForge Account</string>
+    <string name="settings_cf_reconnect">Reconnect / Refresh Session</string>
+    <string name="settings_cf_connected">Connected</string>
+    <string name="settings_cf_points">Points: %s</string>
+    <string name="settings_cf_logout">Reset Session (Log Out)</string>
+    <string name="settings_debug_view">View Debug Info</string>
+    <string name="settings_debug_fetch">Fetch Raw API Data</string>
+    <string name="settings_debug_close">Close</string>
+    <string name="settings_version">Mod Revenue Tracker v1.2</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Welcome</string>
+    <string name="onboarding_modrinth_label">Modrinth Access Token</string>
+    <string name="onboarding_cf_btn">Connect CurseForge (Login)</string>
+    <string name="onboarding_start_btn">Start Tracking</string>
+    <string name="onboarding_help_title">About Modrinth Tokens</string>
+    <string name="onboarding_help_desc">We need specific permissions to show your data:</string>
+    <string name="onboarding_help_p1">• Read user data: To display your username.</string>
+    <string name="onboarding_help_p2">• Read payouts: To calculate your revenue.</string>
+    <string name="onboarding_help_scopes">REQUIRED SCOPES:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ SECURITY WARNING:</string>
+    <string name="onboarding_help_warn_desc">This token grants access to your account data. Do NOT share it with anyone else.</string>
+    <string name="onboarding_help_warn_local">This app saves it locally on your device only.</string>
+    <string name="onboarding_help_get_token">Get Token (modrinth.com)</string>
+    <string name="onboarding_help_understood">Understood</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Loading...</string>
+    <string name="cf_login_no_title">No Title</string>
+    <string name="cf_login_exit">Exit</string>
+    <string name="cf_login_secure">Secure</string>
+    <string name="cf_login_tabs">Tabs</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Switch to Mobile Site</string>
+    <string name="cf_login_switch_desktop">Switch to Desktop Site</string>
+    <string name="cf_login_force_zoom_on">Enable Force Zoom (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Disable Force Zoom</string>
+    <string name="cf_login_refresh">Refresh</string>
+    <string name="cf_login_no_tabs">No Tabs Open</string>
+    <string name="cf_login_open_btn">Open CurseForge</string>
+    <string name="cf_login_rewards_btn">I\'m Logged In -> Check Rewards</string>
+    <string name="cf_login_open_tabs">Open Tabs</string>
+    <string name="cf_login_close_tab">Close Tab</string>
+    <string name="cf_login_back_browser">Back to Browser</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Invalid Token Format. Must start with \"mrp_\"</string>
+    <string name="daily_total">Daily Total</string>
+    <string name="support_us_btn">Watch Ad to Support Us ❤️</string>
 </resources>

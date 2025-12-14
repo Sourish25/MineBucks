@@ -23,6 +23,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import com.example.newapp.R
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,6 +36,7 @@ fun SettingsScreen(
     onConnectCurseForge: () -> Unit
 ) {
     var modrinthToken by remember { mutableStateOf("") }
+    var tokenError by remember { mutableStateOf<String?>(null) } // Validation Error
     var expanded by remember { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
 
@@ -56,7 +59,7 @@ fun SettingsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Settings") },
+                title = { Text(stringResource(R.string.settings)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -77,8 +80,8 @@ fun SettingsScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(24.dp)
         ) {
-            // 0. Appearance (New)
-            Text("Appearance", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+            // 0. Appearance
+            Text(stringResource(R.string.settings_appearance), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
             
             ThemeSelectionBar(
                 currentTheme = uiState.appTheme,
@@ -88,7 +91,7 @@ fun SettingsScreen(
             HorizontalDivider()
 
             // 1. General Settings
-            Text("General", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+            Text(stringResource(R.string.settings_general), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
             
             ExposedDropdownMenuBox(
                 expanded = expanded,
@@ -99,7 +102,7 @@ fun SettingsScreen(
                     value = "${selectedCurrency.symbol}  ${selectedCurrency.code} - ${selectedCurrency.name}",
                     onValueChange = {},
                     readOnly = true,
-                    label = { Text("Preferred Currency") },
+                    label = { Text(stringResource(R.string.settings_pref_currency)) },
                     trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                     colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(),
                     modifier = Modifier.fillMaxWidth().menuAnchor()
@@ -129,50 +132,62 @@ fun SettingsScreen(
             HorizontalDivider()
 
             // 2. Modrinth Settings
-            Text("Modrinth", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+            Text(stringResource(R.string.settings_modrinth), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
             
             OutlinedTextField(
                 value = uiState.maskedToken,
                 onValueChange = { }, 
                 readOnly = true,
-                label = { Text("Current Token") },
+                label = { Text(stringResource(R.string.settings_token_current)) },
                 modifier = Modifier.fillMaxWidth(),
                 leadingIcon = { Icon(Icons.Filled.Lock, null) }
             )
              
             OutlinedTextField(
                 value = modrinthToken,
-                onValueChange = { modrinthToken = it },
-                label = { Text("Update Access Token") },
-                placeholder = { Text("Enter new token") },
+                onValueChange = { 
+                    modrinthToken = it
+                    // Reset error on change
+                    if (tokenError != null) tokenError = null 
+                },
+                label = { Text(stringResource(R.string.settings_token_update)) },
+                placeholder = { Text(stringResource(R.string.settings_token_placeholder)) },
                 modifier = Modifier.fillMaxWidth(),
-                singleLine = true
+                singleLine = true,
+                isError = tokenError != null,
+                supportingText = { if (tokenError != null) Text(tokenError!!, color = MaterialTheme.colorScheme.error) }
             )
             
-            Button(
+            val invalidTokenMsg = stringResource(R.string.error_invalid_token)
+
+             Button(
                 onClick = { 
-                    if (modrinthToken.isNotBlank()) {
+                    if (modrinthToken.startsWith("mrp_")) {
                         viewModel.saveModrinthToken(modrinthToken) 
-                        modrinthToken = "" // Clear after save
+                        modrinthToken = "" 
+                        tokenError = null
+                    } else {
+                        tokenError = invalidTokenMsg
                     }
                 },
                 enabled = modrinthToken.isNotBlank(),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Update Token")
+                Text(stringResource(R.string.settings_token_btn))
             }
-            
+
+
              TextButton(
                 onClick = { uriHandler.openUri("https://modrinth.com/settings/pats") },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                 Text("Generate New Token")
+                 Text(stringResource(R.string.settings_token_generate))
             }
 
             HorizontalDivider()
 
             // 3. CurseForge Settings
-            Text("CurseForge", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+            Text(stringResource(R.string.settings_curseforge), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
             
             if (uiState.curseForgePoints > 0) {
                  Card(
@@ -183,8 +198,8 @@ fun SettingsScreen(
                         Icon(Icons.Filled.CheckCircle, null, tint = MaterialTheme.colorScheme.onSecondaryContainer)
                         Spacer(modifier = Modifier.width(12.dp))
                         Column {
-                            Text("Connected", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
-                            Text("Points: ${uiState.curseForgePoints}", style = MaterialTheme.typography.bodySmall)
+                            Text(stringResource(R.string.settings_cf_connected), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                            Text(stringResource(R.string.settings_cf_points, uiState.curseForgePoints.toString()), style = MaterialTheme.typography.bodySmall)
                         }
                     }
                 }
@@ -193,14 +208,14 @@ fun SettingsScreen(
                     modifier = Modifier.fillMaxWidth(),
                     colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.surfaceVariant, contentColor = MaterialTheme.colorScheme.onSurfaceVariant)
                 ) {
-                    Text("Reconnect / Refresh Session")
+                    Text(stringResource(R.string.settings_cf_reconnect))
                 }
             } else {
                 Button(
                     onClick = onConnectCurseForge,
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("Connect CurseForge Account")
+                    Text(stringResource(R.string.settings_cf_connect))
                 }
             }
             
@@ -210,7 +225,7 @@ fun SettingsScreen(
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Reset Session (Log Out)", color = MaterialTheme.colorScheme.error)
+                Text(stringResource(R.string.settings_cf_logout), color = MaterialTheme.colorScheme.error)
             }
             
             Spacer(modifier = Modifier.weight(1f))
@@ -245,24 +260,24 @@ fun SettingsScreen(
                                 },
                                 modifier = Modifier.fillMaxWidth().padding(top = 8.dp)
                             ) {
-                                Text("Fetch Raw API Data")
+                                Text(stringResource(R.string.settings_debug_fetch))
                             }
                         }
                     },
-                    confirmButton = { TextButton(onClick = { showDebug = false }) { Text("Close") } }
+                    confirmButton = { TextButton(onClick = { showDebug = false }) { Text(stringResource(R.string.settings_debug_close)) } }
                 )
             }
             TextButton(
                 onClick = { showDebug = true },
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             ) {
-                Text("View Debug Info", style = MaterialTheme.typography.labelSmall)
+                Text(stringResource(R.string.settings_debug_view), style = MaterialTheme.typography.labelSmall)
             }
             
             HorizontalDivider()
             
             // 4. About Developer
-            Text("About Developer", style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
+            Text(stringResource(R.string.settings_about), style = MaterialTheme.typography.titleMedium, color = MaterialTheme.colorScheme.primary)
             
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -281,7 +296,7 @@ fun SettingsScreen(
                 ) {
                     Icon(painterResource(id = com.example.newapp.R.drawable.ic_github), contentDescription = null, modifier = Modifier.size(20.dp))
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("GitHub")
+                    Text(stringResource(R.string.github))
                 }
                 
                 // Ko-fi Button
@@ -302,13 +317,13 @@ fun SettingsScreen(
                         modifier = Modifier.size(20.dp).offset(y = (-2).dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("Ko-fi")
+                    Text(stringResource(R.string.kofi))
                 }
             }
 
             // Footer
             Text(
-                "Mod Revenue Tracker v1.2", 
+                stringResource(R.string.settings_version), 
                 style = MaterialTheme.typography.labelSmall, 
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.align(Alignment.CenterHorizontally)
@@ -371,9 +386,9 @@ fun ThemeSelectionBar(
                 ) {
                     val isSelected = index == selectedIndex
                     val label = when(option) {
-                        "SYSTEM" -> "System"
-                        "LIGHT" -> "Light"
-                        else -> "Dark"
+                        "SYSTEM" -> stringResource(R.string.theme_system)
+                        "LIGHT" -> stringResource(R.string.theme_light)
+                        else -> stringResource(R.string.theme_dark)
                     }
                     Text(
                         text = label,

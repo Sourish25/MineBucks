@@ -31,7 +31,7 @@ fun SupportUsButton(onClick: () -> Unit) {
         ) {
             Icon(Icons.Default.PlayArrow, contentDescription = null)
             Spacer(modifier = Modifier.width(8.dp))
-            Text("Watch Ad to Support Us ❤️", style = MaterialTheme.typography.titleSmall)
+            Text(androidx.compose.ui.res.stringResource(com.example.newapp.R.string.support_us_btn), style = MaterialTheme.typography.titleSmall)
         }
     }
 }

@@ -20,10 +20,15 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material.icons.filled.Warning // Added import
 import androidx.compose.material.icons.automirrored.filled.ArrowForward // Added import
-import androidx.compose.material.icons.automirrored.filled.ArrowBack // Added import
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.CloudOff // Added import
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import com.example.newapp.ui.theme.ExpressiveMotion
 import java.text.NumberFormat
 import java.util.Locale
@@ -32,10 +37,12 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 
 
 // ... (Existing content)
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun DashboardScreen(
     viewModel: RevenueViewModel,
@@ -44,12 +51,19 @@ fun DashboardScreen(
 ) {
     val scrollState = rememberScrollState()
     val greeting = remember { viewModel.getGreeting() }
-    val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current // NEW
+    val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current 
     
     // Refresh data on entry
     LaunchedEffect(Unit) {
         viewModel.refreshData()
     }
+
+    val pullRefreshState = rememberPullRefreshState(
+        refreshing = uiState.isLoading,
+        onRefresh = { viewModel.refreshData() }
+    )
+    
+    // ... (Imports logic handled by tool usually, but need to ensure androidx.lifecycle is available)
     
     // --- BACKGROUND SCRAPER ---
     // Invisible WebView to keep data fresh using saved cookies
@@ -81,7 +95,8 @@ fun DashboardScreen(
                                 val js = """
                                     (function() {
                                         var body = document.body.innerText;
-                                        var match = body.match(/[\(\s](\d[\d,.]*)\s*points/i);
+                                        // ROBUST REGEX: Handle start of line or space/paren
+                                        var match = body.match(/(?:^|[\(\s])([\d,.]+)\s*points/i);
                                         if (match) { return match[1].replace(/,/g, ''); }
                                         return null;
                                     })();
@@ -105,173 +120,234 @@ fun DashboardScreen(
         )
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background) // Fix: Explicit background to prevent transparency issues
-            .verticalScroll(scrollState)
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(24.dp)
-    ) {
-        // ... (Existing UI content)
-        // 1. Greeting & Settings
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            GreetingSection(greeting, uiState.userName, uiState.userAvatarUrl)
-            IconButton(onClick = onOpenSettings) {
-                Icon(Icons.Default.Settings, contentDescription = "Settings")
-            }
+    val snackbarHostState = remember { SnackbarHostState() }
+    
+    // Error Handling
+    if (uiState.error != null) {
+        LaunchedEffect(uiState.error) {
+            snackbarHostState.showSnackbar(uiState.error!!)
+            viewModel.clearError()
         }
-        
-        // Session Expired Warning
-        if (uiState.onboarded && uiState.curseForgeCookies.isNullOrBlank() && uiState.curseForgePoints > 0) {
-            Card(
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
-                modifier = Modifier.fillMaxWidth()
+    }
+
+    Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) }
+    ) { padding ->
+        Box(
+            modifier = Modifier
+                .padding(padding)
+                .fillMaxSize()
+                .background(MaterialTheme.colorScheme.background)
+                .pullRefresh(pullRefreshState)
+        ) {
+            androidx.compose.foundation.lazy.LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(16.dp),
+                verticalArrangement = Arrangement.spacedBy(24.dp)
             ) {
-                 Row(
-                    modifier = Modifier.padding(16.dp),
+            
+            // 1. Greeting & Settings
+            item {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(androidx.compose.material.icons.Icons.Default.Warning, contentDescription = null, tint = MaterialTheme.colorScheme.error)
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        "CurseForge Session Expired. Please reconnect in Settings.",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onErrorContainer
-                    )
-                }
-            }
-        }
-        
-        // 2. Total Revenue Card
-        TotalRevenueCard(uiState.totalRevenue, uiState.modrinthRevenueLast24h, uiState.targetCurrency)
-        
-        Text("Breakdown", style = MaterialTheme.typography.titleLarge)
-        
-        // 3. Platform Breakdown using Expressive shapes
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            PlatformCard(
-                title = "Modrinth",
-                amount = uiState.modrinthRevenue,
-                currency = uiState.targetCurrency,
-                // Modrinth Green #1BD96A
-                color = Color(0xFF1BD96A),
-                iconRes = com.example.newapp.R.drawable.ic_modrinth, // New Icon
-                modifier = Modifier.weight(1f),
-                onClick = { uriHandler.openUri("https://modrinth.com/dashboard/revenue") }
-            )
-            PlatformCard(
-                title = "CurseForge",
-                amount = uiState.curseForgeRevenueUSD,
-                currency = uiState.targetCurrency,
-                // CurseForge Orange #F16436
-                color = Color(0xFFF16436),
-                iconRes = com.example.newapp.R.drawable.ic_curseforge, // New Icon
-                modifier = Modifier.weight(1f),
-                onClick = { uriHandler.openUri("https://authors.curseforge.com/#/transactions") }
-            )
-        }
-        
-        // History Section
-        // Always show history section, even if empty (UI handles empty state)
-        Spacer(modifier = Modifier.height(24.dp))
-        Text(
-            text = "Revenue History",
-            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
-            color = MaterialTheme.colorScheme.onBackground
-        )
-        
-        RevenueHistoryGraph(
-            dailyHistory = uiState.dailyHistory,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(220.dp),
-            // Colors handled by defaults now (Material Scheme)
-        )
-        
-        // Navigation Buttons
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            IconButton(onClick = { viewModel.previousWeek() }) {
-                Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Previous Week")
-            }
-            
-            Text(
-                text = if (uiState.currentWeekOffset == 0) "Current Week" else "${kotlin.math.abs(uiState.currentWeekOffset)} Week(s) Ago",
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            
-            IconButton(
-                onClick = { viewModel.nextWeek() },
-                enabled = uiState.currentWeekOffset < 0
-            ) {
-                Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Next Week")
-            }
-        }
-        
-        Spacer(modifier = Modifier.height(24.dp))
-        
-        Text(
-            text = "Recent Activity",
-            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-            color = MaterialTheme.colorScheme.onBackground
-        )
-        
-        RevenueHistoryList(
-            history = uiState.dailyRecents, // Show daily increments
-            currency = uiState.targetCurrency,
-            modifier = Modifier.fillMaxWidth()
-        )
-        
-        Spacer(modifier = Modifier.height(32.dp))
-        
-        // Support Us Pill Button (Ad)
-        SupportUsButton(
-            onClick = {
-                val activity = context as? android.app.Activity
-                if (activity != null) {
-                    com.example.newapp.ads.AdManager.showAd(activity) {
-                        // On Reward
-                        android.widget.Toast.makeText(context, "Thanks for supporting us! ❤️", android.widget.Toast.LENGTH_LONG).show()
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                         GreetingSection(greeting, uiState.userName, uiState.userAvatarUrl)
+                         // Offline Indicator
+                         if (uiState.connectionError) {
+                             Spacer(modifier = Modifier.width(8.dp))
+                             Icon(
+                                 imageVector = Icons.Outlined.CloudOff,
+                                 contentDescription = "Offline",
+                                 tint = MaterialTheme.colorScheme.error,
+                                 modifier = Modifier.size(20.dp)
+                             )
+                         }
+                    }
+                    IconButton(onClick = onOpenSettings) {
+                        Icon(Icons.Default.Settings, contentDescription = stringResource(com.example.newapp.R.string.settings))
                     }
                 }
             }
-        )
-        
-        Spacer(modifier = Modifier.height(24.dp))
-        
-        // Developer Links
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
-        ) {
-            TextButton(onClick = { uriHandler.openUri("https://github.com/Sourish25") }) {
-                Text("GitHub", color = MaterialTheme.colorScheme.secondary)
+            
+            // ... (Permission Rationale Placeholder) ...
+
+            // Session Expired Warning
+            if (uiState.onboarded && uiState.curseForgeCookies.isNullOrBlank() && uiState.curseForgePoints > 0) {
+                item {
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(16.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(androidx.compose.material.icons.Icons.Default.Warning, contentDescription = null, tint = MaterialTheme.colorScheme.error)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                stringResource(com.example.newapp.R.string.session_expired_title),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onErrorContainer
+                            )
+                        }
+                    }
+                }
             }
-            Spacer(modifier = Modifier.width(16.dp))
-            TextButton(onClick = { uriHandler.openUri("https://ko-fi.com/sourish25") }) {
-                Text("Ko-fi", color = MaterialTheme.colorScheme.secondary)
+            
+            // 2. Total Revenue Card
+            item {
+                TotalRevenueCard(uiState.totalRevenue, uiState.modrinthRevenueLast24h, uiState.targetCurrency)
+            }
+            
+            item {
+                Text(stringResource(com.example.newapp.R.string.breakdown), style = MaterialTheme.typography.titleLarge)
+            }
+            
+            // 3. Platform Breakdown using Expressive shapes
+            item {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    PlatformCard(
+                        title = stringResource(com.example.newapp.R.string.modrinth),
+                        amount = uiState.modrinthRevenue,
+                        currency = uiState.targetCurrency,
+                        color = Color(0xFF1BD96A),
+                        iconRes = com.example.newapp.R.drawable.ic_modrinth,
+                        modifier = Modifier.weight(1f),
+                        onClick = { uriHandler.openUri("https://modrinth.com/dashboard/revenue") }
+                    )
+                    PlatformCard(
+                        title = stringResource(com.example.newapp.R.string.curseforge),
+                        amount = uiState.curseForgeRevenueUSD,
+                        currency = uiState.targetCurrency,
+                        color = Color(0xFFF16436),
+                        iconRes = com.example.newapp.R.drawable.ic_curseforge,
+                        modifier = Modifier.weight(1f),
+                        onClick = { uriHandler.openUri("https://authors.curseforge.com/#/transactions") }
+                    )
+                }
+            }
+            
+            // History Section
+            item {
+                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                    Text(
+                        text = stringResource(com.example.newapp.R.string.revenue_history),
+                        style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
+                    
+                    RevenueHistoryGraph(
+                        dailyHistory = uiState.dailyHistory,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(220.dp),
+                    )
+                    
+                    // Navigation Buttons
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        IconButton(onClick = { viewModel.previousWeek() }) {
+                            Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Previous Week")
+                        }
+                        
+                        val weeksText = if (uiState.currentWeekOffset == 0) 
+                             stringResource(com.example.newapp.R.string.current_week) 
+                        else 
+                             stringResource(com.example.newapp.R.string.weeks_ago, kotlin.math.abs(uiState.currentWeekOffset))
+                             
+                        Text(
+                            text = weeksText,
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        
+                        IconButton(
+                            onClick = { viewModel.nextWeek() },
+                            enabled = uiState.currentWeekOffset < 0
+                        ) {
+                            Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Next Week")
+                        }
+                    }
+                }
+            }
+            
+            item {
+                Text(
+                    text = stringResource(com.example.newapp.R.string.recent_activity),
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+            }
+            
+            // REPLACED RevenueHistoryList with direct Items for Lazy performance
+            if (uiState.dailyRecents.isEmpty()) {
+                item {
+                    Text(stringResource(com.example.newapp.R.string.no_recent_activity), style = MaterialTheme.typography.bodyMedium)
+                }
+            } else {
+                items(uiState.dailyRecents.size) { index ->
+                    val daily = uiState.dailyRecents[index]
+                    HistoryItem(daily, uiState.targetCurrency)
+                    HorizontalDivider(color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
+                }
+            }
+            
+            // Support Us Pill Button (Ad)
+            item {
+                Spacer(modifier = Modifier.height(8.dp))
+                val thanksText = stringResource(com.example.newapp.R.string.support_us_thanks)
+                SupportUsButton(
+                    onClick = {
+                        val activity = context as? android.app.Activity
+                        if (activity != null) {
+                            com.example.newapp.ads.AdManager.showAd(activity) {
+                                android.widget.Toast.makeText(context, thanksText, android.widget.Toast.LENGTH_LONG).show()
+                            }
+                        }
+                    }
+                )
+            }
+            
+            // Developer Links
+            item {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    TextButton(onClick = { uriHandler.openUri("https://github.com/Sourish25") }) {
+                        Text(stringResource(com.example.newapp.R.string.github), color = MaterialTheme.colorScheme.secondary)
+                    }
+                    Spacer(modifier = Modifier.width(16.dp))
+                    TextButton(onClick = { uriHandler.openUri("https://ko-fi.com/sourish25") }) {
+                        Text(stringResource(com.example.newapp.R.string.kofi), color = MaterialTheme.colorScheme.secondary)
+                    }
+                }
+                Spacer(modifier = Modifier.height(48.dp)) // Final padding
             }
         }
-        
-        Spacer(modifier = Modifier.height(48.dp)) // Final padding
+
+        PullRefreshIndicator(
+            refreshing = uiState.isLoading,
+            state = pullRefreshState,
+            modifier = Modifier.align(androidx.compose.ui.Alignment.TopCenter)
+        )
     }
 }
-// ... (Rest of file)
+}
+
+// ... (GreetingSection adapted below) ...
 
 @Composable
-fun GreetingSection(greeting: String, name: String, avatarUrl: String?) {
+fun GreetingSection(greetingRes: Int, name: String, avatarUrl: String?) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         if (avatarUrl != null) {
             AsyncImage(
@@ -291,7 +367,7 @@ fun GreetingSection(greeting: String, name: String, avatarUrl: String?) {
         
         Column {
             Text(
-                text = "$greeting,",
+                text = "${stringResource(greetingRes)},",
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -306,16 +382,38 @@ fun GreetingSection(greeting: String, name: String, avatarUrl: String?) {
 
 @Composable
 fun TotalRevenueCard(amount: Double, last24h: Double, currencyCode: String) {
+    // PERFORMANCE FIX: Only animate when Resumed
+    val lifecycleOwner = androidx.compose.ui.platform.LocalLifecycleOwner.current
+    var isResumed by remember { mutableStateOf(false) }
+    
+    DisposableEffect(lifecycleOwner) {
+        val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
+            isResumed = (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME)
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+    // Only run infinite transition if resumed
     val infiniteTransition = rememberInfiniteTransition(label = "wave")
-    val phase by infiniteTransition.animateFloat(
-        initialValue = 0f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(3000, easing = LinearEasing),
-            repeatMode = RepeatMode.Restart
-        ),
-        label = "phase"
-    )
+    // If not resumed, snap to 0 or freeze? 
+    // AnimateFloat requires a target. We can pass a constant if not resumed?
+    // Actually, rememberInfiniteTransition continues internally unless removed from comp?
+    // Better: Conditional phase.
+    
+    val phase by if (isResumed) {
+         infiniteTransition.animateFloat(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec = infiniteRepeatable(
+                animation = tween(3000, easing = LinearEasing),
+                repeatMode = RepeatMode.Restart
+            ),
+            label = "phase"
+        )
+    } else {
+        remember { mutableFloatStateOf(0f) }
+    }
 
     Card(
         modifier = Modifier
@@ -348,7 +446,7 @@ fun TotalRevenueCard(amount: Double, last24h: Double, currencyCode: String) {
                     color = MaterialTheme.colorScheme.onPrimaryContainer
                 )
                 Text(
-                    text = "Total Revenue",
+                    text = stringResource(com.example.newapp.R.string.total_revenue),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
                 )
@@ -368,7 +466,7 @@ fun TotalRevenueCard(amount: Double, last24h: Double, currencyCode: String) {
                         color = MaterialTheme.colorScheme.primary
                     )
                      Text(
-                        text = "Last 24h",
+                        text = stringResource(com.example.newapp.R.string.last_24h),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
                     )
@@ -377,6 +475,7 @@ fun TotalRevenueCard(amount: Double, last24h: Double, currencyCode: String) {
         }
     }
 }
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

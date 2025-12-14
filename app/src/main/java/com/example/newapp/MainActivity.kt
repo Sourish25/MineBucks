@@ -32,6 +32,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.animation.with
 import androidx.compose.animation.core.tween
 
@@ -59,8 +60,27 @@ class MainActivity : ComponentActivity() {
         // Request Notification Permission (Android 13+)
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
              val permission = android.Manifest.permission.POST_NOTIFICATIONS
+             
+             val requestPermissionLauncher = registerForActivityResult(
+                androidx.activity.result.contract.ActivityResultContracts.RequestPermission()
+            ) { isGranted: Boolean ->
+                if (isGranted) {
+                    // Permission granted.
+                } else {
+                    // Explain to user? State is managed by UI.
+                }
+            }
+            
              if (checkSelfPermission(permission) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
-                 requestPermissions(arrayOf(permission), 101)
+                 // Check if we should show rationale
+                 if (shouldShowRequestPermissionRationale(permission)) {
+                     // Show UI (handled by PulseUiState usually, but here we can just fire the request for now 
+                     // or rely on a Composable to show the rationale. 
+                     // Since we are in onCreate, we can't easily show Composable Dialogs instantly without state.
+                     // Better approach: Let DashboardScreen handle this check!
+                 } else {
+                     requestPermissionLauncher.launch(permission)
+                 }
              }
         }
 
@@ -105,10 +125,10 @@ class MainActivity : ComponentActivity() {
                                 transitionSpec = {
                                     if (targetState) {
                                         // Entering Settings
-                                        slideInHorizontally { it } + fadeIn() with slideOutHorizontally { -it / 3 } + fadeOut()
+                                        (slideInHorizontally { it } + fadeIn()) togetherWith (slideOutHorizontally { -it / 3 } + fadeOut())
                                     } else {
                                         // Exiting Settings
-                                        slideInHorizontally { -it } + fadeIn() with slideOutHorizontally { it / 3 } + fadeOut()
+                                        (slideInHorizontally { -it } + fadeIn()) togetherWith (slideOutHorizontally { it / 3 } + fadeOut())
                                     }
                                 },
                                 label = "ScreenTransition"

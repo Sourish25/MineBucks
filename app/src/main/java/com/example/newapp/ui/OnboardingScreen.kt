@@ -11,6 +11,8 @@ import androidx.compose.material.icons.outlined.Info
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.stringResource
+import com.example.newapp.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,24 +45,24 @@ fun OnboardingScreen(
     if (showModrinthHelp) {
         AlertDialog(
             onDismissRequest = { showModrinthHelp = false },
-            title = { Text("About Modrinth Tokens") },
+            title = { Text(stringResource(R.string.onboarding_help_title)) },
             text = {
                 Column {
-                    Text("We need specific permissions to show your data:", style = MaterialTheme.typography.bodyMedium)
+                    Text(stringResource(R.string.onboarding_help_desc), style = MaterialTheme.typography.bodyMedium)
                     Spacer(modifier = Modifier.height(8.dp))
                     
-                    Text("• Read user data: To display your username.", style = MaterialTheme.typography.bodySmall)
-                    Text("• Read payouts: To calculate your revenue.", style = MaterialTheme.typography.bodySmall)
+                    Text(stringResource(R.string.onboarding_help_p1), style = MaterialTheme.typography.bodySmall)
+                    Text(stringResource(R.string.onboarding_help_p2), style = MaterialTheme.typography.bodySmall)
                     
                     Spacer(modifier = Modifier.height(8.dp))
-                    Text("REQUIRED SCOPES:", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
-                    Text("analytics, payouts, user", style = MaterialTheme.typography.bodyMedium, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace, color = MaterialTheme.colorScheme.primary)
+                    Text(stringResource(R.string.onboarding_help_scopes), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
+                    Text(stringResource(R.string.onboarding_help_scopes_val), style = MaterialTheme.typography.bodyMedium, fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace, color = MaterialTheme.colorScheme.primary)
                     
                     Spacer(modifier = Modifier.height(16.dp))
                     
-                    Text("⚠️ SECURITY WARNING:", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.error)
-                    Text("This token grants access to your account data. Do NOT share it with anyone else.", style = MaterialTheme.typography.bodySmall)
-                    Text("This app saves it locally on your device only.", style = MaterialTheme.typography.bodySmall)
+                    Text(stringResource(R.string.onboarding_help_warn), fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.error)
+                    Text(stringResource(R.string.onboarding_help_warn_desc), style = MaterialTheme.typography.bodySmall)
+                    Text(stringResource(R.string.onboarding_help_warn_local), style = MaterialTheme.typography.bodySmall)
 
                     Spacer(modifier = Modifier.height(16.dp))
 
@@ -68,13 +70,13 @@ fun OnboardingScreen(
                         onClick = { uriHandler.openUri("https://modrinth.com/settings/pats") },
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Get Token (modrinth.com)")
+                        Text(stringResource(R.string.onboarding_help_get_token))
                     }
                 }
             },
             confirmButton = {
                 TextButton(onClick = { showModrinthHelp = false }) {
-                    Text("Understood")
+                    Text(stringResource(R.string.onboarding_help_understood))
                 }
             }
         )
@@ -88,7 +90,7 @@ fun OnboardingScreen(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Welcome",
+            text = stringResource(R.string.onboarding_welcome),
             style = MaterialTheme.typography.displayMedium,
             fontWeight = FontWeight.Bold
         )
@@ -103,7 +105,7 @@ fun OnboardingScreen(
             OutlinedTextField(
                 value = modrinthToken,
                 onValueChange = { modrinthToken = it },
-                label = { Text("Modrinth Access Token") }, // Removed "(Optional)"
+                label = { Text(stringResource(R.string.onboarding_modrinth_label)) }, // Removed "(Optional)"
                 modifier = Modifier.weight(1f),
                 singleLine = true
             )
@@ -123,7 +125,7 @@ fun OnboardingScreen(
             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary),
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Connect CurseForge (Login)")
+            Text(stringResource(R.string.onboarding_cf_btn))
         }
         
         Spacer(modifier = Modifier.height(16.dp))
@@ -138,7 +140,7 @@ fun OnboardingScreen(
                 value = "${selectedCurrency.symbol}  ${selectedCurrency.code} - ${selectedCurrency.name}",
                 onValueChange = {},
                 readOnly = true,
-                label = { Text("Preferred Currency") },
+                label = { Text(stringResource(R.string.settings_pref_currency)) },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                 colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(),
                 modifier = Modifier.fillMaxWidth().menuAnchor()
@@ -174,7 +176,7 @@ fun OnboardingScreen(
             },
             modifier = Modifier.fillMaxWidth().height(56.dp)
         ) {
-            Text("Start Tracking")
+            Text(stringResource(R.string.onboarding_start_btn))
         }
     }
 }

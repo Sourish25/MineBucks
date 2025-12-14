@@ -22,7 +22,7 @@ fun RevenueHistoryList(
 ) {
     Column(modifier = modifier) {
         if (history.isEmpty()) {
-            Text("No recent activity.", style = MaterialTheme.typography.bodyMedium)
+            Text(androidx.compose.ui.res.stringResource(com.example.newapp.R.string.no_recent_activity), style = MaterialTheme.typography.bodyMedium)
         } else {
             history.forEach { daily ->
                 HistoryItem(daily, currency)
@@ -53,7 +53,7 @@ fun HistoryItem(daily: DailyRevenue, currency: String) {
                 color = MaterialTheme.colorScheme.onSurface
             )
             Text(
-                text = "Daily Total",
+                text = androidx.compose.ui.res.stringResource(com.example.newapp.R.string.daily_total),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

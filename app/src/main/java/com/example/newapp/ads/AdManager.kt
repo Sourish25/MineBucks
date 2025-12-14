@@ -20,7 +20,8 @@ object AdManager {
 
     fun loadAd(context: Context) {
         val adRequest = AdRequest.Builder().build()
-        RewardedAd.load(context, AD_UNIT_ID, adRequest, object : RewardedAdLoadCallback() {
+        // Use Application Context to avoid leaking Activity if ad loads slowly
+        RewardedAd.load(context.applicationContext, AD_UNIT_ID, adRequest, object : RewardedAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.e(TAG, "Ad failed to load: ${adError.message}")
                 rewardedAd = null

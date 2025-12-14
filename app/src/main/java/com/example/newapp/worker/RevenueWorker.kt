@@ -43,59 +43,56 @@ class RevenueWorker(
                  return Result.failure()
              }
              
-             // Get User ID from saved token (Ideally we saved ID in prefs too, but we can fetch it or use token hash as key if rigorous isolation needed. 
-             // Plan said "Detect User ID change".
-             // We can fetch user again or rely on what's active. 
-             // Repository fetches user profile inside getModrinthRevenue() -> saves to DataStore.
-             // We need a stable ID. Let's use the one from DataStoreUserName for now or fetch it cleanly.
-             // Better: Repository already fetches it. We should assume the CURRENT active token defines the "User".
-             // For now, let's use a hashed token or just "default_user" if we haven't implemented multi-user fully yet. 
-             // Wait, the plan said "userId -> Critical".
-             // Let's grab it from the API call if we can, OR store it in DataStore.
-             // Simplest compliant fix:
-             val user = try { 
-                // We don't expose getUser in repo easily without making another call.
-                // Let's rely on "UserName" from DataStore as the ID key for now? No, unqiue ID is better.
-                // Let's add `saveUserId` to DataStoreManager later. For now, we will assume single active user or use Token hash.
-                // Actually, let's just use "current_user" string or fetch it.
-                 "current_user" 
-             } catch(e: Exception) { "unknown" }
-             
-             // Use stable User ID if possible.
-             // Let's proceed with capturing the snapshot.
-
-            // 3. Get User ID (Updated by repository.getModrinthRevenue)
-            val userId = dataStoreManager.userId.first() ?: "unknown"
+             // 3. Get Robust User ID
+             // Try to get explicit ID (updated by repository), but fallback to Helper.generateUserId(token)
+             // This ensures that even if API fails, we use a consistent ID for this token, preventing data mixing.
+             val userId = dataStoreManager.userId.first() ?: ""
             
-            // 4. Create Snapshot
+            // Generate deterministic ID if missing
+            val cleanUserId = if (userId.isBlank()) {
+                val tokenForHash = dataStoreManager.modrinthToken.first() ?: ""
+                val hash = try {
+                     val digest = java.security.MessageDigest.getInstance("SHA-256")
+                     val bytes = digest.digest(tokenForHash.toByteArray())
+                     // Convert to Hex
+                     bytes.joinToString("") { "%02x".format(it) }
+                } catch (e: Exception) {
+                    "fallback-device-id"
+                }
+                "auto_generated_$hash"
+            } else {
+                userId
+            }
+            
+            // 4. Create Snapshot Object
             val snapshot = RevenueSnapshot(
                 timestamp = System.currentTimeMillis(),
                 modrinthRevenue = modResult.totalAmount,
                 curseForgeRevenue = cfRevenue,
-                currency = dataStoreManager.targetCurrency.first() ?: "USD",
-                userId = userId
+                currency = dataStoreManager.targetCurrency.first(),
+                userId = cleanUserId
             )
             
-            // Check for Increase (Smart Notification)
-            // Fetch the *previous* snapshot for this user
-            // Our DAO has getRecentSnapshots.
-            val recent = revenueDao.getRecentSnapshots(userId, limit = 1).first().firstOrNull()
-            
-            // 3. Save to DB
-            revenueDao.insertSnapshot(snapshot)
-            
-            // WIDGET UPDATE (Passive)
-            updateWidget(applicationContext, snapshot.modrinthRevenue + snapshot.curseForgeRevenue, snapshot.currency)
+            // 5. Smart Save (Debounce)
+            // Fetch the *latest* snapshot for this user to check for changes
+            val lastSnapshot = revenueDao.getLatestSnapshot(userId)
+            val currentTotal = modResult.totalAmount + cfRevenue
+            val lastTotal = (lastSnapshot?.modrinthRevenue ?: 0.0) + (lastSnapshot?.curseForgeRevenue ?: 0.0)
+            val timeDiff = System.currentTimeMillis() - (lastSnapshot?.timestamp ?: 0L)
 
-            // NOTIFICATION (Smart)
-            if (recent != null) {
-                val oldTotal = recent.modrinthRevenue + recent.curseForgeRevenue
-                val newTotal = snapshot.modrinthRevenue + snapshot.curseForgeRevenue
-                if (newTotal > oldTotal) {
-                    val diff = newTotal - oldTotal
+            // Save ONLY if: No previous data OR Value Changed (> 0.001) OR > 1 Hour passed
+            if (lastSnapshot == null || kotlin.math.abs(currentTotal - lastTotal) > 0.001 || timeDiff > 3600000) {
+                revenueDao.insertSnapshot(snapshot)
+                
+                 // NOTIFICATION (Only if increased)
+                if (lastSnapshot != null && currentTotal > lastTotal) {
+                    val diff = currentTotal - lastTotal
                     sendRevenueNotification(applicationContext, diff, snapshot.currency)
                 }
             }
+            
+            // WIDGET UPDATE (Always update widget to show freshness)
+            updateWidget(applicationContext, currentTotal, snapshot.currency)
             
             Result.success()
         } catch (e: Exception) {

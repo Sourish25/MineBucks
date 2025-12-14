@@ -31,6 +31,13 @@ android {
         }
     }
 
+    flavorDimensions += "env"
+    productFlavors {
+        create("prod") {
+            dimension = "env"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -47,6 +54,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.10"
@@ -69,6 +77,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.graphics:graphics-shapes:1.0.0-beta01")
+    implementation("androidx.compose.material:material:1.6.1") // Added for PullRefresh
     
     // Icons
     implementation("androidx.compose.material:material-icons-extended")
