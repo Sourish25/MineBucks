@@ -2,8 +2,22 @@
 
 **Comprehensive Revenue & Analytics Tracker for Minecraft Mod Creators**
 
-MineBucks is an open-source Android utility developed to solve the fragmentation of revenue tracking in the Minecraft modding ecosystem. It automates data retrieval from Modrinth and CurseForge, providing a unified dashboard for creators to monitor their earnings without manual aggregation.
+MineBucks is an open-source Android utility developed to solve the fragmentation of revenue tracking in the Minecraft modding ecosystem. It automates data retrieval from Modrinth and CurseForge, providing a unified dashboard for creators to monitor their earnings without manual aggregation
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><img src="https://github.com/user-attachments/assets/344eb723-ca9c-454a-8323-c01db2f1a178" width="200px;" alt=""/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/dfd4ebea-7a65-4fef-9a8e-a86ff38c4259" width="200px;" alt=""/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/756e29b0-dbcc-4ae2-9042-59b218bd2240" width="200px;" alt=""/></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://github.com/user-attachments/assets/967dfd25-d16f-4d35-a08d-938086c8e850" width="200px;" alt=""/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/be768adb-3938-41cd-a498-745ed8189e19" width="200px;" alt=""/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/4f0ddba6-42bd-40b9-80e1-ac7853aeb64a" width="200px;" alt=""/></td>
+    </tr>
+  </table>
+</div>
 ---
 
 ## 1. Project Origins & The Problem
