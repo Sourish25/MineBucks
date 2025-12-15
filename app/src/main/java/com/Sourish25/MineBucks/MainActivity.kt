@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         
         // Initialize AdMob
-        com.google.android.gms.ads.MobileAds.initialize(this) {}
+        com.Sourish25.MineBucks.ads.AdManager.initialize(this)
         // Preload Ad
         com.Sourish25.MineBucks.ads.AdManager.loadAd(this)
         

@@ -323,19 +323,21 @@ fun DashboardScreen(
             }
             
             // Support Us Pill Button (Ad)
-            item {
-                Spacer(modifier = Modifier.height(8.dp))
-                val thanksText = stringResource(com.Sourish25.MineBucks.R.string.support_us_thanks)
-                SupportUsButton(
-                    onClick = {
-                        val activity = context as? android.app.Activity
-                        if (activity != null) {
-                            com.Sourish25.MineBucks.ads.AdManager.showAd(activity) {
-                                android.widget.Toast.makeText(context, thanksText, android.widget.Toast.LENGTH_LONG).show()
+            if (com.Sourish25.MineBucks.ads.AdManager.areAdsEnabled) {
+                item {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    val thanksText = stringResource(com.Sourish25.MineBucks.R.string.support_us_thanks)
+                    SupportUsButton(
+                        onClick = {
+                            val activity = context as? android.app.Activity
+                            if (activity != null) {
+                                com.Sourish25.MineBucks.ads.AdManager.showAd(activity) {
+                                    android.widget.Toast.makeText(context, thanksText, android.widget.Toast.LENGTH_LONG).show()
+                                }
                             }
                         }
-                    }
-                )
+                    )
+                }
             }
             
             // Developer Links

@@ -10,6 +10,7 @@ import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import com.google.android.gms.ads.MobileAds
 
 object AdManager {
 
@@ -17,6 +18,12 @@ object AdManager {
     // REAL ID for Rewarded Video
     private const val AD_UNIT_ID = "ca-app-pub-2159601373823175/6788941996"
     private const val TAG = "AdManager"
+    const val areAdsEnabled = true
+
+
+    fun initialize(context: Context) {
+        MobileAds.initialize(context) {}
+    }
 
     fun loadAd(context: Context) {
         val adRequest = AdRequest.Builder().build()

@@ -40,10 +40,13 @@ android {
         }
     }
 
-    flavorDimensions += "env"
+    flavorDimensions += "version"
     productFlavors {
         create("prod") {
-            dimension = "env"
+            dimension = "version"
+        }
+        create("foss") {
+            dimension = "version"
         }
     }
 
@@ -125,8 +128,8 @@ dependencies {
     implementation("androidx.glance:glance-appwidget:1.0.0")
     implementation("androidx.glance:glance-material3:1.0.0")
 
-    // Monetization (Ads)
-    implementation("com.google.android.gms:play-services-ads:23.0.0")
+    // Monetization (Ads) - PROD ONLY
+    "prodImplementation"("com.google.android.gms:play-services-ads:23.0.0")
 
 
 
