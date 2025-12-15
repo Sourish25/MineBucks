@@ -6,7 +6,7 @@
   <p><strong>Comprehensive Revenue & Analytics Tracker for Minecraft Mod Creators</strong></p>
   
   <p>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/Sourish25/MineBucks?style=flat-square" alt="License"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/Sourish25/MineBucks?style=flat-square&label=License&color=blue" alt="MIT License"></a>
     <img src="https://img.shields.io/badge/Kotlin-100%25-purple?style=flat-square" alt="Kotlin">
     <img src="https://img.shields.io/badge/Platform-Android-green?style=flat-square" alt="Android">
     <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Status">
