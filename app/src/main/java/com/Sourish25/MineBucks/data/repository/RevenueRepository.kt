@@ -9,9 +9,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 import java.text.SimpleDateFormat
 import java.util.Date
-import com.Sourish25.MineBucks.data.model.ModrinthProject
-import com.Sourish25.MineBucks.data.model.ModrinthAnalytics
-import com.Sourish25.MineBucks.data.api.ModrinthServiceV3
+import com.Sourish25.MineBucks.data.database.RevenueDao
 import com.Sourish25.MineBucks.data.model.ModrinthRevenueAnalyticsResponse
 import java.util.Locale
 
@@ -20,7 +18,7 @@ import java.util.Locale
 class RevenueRepository(
     private val dataSource: RevenueDataSource, // Changed from Service
     private val dataStoreManager: DataStoreManager,
-    private val revenueDao: com.Sourish25.MineBucks.data.database.RevenueDao // NEW
+    private val revenueDao: RevenueDao // NEW
 ) {
     
     private val json = Json { ignoreUnknownKeys = true }

@@ -24,7 +24,7 @@ import com.Sourish25.MineBucks.ui.OnboardingScreen
 import com.Sourish25.MineBucks.ui.CurseForgeLoginScreen
 import com.Sourish25.MineBucks.ui.SettingsScreen
 import com.Sourish25.MineBucks.ui.RevenueViewModel
-import com.Sourish25.MineBucks.ui.theme.NewAppTheme
+import com.Sourish25.MineBucks.ui.theme.MineBucksTheme
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                 else -> isSystemInDarkTheme()
             }
 
-            NewAppTheme(darkTheme = isDarkTheme) {
+            MineBucksTheme(darkTheme = isDarkTheme) {
                 // Scoped WebView State
                 var showWebView by remember { mutableStateOf(false) }
                 // Settings State

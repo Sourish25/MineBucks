@@ -88,7 +88,7 @@ fun DashboardScreen(
                     settings.javaScriptEnabled = true
                     settings.domStorageEnabled = true
                     // Use clean Mobile UA for consistency
-                    settings.userAgentString = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36"
+                    settings.userAgentString = com.Sourish25.MineBucks.util.Constants.UA_MOBILE
                     
                     val cookieManager = android.webkit.CookieManager.getInstance()
                     cookieManager.setAcceptCookie(true)
@@ -557,12 +557,19 @@ fun PlatformCard(
 
 @Composable
 fun WavyGraphCanvas(modifier: Modifier, color: Color, phase: Float) {
+    // Optimization: Reuse Path objects to avoid allocation on every frame
+    val wavePath = remember { Path() }
+    val fillPath = remember { Path() }
+
     Canvas(modifier = modifier) {
         val width = size.width
         val height = size.height
         
+        // Reset before drawing
+        wavePath.reset()
+        fillPath.reset()
+        
         // 1. Calculate the Wave Path (Open)
-        val wavePath = Path()
         
         // Points for the wave
         val points = listOf(0.2f, 0.45f, 0.15f, 0.6f, 0.3f, 0.8f, 0.4f)
@@ -577,8 +584,6 @@ fun WavyGraphCanvas(modifier: Modifier, color: Color, phase: Float) {
             
             val x = index * stepX
             // Invert Y: 0 is top, height is bottom.
-            // We want points to define "how high up from bottom" essentially? 
-            // Let's say point 1.0 = Top(0), Point 0.0 = Bottom(height).
             val y = height - (animatedPoint * height * 0.7f) // Scale height so it doesn't hit top
             
             if (index == 0) {
@@ -597,7 +602,6 @@ fun WavyGraphCanvas(modifier: Modifier, color: Color, phase: Float) {
         }
         
         // 2. Draw Fill (Closed Path)
-        val fillPath = Path()
         fillPath.addPath(wavePath)
         fillPath.lineTo(width, height)
         fillPath.lineTo(0f, height)

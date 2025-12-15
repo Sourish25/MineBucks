@@ -63,12 +63,19 @@ class RevenueWorker(
             }
             
             // 4. Create Snapshot Object
-            // Only create snapshot if we have data
-            if (modResult != null && cfRevenue != null) {
+            // Create snapshot even if partial data exists
+            if (modResult != null || cfRevenue != null) {
+                // If one is missing, treat as 0.0 for storage, but ideally we'd store nulls in DB if defined?
+                // Our snapshot model uses Doubles (non-null in DB usually). 
+                // Let's store 0.0 for missing data to maintain continuity in graph, but it's imperfect.
+                // However, since we are calculating "Total", 0.0 is the correct contribution of a missing source to the SUM.
+                val safeMod = modResult?.totalAmount ?: 0.0
+                val safeCf = cfRevenue ?: 0.0
+                
                 val snapshot = RevenueSnapshot(
                     timestamp = System.currentTimeMillis(),
-                    modrinthRevenue = modResult.totalAmount,
-                    curseForgeRevenue = cfRevenue,
+                    modrinthRevenue = safeMod,
+                    curseForgeRevenue = safeCf,
                     // IMPORTANT: Always store in USD to allow dynamic conversion in UI.
                     // This matches RevenueViewModel behavior.
                     currency = "USD", 
@@ -77,7 +84,7 @@ class RevenueWorker(
                 
                 // 5. Smart Save (Debounce)
                 val lastSnapshot = revenueDao.getLatestSnapshot(userId)
-                val currentTotalUSD = modResult.totalAmount + cfRevenue
+                val currentTotalUSD = safeMod + safeCf
                 val lastTotalUSD = (lastSnapshot?.modrinthRevenue ?: 0.0) + (lastSnapshot?.curseForgeRevenue ?: 0.0)
                 val timeDiff = System.currentTimeMillis() - (lastSnapshot?.timestamp ?: 0L)
     

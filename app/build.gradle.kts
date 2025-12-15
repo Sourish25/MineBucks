@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -25,9 +28,9 @@ android {
     signingConfigs {
         create("release") {
             val keystorePropertiesFile = rootProject.file("local.properties")
-            val keystoreProperties = java.util.Properties()
+            val keystoreProperties = Properties()
             if (keystorePropertiesFile.exists()) {
-                keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
+                keystoreProperties.load(FileInputStream(keystorePropertiesFile))
             }
 
             storeFile = file(keystoreProperties["storeFile"] as String? ?: "release-key.jks")

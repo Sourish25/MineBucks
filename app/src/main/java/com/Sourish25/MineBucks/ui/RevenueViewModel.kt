@@ -3,8 +3,6 @@ package com.Sourish25.MineBucks.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.initializer
-import androidx.lifecycle.viewmodel.viewModelFactory
 import com.Sourish25.MineBucks.data.repository.DataStoreManager
 import com.Sourish25.MineBucks.data.repository.RevenueRepository
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -305,8 +303,12 @@ import androidx.lifecycle.viewmodel.CreationExtras
                 val mod24h = modResult?.last24Hours
                 val cfAmount = cfRevenue
                 
-                // Calculate Total: null if ANY source is null
-                val totalUSD = if (modAmount != null && cfAmount != null) modAmount + cfAmount else null
+                // Calculate Total: Use partial data if available. Only null if BOTH are missing.
+                val totalUSD = if (modAmount == null && cfAmount == null) {
+                    null
+                } else {
+                    (modAmount ?: 0.0) + (cfAmount ?: 0.0)
+                }
                 
                 // Convert (if not null)
                 val totalConverted = if (totalUSD != null) repository.convertCurrency(totalUSD) else null
@@ -322,7 +324,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
                 // 5. SAVE SNAPSHOT (Optimized)
                 val currentUserId = dataStoreManager.userId.first() ?: "unknown"
                 
-                if (currentUserId != "unknown" && modAmount != null && cfAmount != null) {
+                if (currentUserId != "unknown" && (modAmount != null || cfAmount != null)) {
                     // Check last snapshot to avoid spam
                     val lastSnapshot = revenueDao.getLatestSnapshot(currentUserId)
                     val currentTotal = modAmount + cfAmount

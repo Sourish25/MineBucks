@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.NewApp" parent="Theme.AppCompat.NoActionBar" />
+    <style name="Theme.MineBucks" parent="Theme.AppCompat.NoActionBar" />
 </resources>
