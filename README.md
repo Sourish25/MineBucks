@@ -17,7 +17,6 @@
     <img src="https://img.shields.io/badge/Discord-sourish-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord">
   </p>
 
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm95bm84bm95bm84bm95bm84bm95bm84bm95bm84MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/13CoXDiaCcCoyk/giphy.gif" align="right" width="120" alt="Welcome Chibi">
   <img src="docs/screenshots/bannermine.png" alt="MineBucks Dashboard Banner" width="100%" />
 </div>
 
@@ -32,10 +31,6 @@
 ---
 
 ## ✨ Features Showcase
-
-<div align="right">
-  <img src="https://media.giphy.com/media/L765hG0nFZeO4/giphy.gif" width="100" alt="Coding Chibi">
-</div>
 
 ### 📊 Unified Dashboard
 
@@ -192,7 +187,3 @@ MineBucks is built with modern Android development standards, ensuring robustnes
 ## 6. License
 
 This project is open-source under the MIT License. Contributions are welcome, especially regarding parsing logic updates if platform DOMs change.
-
-<div align="center">
-  <img src="https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif" width="150" alt="Bye Chibi">
-</div>
