@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">सेटिंग्स (Settings)</string>
+    <string name="session_expired_title">CurseForge सत्र समाप्त। कृपया सेटिंग्स में पुनः कनेक्ट करें।</string>
+    <string name="total_revenue">कुल राजस्व</string>
+    <string name="last_24h">पिछले 24 घंटे</string>
+    <string name="breakdown">विवरण</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">राजस्व इतिहास</string>
+    <string name="recent_activity">हाल की गतिविधि</string>
+    <string name="no_recent_activity">कोई हालिया गतिविधि नहीं।</string>
+    <string name="support_us_thanks">हमें समर्थन देने के लिए धन्यवाद! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">कोई ग्राफ डेटा उपलब्ध नहीं है</string>
+    <string name="current_week">वर्तमान सप्ताह</string>
+    <string name="weeks_ago">%d सप्ताह पहले</string>
+    <string name="greeting_morning">सुशुभ प्रभात</string>
+    <string name="greeting_afternoon">शुभ अपराह्न</string>
+    <string name="greeting_evening">शुभ संध्या</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">उपस्थिति (Appearance)</string>
+    <string name="settings_general">सामान्य (General)</string>
+    <string name="settings_pref_currency">पसंदीदा मुद्रा</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">डेवलपर के बारे में</string>
+    <string name="settings_token_current">वर्तमान टोकन</string>
+    <string name="settings_token_update">एक्सेस टोकन अपडेट करें</string>
+    <string name="settings_token_placeholder">नया टोकन दर्ज करें</string>
+    <string name="settings_token_btn">टोकन अपडेट करें</string>
+    <string name="settings_token_generate">नया टोकन जनरेट करें</string>
+    <string name="settings_cf_connect">CurseForge खाता कनेक्ट करें</string>
+    <string name="settings_cf_reconnect">पुनः कनेक्ट / ताज़ा करें</string>
+    <string name="settings_cf_connected">कनेक्टेड</string>
+    <string name="settings_cf_points">अंक: %s</string>
+    <string name="settings_cf_logout">लॉग आउट करें</string>
+    <string name="settings_debug_view">डिबग जानकारी देखें</string>
+    <string name="settings_debug_fetch">कच्चा API डेटा लाएं</string>
+    <string name="settings_debug_close">बंद करें</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">सिस्टम</string>
+    <string name="theme_light">लाइट</string>
+    <string name="theme_dark">डार्क</string>
+    <string name="settings_language">भाषा (Language)</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">स्वागत है</string>
+    <string name="onboarding_modrinth_label">Modrinth एक्सेस टोकन</string>
+    <string name="onboarding_cf_btn">CurseForge कनेक्ट करें (लॉगिन)</string>
+    <string name="onboarding_start_btn">ट्रैकिंग शुरू करें</string>
+    <string name="onboarding_help_title">Modrinth टोकन के बारे में</string>
+    <string name="onboarding_help_desc">आपका डेटा दिखाने के लिए हमें अनुमति चाहिए:</string>
+    <string name="onboarding_help_p1">• उपयोगकर्ता डेटा: आपका नाम दिखाने के लिए।</string>
+    <string name="onboarding_help_p2">• भुगतान: राजस्व की गणना के लिए।</string>
+    <string name="onboarding_help_scopes">आवश्यक स्कोप:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ सुरक्षा चेतावनी:</string>
+    <string name="onboarding_help_warn_desc">यह टोकन आपके खाते तक पहुंच देता है। इसे किसी के साथ साझा न करें।</string>
+    <string name="onboarding_help_warn_local">यह ऐप इसे केवल आपके डिवाइस पर स्थानीय रूप से सहेजता है।</string>
+    <string name="onboarding_help_get_token">टोकन प्राप्त करें</string>
+    <string name="onboarding_help_understood">समझ गया</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">लोड हो रहा है...</string>
+    <string name="cf_login_no_title">कोई शीर्षक नहीं</string>
+    <string name="cf_login_exit">बाहर निकलें</string>
+    <string name="cf_login_secure">सुरक्षित</string>
+    <string name="cf_login_tabs">टैब</string>
+    <string name="cf_login_menu">मेनू</string>
+    <string name="cf_login_switch_mobile">मोबाइल साइट पर जाएं</string>
+    <string name="cf_login_switch_desktop">डेस्कटॉप साइट पर जाएं</string>
+    <string name="cf_login_force_zoom_on">फ़ोर्स ज़ूम सक्षम करें (0.5x)</string>
+    <string name="cf_login_force_zoom_off">फ़ोर्स ज़ूम अक्षम करें</string>
+    <string name="cf_login_refresh">ताज़ा करें</string>
+    <string name="cf_login_no_tabs">कोई टैब खुला नहीं है</string>
+    <string name="cf_login_open_btn">CurseForge खोलें</string>
+    <string name="cf_login_rewards_btn">मैं लॉग इन हूँ -> इनाम चेक करें</string>
+    <string name="cf_login_open_tabs">खुले टैब</string>
+    <string name="cf_login_close_tab">टैब बंद करें</string>
+    <string name="cf_login_back_browser">ब्राउज़र पर वापस जाएं</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">अमान्य टोकन। "mrp_" से शुरू होना चाहिए</string>
+    <string name="daily_total">दैनिक कुल</string>
+    <string name="support_us_btn">हमें समर्थन देने के लिए विज्ञापन देखें ❤️</string>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Cài đặt</string>
+    <string name="session_expired_title">Phiên CurseForge đã hết hạn. Vui lòng kết nối lại trong Cài đặt.</string>
+    <string name="total_revenue">Tổng Doanh thu</string>
+    <string name="last_24h">24 giờ qua</string>
+    <string name="breakdown">Chi tiết</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Lịch sử Doanh thu</string>
+    <string name="recent_activity">Hoạt động Gần đây</string>
+    <string name="no_recent_activity">Không có hoạt động gần đây.</string>
+    <string name="support_us_thanks">Cảm ơn bạn đã hỗ trợ! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Không có dữ liệu biểu đồ</string>
+    <string name="current_week">Tuần này</string>
+    <string name="weeks_ago">%d tuần trước</string>
+    <string name="greeting_morning">Chào buổi sáng</string>
+    <string name="greeting_afternoon">Chào buổi chiều</string>
+    <string name="greeting_evening">Chào buổi tối</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Giao diện</string>
+    <string name="settings_general">Chung</string>
+    <string name="settings_pref_currency">Tiền tệ Ưu tiên</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Về Nhà phát triển</string>
+    <string name="settings_token_current">Token Hiện tại</string>
+    <string name="settings_token_update">Cập nhật Token Truy cập</string>
+    <string name="settings_token_placeholder">Nhập token mới</string>
+    <string name="settings_token_btn">Cập nhật Token</string>
+    <string name="settings_token_generate">Tạo Token Mới</string>
+    <string name="settings_cf_connect">Kết nối CurseForge (Đăng nhập)</string>
+    <string name="settings_cf_reconnect">Kết nối lại</string>
+    <string name="settings_cf_connected">Đã kết nối</string>
+    <string name="settings_cf_points">Điểm: %s</string>
+    <string name="settings_cf_logout">Đăng xuất</string>
+    <string name="settings_debug_view">Xem Thông tin Gỡ lỗi</string>
+    <string name="settings_debug_fetch">Tìm nạp Dữ liệu API Thô</string>
+    <string name="settings_debug_close">Đóng</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Hệ thống</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="settings_language">Ngôn ngữ</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Chào mừng</string>
+    <string name="onboarding_modrinth_label">Token Truy cập Modrinth</string>
+    <string name="onboarding_cf_btn">Kết nối CurseForge</string>
+    <string name="onboarding_start_btn">Bắt đầu Theo dõi</string>
+    <string name="onboarding_help_title">Về Modrinth Tokens</string>
+    <string name="onboarding_help_desc">Chúng tôi cần quyền để hiển thị dữ liệu của bạn:</string>
+    <string name="onboarding_help_p1">• Dữ liệu Người dùng: Để hiển thị tên của bạn.</string>
+    <string name="onboarding_help_p2">• Thanh toán: Để tính toán doanh thu.</string>
+    <string name="onboarding_help_scopes">PHẠM VI YÊU CẦU:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ CẢNH BÁO BẢO MẬT:</string>
+    <string name="onboarding_help_warn_desc">Token này cấp quyền truy cập vào tài khoản của bạn. KHÔNG chia sẻ nó.</string>
+    <string name="onboarding_help_warn_local">Ứng dụng này chỉ lưu cục bộ trên thiết bị của bạn.</string>
+    <string name="onboarding_help_get_token">Lấy Token</string>
+    <string name="onboarding_help_understood">Đã hiểu</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Đang tải...</string>
+    <string name="cf_login_no_title">Không có Tiêu đề</string>
+    <string name="cf_login_exit">Thoát</string>
+    <string name="cf_login_secure">An toàn</string>
+    <string name="cf_login_tabs">Thẻ</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Trang web Di động</string>
+    <string name="cf_login_switch_desktop">Trang web Máy tính</string>
+    <string name="cf_login_force_zoom_on">Buộc Thu phóng (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Tắt Thu phóng</string>
+    <string name="cf_login_refresh">Làm mới</string>
+    <string name="cf_login_no_tabs">Không có thẻ nào mở</string>
+    <string name="cf_login_open_btn">Mở CurseForge</string>
+    <string name="cf_login_rewards_btn">Đã đăng nhập -> Kiểm tra Phần thưởng</string>
+    <string name="cf_login_open_tabs">Thẻ Đang mở</string>
+    <string name="cf_login_close_tab">Đóng</string>
+    <string name="cf_login_back_browser">Quay lại Trình duyệt</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Định dạng token không hợp lệ. Phải bắt đầu bằng \"mrp_\"</string>
+    <string name="daily_total">Tổng Hàng ngày</string>
+    <string name="support_us_btn">Xem quảng cáo để ủng hộ chúng tôi ❤️</string>
+</resources>

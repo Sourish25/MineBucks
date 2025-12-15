@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">設定</string>
+    <string name="session_expired_title">CurseForgeセッションの有効期限が切れました。設定で再接続してください。</string>
+    <string name="total_revenue">総収益</string>
+    <string name="last_24h">過去24時間</string>
+    <string name="breakdown">内訳</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">収益履歴</string>
+    <string name="recent_activity">最近のアクティビティ</string>
+    <string name="no_recent_activity">最近のアクティビティはありません。</string>
+    <string name="support_us_thanks">サポートありがとうございます！ ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">グラフデータなし</string>
+    <string name="current_week">今週</string>
+    <string name="weeks_ago">%d週間前</string>
+    <string name="greeting_morning">おはようございます</string>
+    <string name="greeting_afternoon">こんにちは</string>
+    <string name="greeting_evening">こんばんは</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">外観</string>
+    <string name="settings_general">一般</string>
+    <string name="settings_pref_currency">優先通貨</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">開発者について</string>
+    <string name="settings_token_current">現在のトークン</string>
+    <string name="settings_token_update">アクセストークンを更新</string>
+    <string name="settings_token_placeholder">新しいトークンを入力</string>
+    <string name="settings_token_btn">トークンを更新</string>
+    <string name="settings_token_generate">新しいトークンを生成</string>
+    <string name="settings_cf_connect">CurseForgeに接続 (ログイン)</string>
+    <string name="settings_cf_reconnect">再接続 / セッション更新</string>
+    <string name="settings_cf_connected">接続済み</string>
+    <string name="settings_cf_points">ポイント: %s</string>
+    <string name="settings_cf_logout">ログアウト</string>
+    <string name="settings_debug_view">デバッグ情報を表示</string>
+    <string name="settings_debug_fetch">生のAPIデータを取得</string>
+    <string name="settings_debug_close">閉じる</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">システム</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="settings_language">言語</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">ようこそ</string>
+    <string name="onboarding_modrinth_label">Modrinthアクセストークン</string>
+    <string name="onboarding_cf_btn">CurseForgeに接続</string>
+    <string name="onboarding_start_btn">追跡を開始</string>
+    <string name="onboarding_help_title">Modrinthトークンについて</string>
+    <string name="onboarding_help_desc">データを表示するには権限が必要です：</string>
+    <string name="onboarding_help_p1">• ユーザーデータ：名前を表示するため。</string>
+    <string name="onboarding_help_p2">• 支払い：収益を計算するため。</string>
+    <string name="onboarding_help_scopes">必要なスコープ：</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ セキュリティ警告：</string>
+    <string name="onboarding_help_warn_desc">このトークンはアカウントへのアクセス権を与えます。共有しないでください。</string>
+    <string name="onboarding_help_warn_local">このアプリはデバイス内にのみローカル保存します。</string>
+    <string name="onboarding_help_get_token">トークンを取得</string>
+    <string name="onboarding_help_understood">理解しました</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">読み込み中...</string>
+    <string name="cf_login_no_title">タイトルなし</string>
+    <string name="cf_login_exit">終了</string>
+    <string name="cf_login_secure">安全</string>
+    <string name="cf_login_tabs">タブ</string>
+    <string name="cf_login_menu">メニュー</string>
+    <string name="cf_login_switch_mobile">モバイルサイト</string>
+    <string name="cf_login_switch_desktop">デスクトップサイト</string>
+    <string name="cf_login_force_zoom_on">強制ズーム有効 (0.5x)</string>
+    <string name="cf_login_force_zoom_off">強制ズーム無効</string>
+    <string name="cf_login_refresh">更新</string>
+    <string name="cf_login_no_tabs">開いているタブはありません</string>
+    <string name="cf_login_open_btn">CurseForgeを開く</string>
+    <string name="cf_login_rewards_btn">ログイン済み -> 報酬を確認</string>
+    <string name="cf_login_open_tabs">開いているタブ</string>
+    <string name="cf_login_close_tab">閉じる</string>
+    <string name="cf_login_back_browser">ブラウザに戻る</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">無効なトークン形式です。\"mrp_\"で始まる必要があります。</string>
+    <string name="daily_total">毎日の合計</string>
+    <string name="support_us_btn">広告を見てサポート ❤️</string>
+</resources>

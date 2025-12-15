@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Setyansow</string>
+    <string name="session_expired_title">CurseForge session expired. Please reconnect in Settings.</string>
+    <string name="total_revenue">Somm an Hosta</string>
+    <string name="last_24h">24h Diwettha</string>
+    <string name="breakdown">Manylyon</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Istori Hosta</string>
+    <string name="recent_activity">Oberth Nevedh</string>
+    <string name="no_recent_activity">Nagonan oberth nevedh.</string>
+    <string name="support_us_thanks">Meur ras a\'gas skoodhyans! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Nagonan data chart</string>
+    <string name="current_week">Seythun Ma</string>
+    <string name="weeks_ago">%d Seythun(yow) Alebma</string>
+    <string name="greeting_morning">Myttin Da</string>
+    <string name="greeting_afternoon">Dohajydh Da</string>
+    <string name="greeting_evening">Gorthugher Da</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Mir</string>
+    <string name="settings_general">Ollgemmyn</string>
+    <string name="settings_pref_currency">Pita Gwell</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Adro dhe\'n Dhisplegyer</string>
+    <string name="settings_token_current">Token A-lemmyn</string>
+    <string name="settings_token_update">Nowedhi Token</string>
+    <string name="settings_token_placeholder">Keworra token nowydh</string>
+    <string name="settings_token_btn">Nowedhi Token</string>
+    <string name="settings_token_generate">Gul Token Nowydh</string>
+    <string name="settings_cf_connect">Kelmi Kont CurseForge</string>
+    <string name="settings_cf_reconnect">Das-kelmi</string>
+    <string name="settings_cf_connected">Kelmies</string>
+    <string name="settings_cf_points">Poyntow: %s</string>
+    <string name="settings_cf_logout">Digelmi</string>
+    <string name="settings_debug_view">Gweles Info Debug</string>
+    <string name="settings_debug_fetch">Kavoes Data API</string>
+    <string name="settings_debug_close">Degea</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Golow</string>
+    <string name="theme_dark">Tewl</string>
+    <string name="settings_language">Yeth</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Dynnargh</string>
+    <string name="onboarding_modrinth_label">Modrinth Access Token</string>
+    <string name="onboarding_cf_btn">Kelmi CurseForge (Login)</string>
+    <string name="onboarding_start_btn">Dalleth</string>
+    <string name="onboarding_help_title">Adro dhe Modrinth Tokens</string>
+    <string name="onboarding_help_desc">Ni a vynn kummyas:</string>
+    <string name="onboarding_help_p1">• Data Usyer: Rag gweles agas hanow.</string>
+    <string name="onboarding_help_p2">• Talasow: Rag rekna hosta.</string>
+    <string name="onboarding_help_scopes">SCOPES:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ WARN:</string>
+    <string name="onboarding_help_warn_desc">An token ma a re kummyas dhe\'gas kont. NA wra y ranna.</string>
+    <string name="onboarding_help_warn_local">An app ma a y\'n gwith yn leel.</string>
+    <string name="onboarding_help_get_token">Kavoes Token</string>
+    <string name="onboarding_help_understood">Konvedhys</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Karga...</string>
+    <string name="cf_login_no_title">Na Titel</string>
+    <string name="cf_login_exit">Mos Mes</string>
+    <string name="cf_login_secure">Diogel</string>
+    <string name="cf_login_tabs">Tabs</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Gwiasva Plegadow</string>
+    <string name="cf_login_switch_desktop">Gwiasva Desktop</string>
+    <string name="cf_login_force_zoom_on">Gweithhe Zoom (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Anweithhe Zoom</string>
+    <string name="cf_login_refresh">Nowedhi</string>
+    <string name="cf_login_no_tabs">Nagonan Tabs</string>
+    <string name="cf_login_open_btn">Ygeri CurseForge</string>
+    <string name="cf_login_rewards_btn">Check Rewards</string>
+    <string name="cf_login_open_tabs">Tabs Ygerys</string>
+    <string name="cf_login_close_tab">Degea</string>
+    <string name="cf_login_back_browser">Dehweles</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Token drog. Res yw dalleth gans \"mrp_\"</string>
+    <string name="daily_total">Somm Dedhyek</string>
+    <string name="support_us_btn">Mir Ad rag Skoodhya ❤️</string>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Mga Setting</string>
+    <string name="session_expired_title">Nag-expire ang session ng CurseForge. Mangyaring kumonekta muli sa Mga Setting.</string>
+    <string name="total_revenue">Kabuuang Kita</string>
+    <string name="last_24h">Huling 24 oras</string>
+    <string name="breakdown">Pagkakahati-hati</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Kasaysayan ng Kita</string>
+    <string name="recent_activity">Kamakailang Aktibidad</string>
+    <string name="no_recent_activity">Walang kamakailang aktibidad.</string>
+    <string name="support_us_thanks">Salamat sa iyong suporta! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Walang data ng graph</string>
+    <string name="current_week">Linggong ito</string>
+    <string name="weeks_ago">%d linggo na ang nakalipas</string>
+    <string name="greeting_morning">Magandang umaga</string>
+    <string name="greeting_afternoon">Magandang hapon</string>
+    <string name="greeting_evening">Magandang gabi</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Hitsura</string>
+    <string name="settings_general">Pangkalahatan</string>
+    <string name="settings_pref_currency">Piniling Pera</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Tungkol sa Developer</string>
+    <string name="settings_token_current">Kasalukuyang Token</string>
+    <string name="settings_token_update">I-update ang Access Token</string>
+    <string name="settings_token_placeholder">Ilagay ang bagong token</string>
+    <string name="settings_token_btn">I-update ang Token</string>
+    <string name="settings_token_generate">Gumawa ng Bagong Token</string>
+    <string name="settings_cf_connect">Ikonekta ang CurseForge (Login)</string>
+    <string name="settings_cf_reconnect">Ikonekta Muli</string>
+    <string name="settings_cf_connected">Konektado</string>
+    <string name="settings_cf_points">Mga Puntos: %s</string>
+    <string name="settings_cf_logout">Mag-logout</string>
+    <string name="settings_debug_view">Tingnan ang Debug Info</string>
+    <string name="settings_debug_fetch">Kunin ang Raw API Data</string>
+    <string name="settings_debug_close">Isara</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Maliwanag</string>
+    <string name="theme_dark">Madilim</string>
+    <string name="settings_language">Wika</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Maligayang Pagdating</string>
+    <string name="onboarding_modrinth_label">Modrinth Access Token</string>
+    <string name="onboarding_cf_btn">Ikonekta ang CurseForge</string>
+    <string name="onboarding_start_btn">Simulan ang Pagsubaybay</string>
+    <string name="onboarding_help_title">Tungkol sa Modrinth Tokens</string>
+    <string name="onboarding_help_desc">Kailangan namin ng pahintulot upang ipakita ang iyong data:</string>
+    <string name="onboarding_help_p1">• User Data: Upang ipakita ang iyong pangalan.</string>
+    <string name="onboarding_help_p2">• Payouts: Upang kalkulahin ang kita.</string>
+    <string name="onboarding_help_scopes">KAILANGANG SCOPES:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ BABALA SA SEGURIDAD:</string>
+    <string name="onboarding_help_warn_desc">Ang token na ito ay nagbibigay ng access sa iyong account. HUWAG ibahagi.</string>
+    <string name="onboarding_help_warn_local">Isinisave lang ito ng app na ito sa iyong device.</string>
+    <string name="onboarding_help_get_token">Kumuha ng Token</string>
+    <string name="onboarding_help_understood">Naintindihan</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Naglo-load...</string>
+    <string name="cf_login_no_title">Walang Pamagat</string>
+    <string name="cf_login_exit">Lumabas</string>
+    <string name="cf_login_secure">Ligtas</string>
+    <string name="cf_login_tabs">Mga Tab</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Mobile Site</string>
+    <string name="cf_login_switch_desktop">Desktop Site</string>
+    <string name="cf_login_force_zoom_on">Pilitin ang Zoom (0.5x)</string>
+    <string name="cf_login_force_zoom_off">I-disable ang Zoom</string>
+    <string name="cf_login_refresh">I-refresh</string>
+    <string name="cf_login_no_tabs">Walang bukas na tab</string>
+    <string name="cf_login_open_btn">Buksan ang CurseForge</string>
+    <string name="cf_login_rewards_btn">Naka-login -> Tingnan ang Rewards</string>
+    <string name="cf_login_open_tabs">Mga Bukas na Tab</string>
+    <string name="cf_login_close_tab">Isara</string>
+    <string name="cf_login_back_browser">Bumalik sa Browser</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Hindi wasto ang format ng token. Dapat magsimula sa \"mrp_\"</string>
+    <string name="daily_total">Pang-araw-araw na Kabuuan</string>
+    <string name="support_us_btn">Manood ng ad para suportahan kami ❤️</string>
+</resources>

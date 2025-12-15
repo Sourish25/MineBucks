@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="session_expired_title">Η συνεδρία CurseForge έληξε. Παρακαλώ επανασυνδεθείτε στις ρυθμίσεις.</string>
+    <string name="total_revenue">Συνολικά Έσοδα</string>
+    <string name="last_24h">Τελευταίες 24ώρες</string>
+    <string name="breakdown">Ανάλυση</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Ιστορικό Εσόδων</string>
+    <string name="recent_activity">Πρόσφατη Δραστηριότητα</string>
+    <string name="no_recent_activity">Καμία πρόσφατη δραστηριότητα.</string>
+    <string name="support_us_thanks">Ευχαριστούμε για την υποστήριξη! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Δεν υπάρχουν δεδομένα γραφήματος</string>
+    <string name="current_week">Τρέχουσα Εβδομάδα</string>
+    <string name="weeks_ago">%d εβδομάδες πριν</string>
+    <string name="greeting_morning">Καλημέρα</string>
+    <string name="greeting_afternoon">Καλησπέρα</string>
+    <string name="greeting_evening">Καλησπέρα</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Εμφάνιση</string>
+    <string name="settings_general">Γενικά</string>
+    <string name="settings_pref_currency">Προτιμώμενο Νόμισμα</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Σχετικά με τον προγραμματιστή</string>
+    <string name="settings_token_current">Τρέχον Token</string>
+    <string name="settings_token_update">Ενημέρωση Token Πρόσβασης</string>
+    <string name="settings_token_placeholder">Εισάγετε νέο token</string>
+    <string name="settings_token_btn">Ενημέρωση Token</string>
+    <string name="settings_token_generate">Δημιουργία Νέου Token</string>
+    <string name="settings_cf_connect">Σύνδεση CurseForge (Login)</string>
+    <string name="settings_cf_reconnect">Επανασύνδεση</string>
+    <string name="settings_cf_connected">Συνδεδεμένος</string>
+    <string name="settings_cf_points">Πόντοι: %s</string>
+    <string name="settings_cf_logout">Αποσύνδεση</string>
+    <string name="settings_debug_view">Προβολή Πληροφοριών Debug</string>
+    <string name="settings_debug_fetch">Λήψη Δεδομένων API</string>
+    <string name="settings_debug_close">Κλείσιμο</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Σύστημα</string>
+    <string name="theme_light">Φωτεινό</string>
+    <string name="theme_dark">Σκοτεινό</string>
+    <string name="settings_language">Γλώσσα</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Καλώς ήρθατε</string>
+    <string name="onboarding_modrinth_label">Token Πρόσβασης Modrinth</string>
+    <string name="onboarding_cf_btn">Σύνδεση CurseForge</string>
+    <string name="onboarding_start_btn">Έναρξη Παρακολούθησης</string>
+    <string name="onboarding_help_title">Σχετικά με τα Modrinth Tokens</string>
+    <string name="onboarding_help_desc">Χρειαζόμαστε άδεια για να εμφανίσουμε τα δεδομένα σας:</string>
+    <string name="onboarding_help_p1">• Στοιχεία Χρήστη: Για εμφάνιση ονόματος.</string>
+    <string name="onboarding_help_p2">• Πληρωμές: Για υπολογισμό εσόδων.</string>
+    <string name="onboarding_help_scopes">ΑΠΑΙΤΟΥΜΕΝΑ ΠΕΔΙΑ:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ ΠΡΟΕΙΔΟΠΟΙΗΣΗ ΑΣΦΑΛΕΙΑΣ:</string>
+    <string name="onboarding_help_warn_desc">Αυτό το token παρέχει πρόσβαση στον λογαριασμό σας. ΜΗΝ το μοιράζεστε.</string>
+    <string name="onboarding_help_warn_local">Αυτή η εφαρμογή το αποθηκεύει μόνο τοπικά.</string>
+    <string name="onboarding_help_get_token">Λήψη Token</string>
+    <string name="onboarding_help_understood">Κατανοητό</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Φόρτωση...</string>
+    <string name="cf_login_no_title">Χωρίς Τίτλο</string>
+    <string name="cf_login_exit">Έξοδος</string>
+    <string name="cf_login_secure">Ασφαλές</string>
+    <string name="cf_login_tabs">Καρτέλες</string>
+    <string name="cf_login_menu">Μενού</string>
+    <string name="cf_login_switch_mobile">Έκδοση για Κινήτα</string>
+    <string name="cf_login_switch_desktop">Έκδοση για Υπολογιστές</string>
+    <string name="cf_login_force_zoom_on">Ενεργοποίηση Zoom (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Απενεργοποίηση Zoom</string>
+    <string name="cf_login_refresh">Ανανέωση</string>
+    <string name="cf_login_no_tabs">Καμία ανοιχτή καρτέλα</string>
+    <string name="cf_login_open_btn">Άνοιγμα CurseForge</string>
+    <string name="cf_login_rewards_btn">Συνδέθηκα -> Έλεγχος Ανταμοιβών</string>
+    <string name="cf_login_open_tabs">Ανοιχτές Καρτέλες</string>
+    <string name="cf_login_close_tab">Κλείσιμο</string>
+    <string name="cf_login_back_browser">Πίσω στον Browser</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Μη έγκυρη μορφή token. Πρέπει να ξεκινά με \"mrp_\"</string>
+    <string name="daily_total">Ημερήσιο Σύνολο</string>
+    <string name="support_us_btn">Δείτε διαφήμιση για υποστήριξη ❤️</string>
+</resources>

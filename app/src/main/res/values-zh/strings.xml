@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">设置</string>
+    <string name="session_expired_title">CurseForge 会话已过期。请在设置中重新连接。</string>
+    <string name="total_revenue">总收入</string>
+    <string name="last_24h">过去 24 小时</string>
+    <string name="breakdown">明细</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">收入历史</string>
+    <string name="recent_activity">近期活动</string>
+    <string name="no_recent_activity">暂无近期活动。</string>
+    <string name="support_us_thanks">感谢您的支持！ ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">暂无图表数据</string>
+    <string name="current_week">本周</string>
+    <string name="weeks_ago">%d 周前</string>
+    <string name="greeting_morning">早上好</string>
+    <string name="greeting_afternoon">下午好</string>
+    <string name="greeting_evening">晚上好</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">外观</string>
+    <string name="settings_general">通用</string>
+    <string name="settings_pref_currency">首选货币</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">关于开发者</string>
+    <string name="settings_token_current">当前 Token</string>
+    <string name="settings_token_update">更新访问 Token</string>
+    <string name="settings_token_placeholder">输入新 Token</string>
+    <string name="settings_token_btn">更新 Token</string>
+    <string name="settings_token_generate">生成新 Token</string>
+    <string name="settings_cf_connect">连接 CurseForge 账号</string>
+    <string name="settings_cf_reconnect">重新连接 / 刷新会话</string>
+    <string name="settings_cf_connected">已连接</string>
+    <string name="settings_cf_points">点数：%s</string>
+    <string name="settings_cf_logout">注销</string>
+    <string name="settings_debug_view">查看调试信息</string>
+    <string name="settings_debug_fetch">获取原始 API 数据</string>
+    <string name="settings_debug_close">关闭</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">系统默认</string>
+    <string name="theme_light">亮色</string>
+    <string name="theme_dark">暗色</string>
+    <string name="settings_language">语言</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">欢迎</string>
+    <string name="onboarding_modrinth_label">Modrinth 访问 Token</string>
+    <string name="onboarding_cf_btn">连接 CurseForge (登录)</string>
+    <string name="onboarding_start_btn">开始追踪</string>
+    <string name="onboarding_help_title">关于 Modrinth Token</string>
+    <string name="onboarding_help_desc">我们需要特定权限来显示您的数据：</string>
+    <string name="onboarding_help_p1">• 用户数据：显示您的用户名。</string>
+    <string name="onboarding_help_p2">• 支付信息：计算您的收入。</string>
+    <string name="onboarding_help_scopes">所需权限范围 (Scopes)：</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ 安全警告：</string>
+    <string name="onboarding_help_warn_desc">此 Token 授予对您账户的访问权限。请勿与他人分享。</string>
+    <string name="onboarding_help_warn_local">此应用仅将其保存在您的设备本地。</string>
+    <string name="onboarding_help_get_token">获取 Token</string>
+    <string name="onboarding_help_understood">明白</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">加载中...</string>
+    <string name="cf_login_no_title">无标题</string>
+    <string name="cf_login_exit">退出</string>
+    <string name="cf_login_secure">安全</string>
+    <string name="cf_login_tabs">标签页</string>
+    <string name="cf_login_menu">菜单</string>
+    <string name="cf_login_switch_mobile">切换到移动版</string>
+    <string name="cf_login_switch_desktop">切换到桌面版</string>
+    <string name="cf_login_force_zoom_on">启用强制缩放 (0.5x)</string>
+    <string name="cf_login_force_zoom_off">禁用强制缩放</string>
+    <string name="cf_login_refresh">刷新</string>
+    <string name="cf_login_no_tabs">无标签页</string>
+    <string name="cf_login_open_btn">打开 CurseForge</string>
+    <string name="cf_login_rewards_btn">已登录 -> 查看奖励</string>
+    <string name="cf_login_open_tabs">已打开的标签页</string>
+    <string name="cf_login_close_tab">关闭</string>
+    <string name="cf_login_back_browser">返回浏览器</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Token 格式无效。必须以 \"mrp_\" 开头</string>
+    <string name="daily_total">每日总计</string>
+    <string name="support_us_btn">观看广告支持我们 ❤️</string>
+</resources>

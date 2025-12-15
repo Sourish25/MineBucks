@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">설정</string>
+    <string name="session_expired_title">CurseForge 세션이 만료되었습니다. 설정에서 다시 연결해주세요.</string>
+    <string name="total_revenue">총 수익</string>
+    <string name="last_24h">최근 24시간</string>
+    <string name="breakdown">상세 내역</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">수익 기록</string>
+    <string name="recent_activity">최근 활동</string>
+    <string name="no_recent_activity">최근 활동이 없습니다.</string>
+    <string name="support_us_thanks">지원해주셔서 감사합니다! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">그래프 데이터 없음</string>
+    <string name="current_week">이번 주</string>
+    <string name="weeks_ago">%d주 전</string>
+    <string name="greeting_morning">좋은 아침입니다</string>
+    <string name="greeting_afternoon">좋은 오후입니다</string>
+    <string name="greeting_evening">좋은 저녁입니다</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">화면 설정</string>
+    <string name="settings_general">일반</string>
+    <string name="settings_pref_currency">선호 통화</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">개발자 정보</string>
+    <string name="settings_token_current">현재 토큰</string>
+    <string name="settings_token_update">액세스 토큰 업데이트</string>
+    <string name="settings_token_placeholder">새 토큰 입력</string>
+    <string name="settings_token_btn">토큰 업데이트</string>
+    <string name="settings_token_generate">새 토큰 생성</string>
+    <string name="settings_cf_connect">CurseForge 연결 (로그인)</string>
+    <string name="settings_cf_reconnect">다시 연결</string>
+    <string name="settings_cf_connected">연결됨</string>
+    <string name="settings_cf_points">포인트: %s</string>
+    <string name="settings_cf_logout">로그아웃</string>
+    <string name="settings_debug_view">디버그 정보 보기</string>
+    <string name="settings_debug_fetch">원본 API 데이터 가져오기</string>
+    <string name="settings_debug_close">닫기</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">시스템 설정</string>
+    <string name="theme_light">라이트 모드</string>
+    <string name="theme_dark">다크 모드</string>
+    <string name="settings_language">언어</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">환영합니다</string>
+    <string name="onboarding_modrinth_label">Modrinth 액세스 토큰</string>
+    <string name="onboarding_cf_btn">CurseForge 연결</string>
+    <string name="onboarding_start_btn">추적 시작</string>
+    <string name="onboarding_help_title">Modrinth 토큰 정보</string>
+    <string name="onboarding_help_desc">데이터를 표시하려면 권한이 필요합니다:</string>
+    <string name="onboarding_help_p1">• 사용자 데이터: 이름 표시용.</string>
+    <string name="onboarding_help_p2">• 지급 내역: 수익 계산용.</string>
+    <string name="onboarding_help_scopes">필요한 권한:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ 보안 경고:</string>
+    <string name="onboarding_help_warn_desc">이 토큰은 계정 액세스 권한을 부여합니다. 절대 공유하지 마세요.</string>
+    <string name="onboarding_help_warn_local">이 앱은 기기에만 로컬로 저장합니다.</string>
+    <string name="onboarding_help_get_token">토큰 발급받기</string>
+    <string name="onboarding_help_understood">확인</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">로딩 중...</string>
+    <string name="cf_login_no_title">제목 없음</string>
+    <string name="cf_login_exit">나가기</string>
+    <string name="cf_login_secure">보안 연결</string>
+    <string name="cf_login_tabs">탭</string>
+    <string name="cf_login_menu">메뉴</string>
+    <string name="cf_login_switch_mobile">모바일 사이트</string>
+    <string name="cf_login_switch_desktop">데스크톱 사이트</string>
+    <string name="cf_login_force_zoom_on">강제 줌 켜기 (0.5x)</string>
+    <string name="cf_login_force_zoom_off">강제 줌 끄기</string>
+    <string name="cf_login_refresh">새로고침</string>
+    <string name="cf_login_no_tabs">열린 탭 없음</string>
+    <string name="cf_login_open_btn">CurseForge 열기</string>
+    <string name="cf_login_rewards_btn">로그인됨 -> 보상 확인</string>
+    <string name="cf_login_open_tabs">열린 탭</string>
+    <string name="cf_login_close_tab">닫기</string>
+    <string name="cf_login_back_browser">브라우저로 돌아가기</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">토큰 형식이 잘못되었습니다. \"mrp_\"로 시작해야 합니다.</string>
+    <string name="daily_total">일일 합계</string>
+    <string name="support_us_btn">광고 보고 후원하기 ❤️</string>
+</resources>

@@ -6,15 +6,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.newapp"
+    namespace = "com.Sourish25.MineBucks"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.newapp"
+        applicationId = "com.Sourish25.MineBucks"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -24,10 +24,16 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("release-key.jks")
-            storePassword = "password"
-            keyAlias = "key0"
-            keyPassword = "password"
+            val keystorePropertiesFile = rootProject.file("local.properties")
+            val keystoreProperties = java.util.Properties()
+            if (keystorePropertiesFile.exists()) {
+                keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
+            }
+
+            storeFile = file(keystoreProperties["storeFile"] as String? ?: "release-key.jks")
+            storePassword = keystoreProperties["storePassword"] as String? ?: ""
+            keyAlias = keystoreProperties["keyAlias"] as String? ?: "key0"
+            keyPassword = keystoreProperties["keyPassword"] as String? ?: ""
         }
     }
 
@@ -68,6 +74,7 @@ android {
 
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1") // Added for LocaleManager
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")

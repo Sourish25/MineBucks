@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Параметрлер</string>
+    <string name="session_expired_title">CurseForge сессиясы аяқталды. Параметрлерде қайта қосылыңыз.</string>
+    <string name="total_revenue">Жалпы табыс</string>
+    <string name="last_24h">Соңғы 24 сағат</string>
+    <string name="breakdown">Мәліметтер</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Табыс тарихы</string>
+    <string name="recent_activity">Соңғы белсенділік</string>
+    <string name="no_recent_activity">Соңғы белсенділік жоқ.</string>
+    <string name="support_us_thanks">Қолдауыңызға рақмет! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">График деректері жоқ</string>
+    <string name="current_week">Осы апта</string>
+    <string name="weeks_ago">%d апта бұрын</string>
+    <string name="greeting_morning">Қайырлы таң</string>
+    <string name="greeting_afternoon">Қайырлы күн</string>
+    <string name="greeting_evening">Қайырлы кеш</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Сыртқы түрі</string>
+    <string name="settings_general">Жалпы</string>
+    <string name="settings_pref_currency">Қалаулы валюта</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Әзірлеуші туралы</string>
+    <string name="settings_token_current">Ағымдағы токен</string>
+    <string name="settings_token_update">Қол жеткізу токенін жаңарту</string>
+    <string name="settings_token_placeholder">Жаңа токенді енгізіңіз</string>
+    <string name="settings_token_btn">Токенді жаңарту</string>
+    <string name="settings_token_generate">Жаңа токен жасау</string>
+    <string name="settings_cf_connect">CurseForge қосу (Login)</string>
+    <string name="settings_cf_reconnect">Қайта қосылу</string>
+    <string name="settings_cf_connected">Қосылды</string>
+    <string name="settings_cf_points">Ұпайлар: %s</string>
+    <string name="settings_cf_logout">Шығу</string>
+    <string name="settings_debug_view">Түзету ақпаратын қарау</string>
+    <string name="settings_debug_fetch">Шикі API деректерін алу</string>
+    <string name="settings_debug_close">Жабу</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Жүйе</string>
+    <string name="theme_light">Ашық</string>
+    <string name="theme_dark">Күңгірт</string>
+    <string name="settings_language">Тіл</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Қош келдіңіз</string>
+    <string name="onboarding_modrinth_label">Modrinth қол жеткізу токені</string>
+    <string name="onboarding_cf_btn">CurseForge қосу</string>
+    <string name="onboarding_start_btn">Бақылауды бастау</string>
+    <string name="onboarding_help_title">Modrinth Токендері туралы</string>
+    <string name="onboarding_help_desc">Деректеріңізді көрсету үшін рұқсат қажет:</string>
+    <string name="onboarding_help_p1">• Пайдаланушы деректері: Атыңызды көрсету үшін.</string>
+    <string name="onboarding_help_p2">• Төлемдер: Табысты есептеу үшін.</string>
+    <string name="onboarding_help_scopes">ҚАЖЕТТІ АУҚЫМДАР:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ ҚАУІПСІЗДІК ЕСКЕРТУІ:</string>
+    <string name="onboarding_help_warn_desc">Бұл токен есептік жазбаңызға қол жеткізуге мүмкіндік береді. Оны БӨЛІСПЕҢІЗ.</string>
+    <string name="onboarding_help_warn_local">Бұл қолданба оны тек құрылғыңызда жергілікті түрде сақтайды.</string>
+    <string name="onboarding_help_get_token">Токенді алу</string>
+    <string name="onboarding_help_understood">Түсіндім</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Жүктелуде...</string>
+    <string name="cf_login_no_title">Тақырыпсыз</string>
+    <string name="cf_login_exit">Шығу</string>
+    <string name="cf_login_secure">Қауіпсіз</string>
+    <string name="cf_login_tabs">Қойындылар</string>
+    <string name="cf_login_menu">Мәзір</string>
+    <string name="cf_login_switch_mobile">Мобильді сайт</string>
+    <string name="cf_login_switch_desktop">Жұмыс үстелі сайты</string>
+    <string name="cf_login_force_zoom_on">Масштабтауды мәжбүрлеу (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Масштабтауды өшіру</string>
+    <string name="cf_login_refresh">Жаңарту</string>
+    <string name="cf_login_no_tabs">Ашық қойындылар жоқ</string>
+    <string name="cf_login_open_btn">CurseForge ашу</string>
+    <string name="cf_login_rewards_btn">Кірдім -> Марапаттарды тексеру</string>
+    <string name="cf_login_open_tabs">Ашық қойындылар</string>
+    <string name="cf_login_close_tab">Жабу</string>
+    <string name="cf_login_back_browser">Браузерге оралу</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Токен пішімі жарамсыз. \"mrp_\" деп басталуы керек</string>
+    <string name="daily_total">Күнделікті жиынтық</string>
+    <string name="support_us_btn">Бізді қолдау үшін жарнама көріңіз ❤️</string>
+</resources>

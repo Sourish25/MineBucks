@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">الإعدادات</string>
+    <string name="session_expired_title">انتهت جلسة CurseForge. يرجى إعادة الاتصال في الإعدادات.</string>
+    <string name="total_revenue">إجمالي الإيرادات</string>
+    <string name="last_24h">آخر 24 ساعة</string>
+    <string name="breakdown">التفاصيل</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">سجل الإيرادات</string>
+    <string name="recent_activity">النشاط الأخير</string>
+    <string name="no_recent_activity">لا يوجد نشاط حديث.</string>
+    <string name="support_us_thanks">شكراً لدعمك! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">لا تتوفر بيانات الرسم البياني</string>
+    <string name="current_week">الأسبوع الحالي</string>
+    <string name="weeks_ago">قبل %d أسبوع</string>
+    <string name="greeting_morning">صباح الخير</string>
+    <string name="greeting_afternoon">طاب مساؤك</string>
+    <string name="greeting_evening">مساء الخير</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">المظهر</string>
+    <string name="settings_general">عام</string>
+    <string name="settings_pref_currency">العملة المفضلة</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">عن المطور</string>
+    <string name="settings_token_current">الرمز الحالي</string>
+    <string name="settings_token_update">تحديث رمز الوصول</string>
+    <string name="settings_token_placeholder">أدخل الرمز الجديد</string>
+    <string name="settings_token_btn">تحديث الرمز</string>
+    <string name="settings_token_generate">إنشاء رمز جديد</string>
+    <string name="settings_cf_connect">ربط حساب CurseForge</string>
+    <string name="settings_cf_reconnect">إعادة الاتصال / تحديث الجلسة</string>
+    <string name="settings_cf_connected">متصل</string>
+    <string name="settings_cf_points">النقاط: %s</string>
+    <string name="settings_cf_logout">تسجيل الخروج</string>
+    <string name="settings_debug_view">عرض معلومات التصحيح</string>
+    <string name="settings_debug_fetch">جلب بيانات API الخام</string>
+    <string name="settings_debug_close">إغلاق</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="settings_language">اللغة</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">أهلاً بك</string>
+    <string name="onboarding_modrinth_label">رمز وصول Modrinth</string>
+    <string name="onboarding_cf_btn">الاتصال بـ CurseForge (تسجيل الدخول)</string>
+    <string name="onboarding_start_btn">بدء التتبع</string>
+    <string name="onboarding_help_title">حول رموز Modrinth</string>
+    <string name="onboarding_help_desc">نحتاج إلى أذونات محددة لعرض بياناتك:</string>
+    <string name="onboarding_help_p1">• بيانات المستخدم: لعرض اسمك.</string>
+    <string name="onboarding_help_p2">• المدفوعات: لحساب الإيرادات.</string>
+    <string name="onboarding_help_scopes">النطاقات المطلوبة:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ تحذير أمني:</string>
+    <string name="onboarding_help_warn_desc">يمنح هذا الرمز الوصول إلى حسابك. لا تشاركه مع أي شخص.</string>
+    <string name="onboarding_help_warn_local">هذا التطبيق يحفظه محليًا على جهازك فقط.</string>
+    <string name="onboarding_help_get_token">الحصول على الرمز</string>
+    <string name="onboarding_help_understood">فهمت</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">جار التحميل...</string>
+    <string name="cf_login_no_title">بدون عنوان</string>
+    <string name="cf_login_exit">خروج</string>
+    <string name="cf_login_secure">آمن</string>
+    <string name="cf_login_tabs">علامات التبويب</string>
+    <string name="cf_login_menu">القائمة</string>
+    <string name="cf_login_switch_mobile">موقع الجوال</string>
+    <string name="cf_login_switch_desktop">موقع سطح المكتب</string>
+    <string name="cf_login_force_zoom_on">تفعيل التكبير الإجباري (0.5x)</string>
+    <string name="cf_login_force_zoom_off">تعطيل التكبير الإجباري</string>
+    <string name="cf_login_refresh">تحديث</string>
+    <string name="cf_login_no_tabs">لا توجد علامات تبويب مفتوحة</string>
+    <string name="cf_login_open_btn">فتح CurseForge</string>
+    <string name="cf_login_rewards_btn">أنا مسجل الدخول -> التحقق من المكافآت</string>
+    <string name="cf_login_open_tabs">علامات التبويب المفتوحة</string>
+    <string name="cf_login_close_tab">إغلاق</string>
+    <string name="cf_login_back_browser">العودة للمتصفح</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">تنسيق الرمز غير صالح. يجب أن يبدأ بـ \"mrp_\"</string>
+    <string name="daily_total">المجموع اليومي</string>
+    <string name="support_us_btn">شاهد إعلانًا لدعمنا ❤️</string>
+</resources>

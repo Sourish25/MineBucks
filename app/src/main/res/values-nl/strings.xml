@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Instellingen</string>
+    <string name="session_expired_title">CurseForge-sessie verlopen. Maak opnieuw verbinding in Instellingen.</string>
+    <string name="total_revenue">Totaal inkomsten</string>
+    <string name="last_24h">Laatste 24u</string>
+    <string name="breakdown">Uitsplitsing</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Inkomstengeschiedenis</string>
+    <string name="recent_activity">Recente activiteit</string>
+    <string name="no_recent_activity">Geen recente activiteit.</string>
+    <string name="support_us_thanks">Bedankt voor je steun! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Geen grafiekgegevens</string>
+    <string name="current_week">Deze week</string>
+    <string name="weeks_ago">%d weken geleden</string>
+    <string name="greeting_morning">Goedemorgen</string>
+    <string name="greeting_afternoon">Goedemiddag</string>
+    <string name="greeting_evening">Goedenavond</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Uiterlijk</string>
+    <string name="settings_general">Algemeen</string>
+    <string name="settings_pref_currency">Voorkeursvaluta</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Over de ontwikkelaar</string>
+    <string name="settings_token_current">Huidig token</string>
+    <string name="settings_token_update">Toegangstoken bijwerken</string>
+    <string name="settings_token_placeholder">Voer nieuw token in</string>
+    <string name="settings_token_btn">Token bijwerken</string>
+    <string name="settings_token_generate">Nieuw token genereren</string>
+    <string name="settings_cf_connect">CurseForge verbinden (Login)</string>
+    <string name="settings_cf_reconnect">Opnieuw verbinden</string>
+    <string name="settings_cf_connected">Verbonden</string>
+    <string name="settings_cf_points">Punten: %s</string>
+    <string name="settings_cf_logout">Uitloggen</string>
+    <string name="settings_debug_view">Foutopsporingsinfo bekijken</string>
+    <string name="settings_debug_fetch">Ruwe API-gegevens ophalen</string>
+    <string name="settings_debug_close">Sluiten</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Systeem</string>
+    <string name="theme_light">Licht</string>
+    <string name="theme_dark">Donker</string>
+    <string name="settings_language">Taal</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Welkom</string>
+    <string name="onboarding_modrinth_label">Modrinth Toegangstoken</string>
+    <string name="onboarding_cf_btn">Verbind CurseForge</string>
+    <string name="onboarding_start_btn">Start Tracking</string>
+    <string name="onboarding_help_title">Over Modrinth Tokens</string>
+    <string name="onboarding_help_desc">We hebben toestemming nodig om je gegevens te tonen:</string>
+    <string name="onboarding_help_p1">• Gebruikersdata: Om je naam te tonen.</string>
+    <string name="onboarding_help_p2">• Uitbetalingen: Om inkomsten te berekenen.</string>
+    <string name="onboarding_help_scopes">VEREISTE SCOPES:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ WAARSCHUWING:</string>
+    <string name="onboarding_help_warn_desc">Dit token geeft toegang tot je account. Deel het NIET.</string>
+    <string name="onboarding_help_warn_local">Deze app slaat het alleen lokaal op je apparaat op.</string>
+    <string name="onboarding_help_get_token">Token ophalen</string>
+    <string name="onboarding_help_understood">Begrepen</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Laden...</string>
+    <string name="cf_login_no_title">Geen titel</string>
+    <string name="cf_login_exit">Verlaten</string>
+    <string name="cf_login_secure">Veilig</string>
+    <string name="cf_login_tabs">Tabbladen</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Mobiele site</string>
+    <string name="cf_login_switch_desktop">Desktopsite</string>
+    <string name="cf_login_force_zoom_on">Forceer zoom (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Zoom uitschakelen</string>
+    <string name="cf_login_refresh">Verversen</string>
+    <string name="cf_login_no_tabs">Geen tabbladen open</string>
+    <string name="cf_login_open_btn">Open CurseForge</string>
+    <string name="cf_login_rewards_btn">Ingelogd -> Controleer beloningen</string>
+    <string name="cf_login_open_tabs">Open tabbladen</string>
+    <string name="cf_login_close_tab">Sluiten</string>
+    <string name="cf_login_back_browser">Terug naar browser</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Ongeldig tokenformaat. Moet beginnen met \"mrp_\"</string>
+    <string name="daily_total">Dagelijks Totaal</string>
+    <string name="support_us_btn">Kijk advertentie om ons te steunen ❤️</string>
+</resources>

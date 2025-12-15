@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Configurações</string>
+    <string name="session_expired_title">Sessão da CurseForge expirou. Reconecte nas configurações.</string>
+    <string name="total_revenue">Receita Total</string>
+    <string name="last_24h">Últimas 24h</string>
+    <string name="breakdown">Detalhes</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Histórico de Receita</string>
+    <string name="recent_activity">Atividade Recente</string>
+    <string name="no_recent_activity">Nenhuma atividade recente.</string>
+    <string name="support_us_thanks">Obrigado pelo apoio! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Sem dados de gráfico</string>
+    <string name="current_week">Esta Semana</string>
+    <string name="weeks_ago">%d semanas atrás</string>
+    <string name="greeting_morning">Bom dia</string>
+    <string name="greeting_afternoon">Boa tarde</string>
+    <string name="greeting_evening">Boa noite</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Aparência</string>
+    <string name="settings_general">Geral</string>
+    <string name="settings_pref_currency">Moeda Preferida</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">Sobre o Desenvolvedor</string>
+    <string name="settings_token_current">Token Atual</string>
+    <string name="settings_token_update">Atualizar Token</string>
+    <string name="settings_token_placeholder">Inserir novo token</string>
+    <string name="settings_token_btn">Atualizar Token</string>
+    <string name="settings_token_generate">Gerar Novo Token</string>
+    <string name="settings_cf_connect">Conectar CurseForge (Login)</string>
+    <string name="settings_cf_reconnect">Reconectar</string>
+    <string name="settings_cf_connected">Conectado</string>
+    <string name="settings_cf_points">Pontos: %s</string>
+    <string name="settings_cf_logout">Sair</string>
+    <string name="settings_debug_view">Ver Info de Debug</string>
+    <string name="settings_debug_fetch">Buscar Dados da API</string>
+    <string name="settings_debug_close">Fechar</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="settings_language">Idioma</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Bem-vindo</string>
+    <string name="onboarding_modrinth_label">Token de Acesso Modrinth</string>
+    <string name="onboarding_cf_btn">Conectar CurseForge</string>
+    <string name="onboarding_start_btn">Iniciar Monitoramento</string>
+    <string name="onboarding_help_title">Sobre Tokens Modrinth</string>
+    <string name="onboarding_help_desc">Precisamos de permissão para mostrar seus dados:</string>
+    <string name="onboarding_help_p1">• Dados de Usuário: Para mostrar seu nome.</string>
+    <string name="onboarding_help_p2">• Pagamentos: Para calcular receita.</string>
+    <string name="onboarding_help_scopes">ESCOPOS NECESSÁRIOS:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ AVISO DE SEGURANÇA:</string>
+    <string name="onboarding_help_warn_desc">Este token dá acesso à sua conta. NÃO compartilhe.</string>
+    <string name="onboarding_help_warn_local">Este app salva apenas localmente no seu dispositivo.</string>
+    <string name="onboarding_help_get_token">Obter Token</string>
+    <string name="onboarding_help_understood">Entendido</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Carregando...</string>
+    <string name="cf_login_no_title">Sem Título</string>
+    <string name="cf_login_exit">Sair</string>
+    <string name="cf_login_secure">Seguro</string>
+    <string name="cf_login_tabs">Abas</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Site Móvel</string>
+    <string name="cf_login_switch_desktop">Site Desktop</string>
+    <string name="cf_login_force_zoom_on">Forçar Zoom (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Desativar Zoom</string>
+    <string name="cf_login_refresh">Recarregar</string>
+    <string name="cf_login_no_tabs">Nenhuma aba aberta</string>
+    <string name="cf_login_open_btn">Abrir CurseForge</string>
+    <string name="cf_login_rewards_btn">Logado -> Verificar Recompensas</string>
+    <string name="cf_login_open_tabs">Abas Abertas</string>
+    <string name="cf_login_close_tab">Fechar</string>
+    <string name="cf_login_back_browser">Voltar ao Navegador</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Formato de token inválido. Deve começar com \"mrp_\"</string>
+    <string name="daily_total">Total Diário</string>
+    <string name="support_us_btn">Assista um anúncio para apoiar ❤️</string>
+</resources>

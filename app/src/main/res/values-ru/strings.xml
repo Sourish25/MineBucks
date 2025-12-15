@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Настройки</string>
+    <string name="session_expired_title">Сессия CurseForge истекла. Пожалуйста, переподключитесь в настройках.</string>
+    <string name="total_revenue">Общий доход</string>
+    <string name="last_24h">За 24 часа</string>
+    <string name="breakdown">Детали</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">История доходов</string>
+    <string name="recent_activity">Недавняя активность</string>
+    <string name="no_recent_activity">Нет недавней активности.</string>
+    <string name="support_us_thanks">Спасибо за поддержку! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Нет данных графика</string>
+    <string name="current_week">Эта неделя</string>
+    <string name="weeks_ago">%d недель назад</string>
+    <string name="greeting_morning">Доброе утро</string>
+    <string name="greeting_afternoon">Добрый день</string>
+    <string name="greeting_evening">Добрый вечер</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Внешний вид</string>
+    <string name="settings_general">Общие</string>
+    <string name="settings_pref_currency">Предпочитаемая валюта</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">О разработчике</string>
+    <string name="settings_token_current">Текущий токен</string>
+    <string name="settings_token_update">Обновить токен доступа</string>
+    <string name="settings_token_placeholder">Введите новый токен</string>
+    <string name="settings_token_btn">Обновить токен</string>
+    <string name="settings_token_generate">Создать новый токен</string>
+    <string name="settings_cf_connect">Подключить CurseForge (Login)</string>
+    <string name="settings_cf_reconnect">Переподключить</string>
+    <string name="settings_cf_connected">Подключено</string>
+    <string name="settings_cf_points">Баллы: %s</string>
+    <string name="settings_cf_logout">Выйти</string>
+    <string name="settings_debug_view">Отладочная информация</string>
+    <string name="settings_debug_fetch">Получить сырые данные API</string>
+    <string name="settings_debug_close">Закрыть</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Системная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Темная</string>
+    <string name="settings_language">Язык</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Добро пожаловать</string>
+    <string name="onboarding_modrinth_label">Токен доступа Modrinth</string>
+    <string name="onboarding_cf_btn">Подключить CurseForge</string>
+    <string name="onboarding_start_btn">Начать отслеживание</string>
+    <string name="onboarding_help_title">О токенах Modrinth</string>
+    <string name="onboarding_help_desc">Нам нужно разрешение для отображения ваших данных:</string>
+    <string name="onboarding_help_p1">• Данные пользователя: Чтобы показать ваше имя.</string>
+    <string name="onboarding_help_p2">• Выплаты: Чтобы рассчитать доход.</string>
+    <string name="onboarding_help_scopes">ТРЕБУЕМЫЕ ОБЛАСТИ:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ ПРЕДУПРЕЖДЕНИЕ БЕЗОПАСНОСТИ:</string>
+    <string name="onboarding_help_warn_desc">Этот токен дает доступ к вашему аккаунту. НЕ делитесь им.</string>
+    <string name="onboarding_help_warn_local">Это приложение сохраняет его только локально на вашем устройстве.</string>
+    <string name="onboarding_help_get_token">Получить токен</string>
+    <string name="onboarding_help_understood">Понятно</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Загрузка...</string>
+    <string name="cf_login_no_title">Без названия</string>
+    <string name="cf_login_exit">Выход</string>
+    <string name="cf_login_secure">Безопасно</string>
+    <string name="cf_login_tabs">Вкладки</string>
+    <string name="cf_login_menu">Меню</string>
+    <string name="cf_login_switch_mobile">Мобильная версия</string>
+    <string name="cf_login_switch_desktop">Полная версия</string>
+    <string name="cf_login_force_zoom_on">Принудительный зум (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Отключить зум</string>
+    <string name="cf_login_refresh">Обновить</string>
+    <string name="cf_login_no_tabs">Нет открытых вкладок</string>
+    <string name="cf_login_open_btn">Открыть CurseForge</string>
+    <string name="cf_login_rewards_btn">Вошли -> Проверить награды</string>
+    <string name="cf_login_open_tabs">Открытые вкладки</string>
+    <string name="cf_login_close_tab">Закрыть</string>
+    <string name="cf_login_back_browser">Назад в браузер</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Неверный формат токена. Должен начинаться с \"mrp_\"</string>
+    <string name="daily_total">Дневной итог</string>
+    <string name="support_us_btn">Посмотреть рекламу для поддержки ❤️</string>
+</resources>

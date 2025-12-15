@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">הגדרות</string>
+    <string name="session_expired_title">הפעלת CurseForge פגה. נא להתחבר מחדש בהגדרות.</string>
+    <string name="total_revenue">סך ההכנסות</string>
+    <string name="last_24h">24 שעות אחרונות</string>
+    <string name="breakdown">פירוט</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">היסטוריית הכנסות</string>
+    <string name="recent_activity">פעילות אחרונה</string>
+    <string name="no_recent_activity">אין פעילות אחרונה.</string>
+    <string name="support_us_thanks">תודה על התמיכה! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">אין נתוני גרף</string>
+    <string name="current_week">השבוע</string>
+    <string name="weeks_ago">לפני %d שבועות</string>
+    <string name="greeting_morning">בוקר טוב</string>
+    <string name="greeting_afternoon">צהריים טובים</string>
+    <string name="greeting_evening">ערב טוב</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">מראה</string>
+    <string name="settings_general">כללי</string>
+    <string name="settings_pref_currency">מטבע מועדף</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">אודות המפתח</string>
+    <string name="settings_token_current">טוקן נוכחי</string>
+    <string name="settings_token_update">עדכן טוקן גישה</string>
+    <string name="settings_token_placeholder">הזן טוקן חדש</string>
+    <string name="settings_token_btn">עדכן טוקן</string>
+    <string name="settings_token_generate">צור טוקן חדש</string>
+    <string name="settings_cf_connect">התחבר ל-CurseForge</string>
+    <string name="settings_cf_reconnect">התחבר מחדש</string>
+    <string name="settings_cf_connected">מחובר</string>
+    <string name="settings_cf_points">נקודות: %s</string>
+    <string name="settings_cf_logout">התנתק</string>
+    <string name="settings_debug_view">הצג מידע דיבאג</string>
+    <string name="settings_debug_fetch">קבל נתוני API גולמיים</string>
+    <string name="settings_debug_close">סגור</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">מערכת</string>
+    <string name="theme_light">בהיר</string>
+    <string name="theme_dark">כהה</string>
+    <string name="settings_language">שפה</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">ברוכים הבאים</string>
+    <string name="onboarding_modrinth_label">Modrinth Access Token</string>
+    <string name="onboarding_cf_btn">התחברות ל-CurseForge</string>
+    <string name="onboarding_start_btn">התחל מעקב</string>
+    <string name="onboarding_help_title">אודות Modrinth Tokens</string>
+    <string name="onboarding_help_desc">אנו זקוקים להרשאות כדי להציג את הנתונים שלך:</string>
+    <string name="onboarding_help_p1">• נתוני משתמש: להצגת השם שלך.</string>
+    <string name="onboarding_help_p2">• תשלומים: לחישוב הכנסות.</string>
+    <string name="onboarding_help_scopes">הרשאות נדרשות:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ אזהרת אבטחה:</string>
+    <string name="onboarding_help_warn_desc">טוקן זה נותן גישה לחשבון שלך. אל תשתף אותו עם אף אחד.</string>
+    <string name="onboarding_help_warn_local">אפליקציה זו שומרת אותו רק באופן מקומי במכשיר שלך.</string>
+    <string name="onboarding_help_get_token">קבל טוקן</string>
+    <string name="onboarding_help_understood">הבנתי</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">טוען...</string>
+    <string name="cf_login_no_title">ללא כותרת</string>
+    <string name="cf_login_exit">יציאה</string>
+    <string name="cf_login_secure">מאובטח</string>
+    <string name="cf_login_tabs">לשוניות</string>
+    <string name="cf_login_menu">תפריט</string>
+    <string name="cf_login_switch_mobile">אתר מובייל</string>
+    <string name="cf_login_switch_desktop">אתר דסקטופ</string>
+    <string name="cf_login_force_zoom_on">אפשר זום (0.5x)</string>
+    <string name="cf_login_force_zoom_off">בטל זום</string>
+    <string name="cf_login_refresh">רענן</string>
+    <string name="cf_login_no_tabs">אין לשוניות פתוחות</string>
+    <string name="cf_login_open_btn">פתח CurseForge</string>
+    <string name="cf_login_rewards_btn">מחובר -> בדוק פרסים</string>
+    <string name="cf_login_open_tabs">לשוניות פתוחות</string>
+    <string name="cf_login_close_tab">סגור</string>
+    <string name="cf_login_back_browser">חזור לדפדפן</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">פורמט טוקן לא חוקי. חייב להתחיל ב-\"mrp_\"</string>
+    <string name="daily_total">סה\"כ יומי</string>
+    <string name="support_us_btn">צפה במודעה כדי לתמוך בנו ❤️</string>
+</resources>

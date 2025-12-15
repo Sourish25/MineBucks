@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MineBucks</string>
+    <string name="settings">Nastavení</string>
+    <string name="session_expired_title">Relace CurseForge vypršela. Prosím, znovu se připojte v nastavení.</string>
+    <string name="total_revenue">Celkový příjem</string>
+    <string name="last_24h">Posledních 24h</string>
+    <string name="breakdown">Rozpis</string>
+    <string name="modrinth">Modrinth</string>
+    <string name="curseforge">CurseForge</string>
+    <string name="revenue_history">Historie příjmů</string>
+    <string name="recent_activity">Nedávná aktivita</string>
+    <string name="no_recent_activity">Žádná nedávná aktivita.</string>
+    <string name="support_us_thanks">Díky za podporu! ❤️</string>
+    <string name="github">GitHub</string>
+    <string name="kofi">Ko-fi</string>
+    <string name="no_graph_data">Žádná data grafu</string>
+    <string name="current_week">Tento týden</string>
+    <string name="weeks_ago">před %d týdny</string>
+    <string name="greeting_morning">Dobré ráno</string>
+    <string name="greeting_afternoon">Dobré odpoledne</string>
+    <string name="greeting_evening">Dobrý večer</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Vzhled</string>
+    <string name="settings_general">Obecné</string>
+    <string name="settings_pref_currency">Preferovaná měna</string>
+    <string name="settings_modrinth">Modrinth</string>
+    <string name="settings_curseforge">CurseForge</string>
+    <string name="settings_about">O vývojáři</string>
+    <string name="settings_token_current">Současný Token</string>
+    <string name="settings_token_update">Aktualizovat přístupový token</string>
+    <string name="settings_token_placeholder">Zadejte nový token</string>
+    <string name="settings_token_btn">Aktualizovat Token</string>
+    <string name="settings_token_generate">Vygenerovat nový token</string>
+    <string name="settings_cf_connect">Připojit účet CurseForge</string>
+    <string name="settings_cf_reconnect">Obnovit připojení</string>
+    <string name="settings_cf_connected">Připojeno</string>
+    <string name="settings_cf_points">Body: %s</string>
+    <string name="settings_cf_logout">Odhlásit se</string>
+    <string name="settings_debug_view">Zobrazit ladící info</string>
+    <string name="settings_debug_fetch">Načíst surová API data</string>
+    <string name="settings_debug_close">Zavřít</string>
+    <string name="settings_version">MineBucks v1.2</string>
+    <string name="theme_system">Systém</string>
+    <string name="theme_light">Světlý</string>
+    <string name="theme_dark">Tmavý</string>
+    <string name="settings_language">Jazyk</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Vítejte</string>
+    <string name="onboarding_modrinth_label">Přístupový token Modrinth</string>
+    <string name="onboarding_cf_btn">Připojit CurseForge (Login)</string>
+    <string name="onboarding_start_btn">Začít sledovat</string>
+    <string name="onboarding_help_title">O tokenech Modrinth</string>
+    <string name="onboarding_help_desc">Potřebujeme oprávnění k zobrazení vašich dat:</string>
+    <string name="onboarding_help_p1">• Uživatelská data: Pro zobrazení jména.</string>
+    <string name="onboarding_help_p2">• Výplaty: Pro výpočet příjmů.</string>
+    <string name="onboarding_help_scopes">POŽADOVANÁ OPRÁVNĚNÍ:</string>
+    <string name="onboarding_help_scopes_val">analytics, payouts, user</string>
+    <string name="onboarding_help_warn">⚠️ BEZPEČNOSTNÍ VAROVÁNÍ:</string>
+    <string name="onboarding_help_warn_desc">Tento token umožňuje přístup k vašemu účtu. S NIKÝM ho nesdílejte.</string>
+    <string name="onboarding_help_warn_local">Tato aplikace ho ukládá pouze lokálně ve vašem zařízení.</string>
+    <string name="onboarding_help_get_token">Získat Token</string>
+    <string name="onboarding_help_understood">Rozumím</string>
+
+    <!-- CurseForge Login -->
+    <string name="cf_login_loading">Načítání...</string>
+    <string name="cf_login_no_title">Bez názvu</string>
+    <string name="cf_login_exit">Odejít</string>
+    <string name="cf_login_secure">Zabezpečeno</string>
+    <string name="cf_login_tabs">Karty</string>
+    <string name="cf_login_menu">Menu</string>
+    <string name="cf_login_switch_mobile">Mobilní verze</string>
+    <string name="cf_login_switch_desktop">Stolní verze</string>
+    <string name="cf_login_force_zoom_on">Vynutit přiblížení (0.5x)</string>
+    <string name="cf_login_force_zoom_off">Vypnout vynucené přiblížení</string>
+    <string name="cf_login_refresh">Obnovit</string>
+    <string name="cf_login_no_tabs">Žádné otevřené karty</string>
+    <string name="cf_login_open_btn">Otevřít CurseForge</string>
+    <string name="cf_login_rewards_btn">Jsem přihlášen -> Zkontrolovat odměny</string>
+    <string name="cf_login_open_tabs">Otevřené karty</string>
+    <string name="cf_login_close_tab">Zavřít</string>
+    <string name="cf_login_back_browser">Zpět na prohlížeč</string>
+
+    <!-- Errors -->
+    <string name="error_invalid_token">Neplatný formát tokenu. Musí začínat \"mrp_\"</string>
+    <string name="daily_total">Denní součet</string>
+    <string name="support_us_btn">Sledovat reklamu pro podporu ❤️</string>
+</resources>
