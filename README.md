@@ -10,6 +10,10 @@
     <img src="https://img.shields.io/badge/Kotlin-100%25-purple?style=flat-square" alt="Kotlin">
     <img src="https://img.shields.io/badge/Platform-Android-green?style=flat-square" alt="Android">
     <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Status">
+    <br>
+    <a href="https://ko-fi.com/sourish25"><img src="https://img.shields.io/badge/Ko--fi-Support-F16061?style=flat-square&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
+    <a href="https://modrinth.com/user/Sourish25"><img src="https://img.shields.io/badge/Modrinth-Sourish25-1BD96A?style=flat-square&logo=modrinth&logoColor=white" alt="Modrinth"></a>
+    <a href="https://www.curseforge.com/members/devillord/projects"><img src="https://img.shields.io/badge/CurseForge-Devillord-F16436?style=flat-square&logo=curseforge&logoColor=white" alt="CurseForge"></a>
   </p>
 
   <img src="docs/screenshots/bannermine.png" alt="MineBucks Dashboard Banner" width="100%" />
