@@ -326,8 +326,10 @@ import androidx.lifecycle.viewmodel.CreationExtras
                 
                 if (currentUserId != "unknown" && (modAmount != null || cfAmount != null)) {
                     // Check last snapshot to avoid spam
+                    val safeMod = modAmount ?: 0.0
+                    val safeCf = cfAmount ?: 0.0
                     val lastSnapshot = revenueDao.getLatestSnapshot(currentUserId)
-                    val currentTotal = modAmount + cfAmount
+                    val currentTotal = safeMod + safeCf
                     val lastTotal = (lastSnapshot?.modrinthRevenue ?: 0.0) + (lastSnapshot?.curseForgeRevenue ?: 0.0)
                     val timeDiff = System.currentTimeMillis() - (lastSnapshot?.timestamp ?: 0L)
                     
@@ -335,8 +337,8 @@ import androidx.lifecycle.viewmodel.CreationExtras
                     if (lastSnapshot == null || kotlin.math.abs(currentTotal - lastTotal) > 0.001 || timeDiff > 3600000) {
                          val snapshot = com.Sourish25.MineBucks.data.database.RevenueSnapshot(
                             timestamp = System.currentTimeMillis(),
-                            modrinthRevenue = modAmount, // Store RAW (USD)
-                            curseForgeRevenue = cfAmount,           // Store RAW (USD)
+                            modrinthRevenue = safeMod, // Store RAW (USD)
+                            curseForgeRevenue = safeCf,     // Store RAW (USD)
                             currency = "USD", // We store in USD to allow dynamic conversion later
                             userId = currentUserId
                         )
