@@ -1,22 +1,65 @@
 # MineBucks
 
-**Comprehensive Revenue & Analytics Tracker for Minecraft Mod Creators**
-
-MineBucks is an open-source Android utility developed to solve the fragmentation of revenue tracking in the Minecraft modding ecosystem. It automates data retrieval from Modrinth and CurseForge, providing a unified dashboard for creators to monitor their earnings without manual aggregation
-
 <div align="center">
-  <table>
-    <tr>
-      <td align="center"><img src="https://github.com/user-attachments/assets/344eb723-ca9c-454a-8323-c01db2f1a178" width="200px;" alt=""/></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/dfd4ebea-7a65-4fef-9a8e-a86ff38c4259" width="200px;" alt=""/></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/756e29b0-dbcc-4ae2-9042-59b218bd2240" width="200px;" alt=""/></td>
-    </tr>
-    <tr>
-      <td align="center"><img src="https://github.com/user-attachments/assets/967dfd25-d16f-4d35-a08d-938086c8e850" width="200px;" alt=""/></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/be768adb-3938-41cd-a498-745ed8189e19" width="200px;" alt=""/></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/4f0ddba6-42bd-40b9-80e1-ac7853aeb64a" width="200px;" alt=""/></td>
-    </tr>
-  </table>
+  <img src="docs/screenshots/finallogominebucks.png" alt="MineBucks Logo" width="120" />
+  <h1>MineBucks</h1>
+  <p><strong>Comprehensive Revenue & Analytics Tracker for Minecraft Mod Creators</strong></p>
+  
+  <p>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/Sourish25/MineBucks?style=flat-square" alt="License"></a>
+    <img src="https://img.shields.io/badge/Kotlin-100%25-purple?style=flat-square" alt="Kotlin">
+    <img src="https://img.shields.io/badge/Platform-Android-green?style=flat-square" alt="Android">
+    <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Status">
+  </p>
+
+  <img src="docs/screenshots/bannermine.png" alt="MineBucks Dashboard Banner" width="100%" />
+</div>
+
+---
+
+## 🚀 Overview
+
+**MineBucks** is an open-source Android utility developed to solve the fragmentation of revenue tracking in the Minecraft modding ecosystem. It automates data retrieval from **Modrinth** and **CurseForge**, providing a unified dashboard for creators to monitor their earnings without manual aggregation.
+
+> "A Set and Forget solution that runs silently in the background."
+
+---
+
+## ✨ Features Showcase
+
+### 📊 Unified Dashboard
+
+Aggregates data from both platforms into a single view. No more Excel sheets or mental math.
+<div align="center">
+  <img src="docs/screenshots/homepage.png" width="800" alt="Unified Dashboard" />
+</div>
+
+<br>
+
+### 📈 Deep Analytics & Visualization
+
+Visualize your revenue trends with beautiful, interactive graphs. Track daily performance effortlessly.
+<div align="center">
+  <img src="docs/screenshots/Graph%20and%20analytic.png" width="800" alt="Revenue Analysis" />
+</div>
+
+<br>
+
+### 🌐 Smart CurseForge Integration
+
+Includes a secure, built-in browser engine to authenticate with CurseForge safely. Bypasses standard login blocks while keeping your credentials local.
+<div align="center">
+  <img src="docs/screenshots/built%20in%20browser.png" width="800" alt="Built-in Browser" />
+</div>
+
+<br>
+
+### ⚡ Easy Setup & Customization
+
+Configure your preferred currency, notifications, and refresh intervals in seconds.
+<div align="center">
+  <img src="docs/screenshots/welcome.png" width="45%" alt="Welcome Screen" />
+  <img src="docs/screenshots/settings.png" width="45%" alt="Settings Screen" />
 </div>
 
 ---
@@ -30,7 +73,7 @@ As active mod developers in the Minecraft community, we faced a recurring daily 
 3. Manually sum the totals.
 4. Perform currency conversion (USD/Points to Your Country's Currency) to understand actual earnings.
 
-This repetitive process was inefficient and lacked historical data tracking. We attempted to find existing solutions, but none offered the passive, unified monitoring we required. Thus, MineBucks was architected to be a "Set and Forget" solution that runs silently in the background, utilizing Android's WorkManager to fetch, aggregate, and notify us of financial changes.
+This repetitive process was inefficient and lacked historical data tracking. We attempted to find existing solutions, but none offered the passive, unified monitoring we required. Thus, MineBucks was architected to utilizing Android's WorkManager to fetch, aggregate, and notify us of financial changes.
 
 ---
 
@@ -60,9 +103,8 @@ To retrieve this data without violating user trust (i.e., asking for passwords),
 
 ---
 
-## 3. Implemented Features
+## 3. Other Implemented Features
 
-* **Unified Dashboard**: Aggregates data from both platforms into a single view.
 * **Background Synchronization**: Uses Android WorkManager to fetch data every 6 hours (Network Dependent).
 * **Battery Efficiency**: Designed to respect Android Doze mode. The app consumes 0% battery when idle.
 * **Smart Notifications**: You are only notified if your revenue *increases*.
