@@ -184,6 +184,17 @@ MineBucks is built with modern Android development standards, ensuring robustnes
 
 ---
 
+### 👨‍🎓 A Note from the Developer
+
+I am a student developer working with limited resources. My dream is to publish apps professionally, and I'm saving up for a **Google Play Console account**.
+
+* The **Standard Version** includes a "Support Us" button. It **never** forces you to watch ads, but watching one voluntarily helps me immensely.
+* The **FOSS Version** has absolutely no ads or tracking. If you prefer privacy or use F-Droid, this is for you!
+
+Whichever version you choose, thank you for using MineBucks! ❤️
+
+---
+
 ## 6. License
 
 This project is open-source under the MIT License. Contributions are welcome, especially regarding parsing logic updates if platform DOMs change.
