@@ -18,6 +18,7 @@ MineBucks is an open-source Android utility developed to solve the fragmentation
     </tr>
   </table>
 </div>
+
 ---
 
 ## 1. Project Origins & The Problem
