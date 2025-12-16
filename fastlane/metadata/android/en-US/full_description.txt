@@ -1,0 +1,28 @@
+**MineBucks** is an open-source Android utility developed to solve the fragmentation of revenue tracking in the Minecraft modding ecosystem. It automates data retrieval from **Modrinth** and **CurseForge**, providing a unified dashboard for creators to monitor their earnings without manual aggregation.
+
+> "A Set and Forget solution that runs silently in the background."
+
+## Features
+
+### Unified Dashboard
+Aggregates data from both platforms into a single view. No more Excel sheets or mental math.
+
+### Deep Analytics & Visualization
+Visualize your revenue trends with beautiful, interactive graphs. Track daily performance effortlessly.
+
+### Smart CurseForge Integration
+Includes a secure, built-in browser engine to authenticate with CurseForge safely. Bypasses standard login blocks while keeping your credentials local.
+
+### Easy Setup & Customization
+Configure your preferred currency, notifications, and refresh intervals in seconds.
+
+## Project Origins & The Problem
+
+As active mod developers in the Minecraft community, we faced a recurring daily inefficiency. Every morning involved a manual workflow:
+
+1. Navigate to the Modrinth dashboard to check balance.
+2. Navigate to the CurseForge Authors portal to check Reward Points.
+3. Manually sum the totals.
+4. Perform currency conversion (USD/Points to Your Country's Currency) to understand actual earnings.
+
+This repetitive process was inefficient and lacked historical data tracking. We attempted to find existing solutions, but none offered the passive, unified monitoring we required. Thus, MineBucks was architected to utilizing Android's WorkManager to fetch, aggregate, and notify us of financial changes.
