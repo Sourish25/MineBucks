@@ -1,0 +1,3519 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "build.gradle.kts",
+      "file_type": "code",
+      "source_file": "build.gradle.kts",
+      "source_location": "L1",
+      "id": "build_gradle_kts",
+      "community": 21,
+      "norm_label": "build.gradle.kts"
+    },
+    {
+      "label": "settings.gradle.kts",
+      "file_type": "code",
+      "source_file": "settings.gradle.kts",
+      "source_location": "L1",
+      "id": "settings_gradle_kts",
+      "community": 22,
+      "norm_label": "settings.gradle.kts"
+    },
+    {
+      "label": "build.gradle.kts",
+      "file_type": "code",
+      "source_file": "app/build.gradle.kts",
+      "source_location": "L1",
+      "id": "app_build_gradle_kts",
+      "community": 23,
+      "norm_label": "build.gradle.kts"
+    },
+    {
+      "label": "AdManager.kt",
+      "file_type": "code",
+      "source_file": "app/src/foss/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L1",
+      "id": "app_src_foss_java_com_sourish25_minebucks_ads_admanager_kt",
+      "community": 11,
+      "norm_label": "admanager.kt"
+    },
+    {
+      "label": "AdManager",
+      "file_type": "code",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L15",
+      "id": "ads_admanager_admanager",
+      "community": 11,
+      "norm_label": "admanager"
+    },
+    {
+      "label": ".initialize()",
+      "file_type": "code",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L24",
+      "id": "ads_admanager_admanager_initialize",
+      "community": 11,
+      "norm_label": ".initialize()"
+    },
+    {
+      "label": ".loadAd()",
+      "file_type": "code",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L28",
+      "id": "ads_admanager_admanager_loadad",
+      "community": 11,
+      "norm_label": ".loadad()"
+    },
+    {
+      "label": ".showAd()",
+      "file_type": "code",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L44",
+      "id": "ads_admanager_admanager_showad",
+      "community": 11,
+      "norm_label": ".showad()"
+    },
+    {
+      "label": "MainActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_mainactivity_kt",
+      "community": 2,
+      "norm_label": "mainactivity.kt"
+    },
+    {
+      "label": "MainActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L43",
+      "id": "minebucks_mainactivity_mainactivity",
+      "community": 2,
+      "norm_label": "mainactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L47",
+      "id": "minebucks_mainactivity_mainactivity_oncreate",
+      "community": 2,
+      "norm_label": ".oncreate()"
+    },
+    {
+      "label": ".onNewIntent()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L170",
+      "id": "minebucks_mainactivity_mainactivity_onnewintent",
+      "community": 2,
+      "norm_label": ".onnewintent()"
+    },
+    {
+      "label": ".handleDeepLink()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L175",
+      "id": "minebucks_mainactivity_mainactivity_handledeeplink",
+      "community": 2,
+      "norm_label": ".handledeeplink()"
+    },
+    {
+      "label": "ModRevenueApplication.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ModRevenueApplication.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_modrevenueapplication_kt",
+      "community": 16,
+      "norm_label": "modrevenueapplication.kt"
+    },
+    {
+      "label": "ModRevenueApplication",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ModRevenueApplication.kt",
+      "source_location": "L8",
+      "id": "minebucks_modrevenueapplication_modrevenueapplication",
+      "community": 16,
+      "norm_label": "modrevenueapplication"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ModRevenueApplication.kt",
+      "source_location": "L29",
+      "id": "minebucks_modrevenueapplication_modrevenueapplication_oncreate",
+      "community": 16,
+      "norm_label": ".oncreate()"
+    },
+    {
+      "label": "Api.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_api_api_kt",
+      "community": 5,
+      "norm_label": "api.kt"
+    },
+    {
+      "label": "ModrinthService",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L15",
+      "id": "api_api_modrinthservice",
+      "community": 5,
+      "norm_label": "modrinthservice"
+    },
+    {
+      "label": ".getAuthenticatedUser()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L16",
+      "id": "api_api_modrinthservice_getauthenticateduser",
+      "community": 5,
+      "norm_label": ".getauthenticateduser()"
+    },
+    {
+      "label": ".getPayouts()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L22",
+      "id": "api_api_modrinthservice_getpayouts",
+      "community": 5,
+      "norm_label": ".getpayouts()"
+    },
+    {
+      "label": ".getPayoutHistory()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L29",
+      "id": "api_api_modrinthservice_getpayouthistory",
+      "community": 5,
+      "norm_label": ".getpayouthistory()"
+    },
+    {
+      "label": ".getProjects()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L35",
+      "id": "api_api_modrinthservice_getprojects",
+      "community": 5,
+      "norm_label": ".getprojects()"
+    },
+    {
+      "label": ".getProjectAnalytics()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L41",
+      "id": "api_api_modrinthservice_getprojectanalytics",
+      "community": 5,
+      "norm_label": ".getprojectanalytics()"
+    },
+    {
+      "label": "ModrinthServiceV3",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L48",
+      "id": "api_api_modrinthservicev3",
+      "community": 5,
+      "norm_label": "modrinthservicev3"
+    },
+    {
+      "label": ".getRevenueAnalytics()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L49",
+      "id": "api_api_modrinthservicev3_getrevenueanalytics",
+      "community": 5,
+      "norm_label": ".getrevenueanalytics()"
+    },
+    {
+      "label": "CurrencyService",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L59",
+      "id": "api_api_currencyservice",
+      "community": 5,
+      "norm_label": "currencyservice"
+    },
+    {
+      "label": ".getRates()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L60",
+      "id": "api_api_currencyservice_getrates",
+      "community": 5,
+      "norm_label": ".getrates()"
+    },
+    {
+      "label": "AppDatabase.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_database_appdatabase_kt",
+      "community": 13,
+      "norm_label": "appdatabase.kt"
+    },
+    {
+      "label": "AppDatabase",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L8",
+      "id": "database_appdatabase_appdatabase",
+      "community": 13,
+      "norm_label": "appdatabase"
+    },
+    {
+      "label": ".revenueDao()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L10",
+      "id": "database_appdatabase_appdatabase_revenuedao",
+      "community": 13,
+      "norm_label": ".revenuedao()"
+    },
+    {
+      "label": "getDatabase()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L16",
+      "id": "database_appdatabase_getdatabase",
+      "community": 13,
+      "norm_label": "getdatabase()"
+    },
+    {
+      "label": "RevenueDao.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_database_revenuedao_kt",
+      "community": 6,
+      "norm_label": "revenuedao.kt"
+    },
+    {
+      "label": "RevenueDao",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L9",
+      "id": "database_revenuedao_revenuedao",
+      "community": 6,
+      "norm_label": "revenuedao"
+    },
+    {
+      "label": ".insertSnapshot()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L11",
+      "id": "database_revenuedao_revenuedao_insertsnapshot",
+      "community": 6,
+      "norm_label": ".insertsnapshot()"
+    },
+    {
+      "label": ".getRecentSnapshots()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L14",
+      "id": "database_revenuedao_revenuedao_getrecentsnapshots",
+      "community": 6,
+      "norm_label": ".getrecentsnapshots()"
+    },
+    {
+      "label": ".getSnapshotsSince()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L17",
+      "id": "database_revenuedao_revenuedao_getsnapshotssince",
+      "community": 6,
+      "norm_label": ".getsnapshotssince()"
+    },
+    {
+      "label": ".getFirstSnapshotOfDay()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L20",
+      "id": "database_revenuedao_revenuedao_getfirstsnapshotofday",
+      "community": 6,
+      "norm_label": ".getfirstsnapshotofday()"
+    },
+    {
+      "label": ".getLatestSnapshot()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L23",
+      "id": "database_revenuedao_revenuedao_getlatestsnapshot",
+      "community": 6,
+      "norm_label": ".getlatestsnapshot()"
+    },
+    {
+      "label": ".deleteOldSnapshots()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L26",
+      "id": "database_revenuedao_revenuedao_deleteoldsnapshots",
+      "community": 6,
+      "norm_label": ".deleteoldsnapshots()"
+    },
+    {
+      "label": ".deleteHistoryForUser()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L28",
+      "id": "database_revenuedao_revenuedao_deletehistoryforuser",
+      "community": 6,
+      "norm_label": ".deletehistoryforuser()"
+    },
+    {
+      "label": ".deleteAll()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L33",
+      "id": "database_revenuedao_revenuedao_deleteall",
+      "community": 6,
+      "norm_label": ".deleteall()"
+    },
+    {
+      "label": "RevenueSnapshot.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueSnapshot.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_database_revenuesnapshot_kt",
+      "community": 9,
+      "norm_label": "revenuesnapshot.kt"
+    },
+    {
+      "label": "RevenueSnapshot",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueSnapshot.kt",
+      "source_location": "L6",
+      "id": "database_revenuesnapshot_revenuesnapshot",
+      "community": 9,
+      "norm_label": "revenuesnapshot"
+    },
+    {
+      "label": "Models.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "community": 8,
+      "norm_label": "models.kt"
+    },
+    {
+      "label": "ModrinthUser",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L5",
+      "id": "model_models_modrinthuser",
+      "community": 8,
+      "norm_label": "modrinthuser"
+    },
+    {
+      "label": "ModrinthPayoutData",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L14",
+      "id": "model_models_modrinthpayoutdata",
+      "community": 8,
+      "norm_label": "modrinthpayoutdata"
+    },
+    {
+      "label": "ModrinthProject",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L19",
+      "id": "model_models_modrinthproject",
+      "community": 8,
+      "norm_label": "modrinthproject"
+    },
+    {
+      "label": "ModrinthAnalytics",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L26",
+      "id": "model_models_modrinthanalytics",
+      "community": 8,
+      "norm_label": "modrinthanalytics"
+    },
+    {
+      "label": "ModrinthRevenueAnalyticsResponse",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L33",
+      "id": "model_models_modrinthrevenueanalyticsresponse",
+      "community": 8,
+      "norm_label": "modrinthrevenueanalyticsresponse"
+    },
+    {
+      "label": "ModrinthPayoutHistory",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L39",
+      "id": "model_models_modrinthpayouthistory",
+      "community": 8,
+      "norm_label": "modrinthpayouthistory"
+    },
+    {
+      "label": "ModrinthPayout",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L46",
+      "id": "model_models_modrinthpayout",
+      "community": 8,
+      "norm_label": "modrinthpayout"
+    },
+    {
+      "label": "CurrencyResponse",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L54",
+      "id": "model_models_currencyresponse",
+      "community": 8,
+      "norm_label": "currencyresponse"
+    },
+    {
+      "label": "NetworkModule.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/network/NetworkModule.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_network_networkmodule_kt",
+      "community": 17,
+      "norm_label": "networkmodule.kt"
+    },
+    {
+      "label": "ModrinthClient",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/network/NetworkModule.kt",
+      "source_location": "L10",
+      "id": "network_networkmodule_modrinthclient",
+      "community": 17,
+      "norm_label": "modrinthclient"
+    },
+    {
+      "label": "DataStoreManager.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_repository_datastoremanager_kt",
+      "community": 7,
+      "norm_label": "datastoremanager.kt"
+    },
+    {
+      "label": "DataStoreManager",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L15",
+      "id": "repository_datastoremanager_datastoremanager",
+      "community": 7,
+      "norm_label": "datastoremanager"
+    },
+    {
+      "label": ".saveModrinthToken()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L39",
+      "id": "repository_datastoremanager_datastoremanager_savemodrinthtoken",
+      "community": 7,
+      "norm_label": ".savemodrinthtoken()"
+    },
+    {
+      "label": ".saveCurseForgePoints()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L43",
+      "id": "repository_datastoremanager_datastoremanager_savecurseforgepoints",
+      "community": 7,
+      "norm_label": ".savecurseforgepoints()"
+    },
+    {
+      "label": ".saveCurseForgeCookies()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L47",
+      "id": "repository_datastoremanager_datastoremanager_savecurseforgecookies",
+      "community": 7,
+      "norm_label": ".savecurseforgecookies()"
+    },
+    {
+      "label": ".saveUserName()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L51",
+      "id": "repository_datastoremanager_datastoremanager_saveusername",
+      "community": 7,
+      "norm_label": ".saveusername()"
+    },
+    {
+      "label": ".saveUserAvatar()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L55",
+      "id": "repository_datastoremanager_datastoremanager_saveuseravatar",
+      "community": 7,
+      "norm_label": ".saveuseravatar()"
+    },
+    {
+      "label": ".saveTargetCurrency()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L59",
+      "id": "repository_datastoremanager_datastoremanager_savetargetcurrency",
+      "community": 7,
+      "norm_label": ".savetargetcurrency()"
+    },
+    {
+      "label": ".saveThemeMode()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L63",
+      "id": "repository_datastoremanager_datastoremanager_savethememode",
+      "community": 7,
+      "norm_label": ".savethememode()"
+    },
+    {
+      "label": ".saveUserId()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L70",
+      "id": "repository_datastoremanager_datastoremanager_saveuserid",
+      "community": 7,
+      "norm_label": ".saveuserid()"
+    },
+    {
+      "label": "RealRevenueDataSource.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_repository_realrevenuedatasource_kt",
+      "community": 4,
+      "norm_label": "realrevenuedatasource.kt"
+    },
+    {
+      "label": "RealRevenueDataSource",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L9",
+      "id": "repository_realrevenuedatasource_realrevenuedatasource",
+      "community": 4,
+      "norm_label": "realrevenuedatasource"
+    },
+    {
+      "label": ".getModrinthRevenue()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L36",
+      "id": "repository_realrevenuedatasource_realrevenuedatasource_getmodrinthrevenue",
+      "community": 4,
+      "norm_label": ".getmodrinthrevenue()"
+    },
+    {
+      "label": ".getCurseForgeRevenueInUSD()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L118",
+      "id": "repository_realrevenuedatasource_realrevenuedatasource_getcurseforgerevenueinusd",
+      "community": 4,
+      "norm_label": ".getcurseforgerevenueinusd()"
+    },
+    {
+      "label": ".getDebugLog()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L123",
+      "id": "repository_realrevenuedatasource_realrevenuedatasource_getdebuglog",
+      "community": 4,
+      "norm_label": ".getdebuglog()"
+    },
+    {
+      "label": "RevenueDataSource.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_repository_revenuedatasource_kt",
+      "community": 14,
+      "norm_label": "revenuedatasource.kt"
+    },
+    {
+      "label": "RevenueDataSource",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L5",
+      "id": "repository_revenuedatasource_revenuedatasource",
+      "community": 14,
+      "norm_label": "revenuedatasource"
+    },
+    {
+      "label": ".getModrinthRevenue()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L6",
+      "id": "repository_revenuedatasource_revenuedatasource_getmodrinthrevenue",
+      "community": 14,
+      "norm_label": ".getmodrinthrevenue()"
+    },
+    {
+      "label": ".getCurseForgeRevenueInUSD()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L7",
+      "id": "repository_revenuedatasource_revenuedatasource_getcurseforgerevenueinusd",
+      "community": 14,
+      "norm_label": ".getcurseforgerevenueinusd()"
+    },
+    {
+      "label": "RevenueRepository.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_data_repository_revenuerepository_kt",
+      "community": 4,
+      "norm_label": "revenuerepository.kt"
+    },
+    {
+      "label": "RevenueRepository",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L18",
+      "id": "repository_revenuerepository_revenuerepository",
+      "community": 4,
+      "norm_label": "revenuerepository"
+    },
+    {
+      "label": "RevenueResult",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L34",
+      "id": "repository_revenuerepository_revenueresult",
+      "community": 4,
+      "norm_label": "revenueresult"
+    },
+    {
+      "label": ".getModrinthRevenue()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L40",
+      "id": "repository_revenuerepository_revenuerepository_getmodrinthrevenue",
+      "community": 4,
+      "norm_label": ".getmodrinthrevenue()"
+    },
+    {
+      "label": ".getCurseForgeRevenueInUSD()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L44",
+      "id": "repository_revenuerepository_revenuerepository_getcurseforgerevenueinusd",
+      "community": 4,
+      "norm_label": ".getcurseforgerevenueinusd()"
+    },
+    {
+      "label": ".getRawModrinthResponse()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L49",
+      "id": "repository_revenuerepository_revenuerepository_getrawmodrinthresponse",
+      "community": 4,
+      "norm_label": ".getrawmodrinthresponse()"
+    },
+    {
+      "label": ".convertCurrency()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L57",
+      "id": "repository_revenuerepository_revenuerepository_convertcurrency",
+      "community": 4,
+      "norm_label": ".convertcurrency()"
+    },
+    {
+      "label": ".getExchangeRate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L70",
+      "id": "repository_revenuerepository_revenuerepository_getexchangerate",
+      "community": 4,
+      "norm_label": ".getexchangerate()"
+    },
+    {
+      "label": "CurseForgeLoginScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/CurseForgeLoginScreen.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_curseforgeloginscreen_kt",
+      "community": 2,
+      "norm_label": "curseforgeloginscreen.kt"
+    },
+    {
+      "label": "BrowserTab",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/CurseForgeLoginScreen.kt",
+      "source_location": "L43",
+      "id": "ui_curseforgeloginscreen_browsertab",
+      "community": 2,
+      "norm_label": "browsertab"
+    },
+    {
+      "label": "CurseForgeLoginScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/CurseForgeLoginScreen.kt",
+      "source_location": "L52",
+      "id": "ui_curseforgeloginscreen_curseforgeloginscreen",
+      "community": 2,
+      "norm_label": "curseforgeloginscreen()"
+    },
+    {
+      "label": "DashboardScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "community": 3,
+      "norm_label": "dashboardscreen.kt"
+    },
+    {
+      "label": "DashboardScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L46",
+      "id": "ui_dashboardscreen_dashboardscreen",
+      "community": 3,
+      "norm_label": "dashboardscreen()"
+    },
+    {
+      "label": "GreetingSection()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L372",
+      "id": "ui_dashboardscreen_greetingsection",
+      "community": 3,
+      "norm_label": "greetingsection()"
+    },
+    {
+      "label": "TotalRevenueCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L406",
+      "id": "ui_dashboardscreen_totalrevenuecard",
+      "community": 3,
+      "norm_label": "totalrevenuecard()"
+    },
+    {
+      "label": "PlatformCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L499",
+      "id": "ui_dashboardscreen_platformcard",
+      "community": 3,
+      "norm_label": "platformcard()"
+    },
+    {
+      "label": "WavyGraphCanvas()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L560",
+      "id": "ui_dashboardscreen_wavygraphcanvas",
+      "community": 3,
+      "norm_label": "wavygraphcanvas()"
+    },
+    {
+      "label": "formatCurrency()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L635",
+      "id": "ui_dashboardscreen_formatcurrency",
+      "community": 3,
+      "norm_label": "formatcurrency()"
+    },
+    {
+      "label": "LanguageHelper.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_languagehelper_kt",
+      "community": 15,
+      "norm_label": "languagehelper.kt"
+    },
+    {
+      "label": "LanguageHelper",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L6",
+      "id": "ui_languagehelper_languagehelper",
+      "community": 15,
+      "norm_label": "languagehelper"
+    },
+    {
+      "label": ".setLanguage()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L32",
+      "id": "ui_languagehelper_languagehelper_setlanguage",
+      "community": 15,
+      "norm_label": ".setlanguage()"
+    },
+    {
+      "label": ".getCurrentLanguage()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L37",
+      "id": "ui_languagehelper_languagehelper_getcurrentlanguage",
+      "community": 15,
+      "norm_label": ".getcurrentlanguage()"
+    },
+    {
+      "label": "OnboardingScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/OnboardingScreen.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_onboardingscreen_kt",
+      "community": 2,
+      "norm_label": "onboardingscreen.kt"
+    },
+    {
+      "label": "OnboardingScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/OnboardingScreen.kt",
+      "source_location": "L18",
+      "id": "ui_onboardingscreen_onboardingscreen",
+      "community": 2,
+      "norm_label": "onboardingscreen()"
+    },
+    {
+      "label": "CurrencyOption",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/OnboardingScreen.kt",
+      "source_location": "L219",
+      "id": "ui_onboardingscreen_currencyoption",
+      "community": 2,
+      "norm_label": "currencyoption"
+    },
+    {
+      "label": "RevenueHistoryGraph.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryGraph.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_revenuehistorygraph_kt",
+      "community": 3,
+      "norm_label": "revenuehistorygraph.kt"
+    },
+    {
+      "label": "RevenueHistoryGraph()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryGraph.kt",
+      "source_location": "L22",
+      "id": "ui_revenuehistorygraph_revenuehistorygraph",
+      "community": 3,
+      "norm_label": "revenuehistorygraph()"
+    },
+    {
+      "label": "RevenueHistoryList.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_revenuehistorylist_kt",
+      "community": 3,
+      "norm_label": "revenuehistorylist.kt"
+    },
+    {
+      "label": "RevenueHistoryList()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L17",
+      "id": "ui_revenuehistorylist_revenuehistorylist",
+      "community": 3,
+      "norm_label": "revenuehistorylist()"
+    },
+    {
+      "label": "HistoryItem()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L35",
+      "id": "ui_revenuehistorylist_historyitem",
+      "community": 3,
+      "norm_label": "historyitem()"
+    },
+    {
+      "label": "RevenueViewModel.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "community": 1,
+      "norm_label": "revenueviewmodel.kt"
+    },
+    {
+      "label": "DailyRevenue",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L24",
+      "id": "ui_revenueviewmodel_dailyrevenue",
+      "community": 1,
+      "norm_label": "dailyrevenue"
+    },
+    {
+      "label": "RevenueUiState",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L29",
+      "id": "ui_revenueviewmodel_revenueuistate",
+      "community": 1,
+      "norm_label": "revenueuistate"
+    },
+    {
+      "label": "RevenueViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L53",
+      "id": "ui_revenueviewmodel_revenueviewmodel",
+      "community": 1,
+      "norm_label": "revenueviewmodel"
+    },
+    {
+      "label": "SettingsData",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L64",
+      "id": "ui_revenueviewmodel_settingsdata",
+      "community": 1,
+      "norm_label": "settingsdata"
+    },
+    {
+      "label": "getDayStart()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L158",
+      "id": "ui_revenueviewmodel_getdaystart",
+      "community": 1,
+      "norm_label": "getdaystart()"
+    },
+    {
+      "label": ".getGreeting()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L250",
+      "id": "ui_revenueviewmodel_revenueviewmodel_getgreeting",
+      "community": 1,
+      "norm_label": ".getgreeting()"
+    },
+    {
+      "label": ".nextWeek()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L259",
+      "id": "ui_revenueviewmodel_revenueviewmodel_nextweek",
+      "community": 1,
+      "norm_label": ".nextweek()"
+    },
+    {
+      "label": ".previousWeek()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L265",
+      "id": "ui_revenueviewmodel_revenueviewmodel_previousweek",
+      "community": 1,
+      "norm_label": ".previousweek()"
+    },
+    {
+      "label": ".refreshData()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L269",
+      "id": "ui_revenueviewmodel_revenueviewmodel_refreshdata",
+      "community": 1,
+      "norm_label": ".refreshdata()"
+    },
+    {
+      "label": ".clearError()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L370",
+      "id": "ui_revenueviewmodel_revenueviewmodel_clearerror",
+      "community": 1,
+      "norm_label": ".clearerror()"
+    },
+    {
+      "label": ".getDebugInfo()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L374",
+      "id": "ui_revenueviewmodel_revenueviewmodel_getdebuginfo",
+      "community": 1,
+      "norm_label": ".getdebuginfo()"
+    },
+    {
+      "label": ".saveModrinthToken()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L381",
+      "id": "ui_revenueviewmodel_revenueviewmodel_savemodrinthtoken",
+      "community": 1,
+      "norm_label": ".savemodrinthtoken()"
+    },
+    {
+      "label": ".saveCurseForgePoints()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L388",
+      "id": "ui_revenueviewmodel_revenueviewmodel_savecurseforgepoints",
+      "community": 1,
+      "norm_label": ".savecurseforgepoints()"
+    },
+    {
+      "label": ".saveCurseForgeCookies()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L395",
+      "id": "ui_revenueviewmodel_revenueviewmodel_savecurseforgecookies",
+      "community": 1,
+      "norm_label": ".savecurseforgecookies()"
+    },
+    {
+      "label": ".setCurrency()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L401",
+      "id": "ui_revenueviewmodel_revenueviewmodel_setcurrency",
+      "community": 1,
+      "norm_label": ".setcurrency()"
+    },
+    {
+      "label": ".setTheme()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L408",
+      "id": "ui_revenueviewmodel_revenueviewmodel_settheme",
+      "community": 1,
+      "norm_label": ".settheme()"
+    },
+    {
+      "label": ".resetCurseForgeSession()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L414",
+      "id": "ui_revenueviewmodel_revenueviewmodel_resetcurseforgesession",
+      "community": 1,
+      "norm_label": ".resetcurseforgesession()"
+    },
+    {
+      "label": ".resetAccount()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L423",
+      "id": "ui_revenueviewmodel_revenueviewmodel_resetaccount",
+      "community": 1,
+      "norm_label": ".resetaccount()"
+    },
+    {
+      "label": "create()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L442",
+      "id": "ui_revenueviewmodel_create",
+      "community": 1,
+      "norm_label": "create()"
+    },
+    {
+      "label": "SettingsScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_settingsscreen_kt",
+      "community": 2,
+      "norm_label": "settingsscreen.kt"
+    },
+    {
+      "label": "SettingsScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L30",
+      "id": "ui_settingsscreen_settingsscreen",
+      "community": 2,
+      "norm_label": "settingsscreen()"
+    },
+    {
+      "label": "ThemeSelectionBar()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L372",
+      "id": "ui_settingsscreen_themeselectionbar",
+      "community": 2,
+      "norm_label": "themeselectionbar()"
+    },
+    {
+      "label": "SupportUsButton.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SupportUsButton.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_supportusbutton_kt",
+      "community": 3,
+      "norm_label": "supportusbutton.kt"
+    },
+    {
+      "label": "SupportUsButton()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SupportUsButton.kt",
+      "source_location": "L14",
+      "id": "ui_supportusbutton_supportusbutton",
+      "community": 3,
+      "norm_label": "supportusbutton()"
+    },
+    {
+      "label": "Color.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Color.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_theme_color_kt",
+      "community": 24,
+      "norm_label": "color.kt"
+    },
+    {
+      "label": "Motion.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Motion.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_theme_motion_kt",
+      "community": 18,
+      "norm_label": "motion.kt"
+    },
+    {
+      "label": "ExpressiveMotion",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Motion.kt",
+      "source_location": "L7",
+      "id": "theme_motion_expressivemotion",
+      "community": 18,
+      "norm_label": "expressivemotion"
+    },
+    {
+      "label": "Shapes.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Shapes.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_theme_shapes_kt",
+      "community": 25,
+      "norm_label": "shapes.kt"
+    },
+    {
+      "label": "Theme.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Theme.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_theme_theme_kt",
+      "community": 2,
+      "norm_label": "theme.kt"
+    },
+    {
+      "label": "MineBucksTheme()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Theme.kt",
+      "source_location": "L45",
+      "id": "theme_theme_minebuckstheme",
+      "community": 2,
+      "norm_label": "minebuckstheme()"
+    },
+    {
+      "label": "Type.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Type.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_ui_theme_type_kt",
+      "community": 26,
+      "norm_label": "type.kt"
+    },
+    {
+      "label": "Constants.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/util/Constants.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_util_constants_kt",
+      "community": 19,
+      "norm_label": "constants.kt"
+    },
+    {
+      "label": "Constants",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/util/Constants.kt",
+      "source_location": "L3",
+      "id": "util_constants_constants",
+      "community": 19,
+      "norm_label": "constants"
+    },
+    {
+      "label": "RevenueWidget.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_widget_revenuewidget_kt",
+      "community": 12,
+      "norm_label": "revenuewidget.kt"
+    },
+    {
+      "label": "RevenueWidget",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L26",
+      "id": "widget_revenuewidget_revenuewidget",
+      "community": 12,
+      "norm_label": "revenuewidget"
+    },
+    {
+      "label": ".provideGlance()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L30",
+      "id": "widget_revenuewidget_revenuewidget_provideglance",
+      "community": 12,
+      "norm_label": ".provideglance()"
+    },
+    {
+      "label": ".OutlinedText()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L38",
+      "id": "widget_revenuewidget_revenuewidget_outlinedtext",
+      "community": 12,
+      "norm_label": ".outlinedtext()"
+    },
+    {
+      "label": ".RevenueWidgetContent()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L61",
+      "id": "widget_revenuewidget_revenuewidget_revenuewidgetcontent",
+      "community": 12,
+      "norm_label": ".revenuewidgetcontent()"
+    },
+    {
+      "label": "updateRevenueWidget()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L129",
+      "id": "widget_revenuewidget_updaterevenuewidget",
+      "community": 12,
+      "norm_label": "updaterevenuewidget()"
+    },
+    {
+      "label": "RevenueWidgetReceiver.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidgetReceiver.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_widget_revenuewidgetreceiver_kt",
+      "community": 20,
+      "norm_label": "revenuewidgetreceiver.kt"
+    },
+    {
+      "label": "RevenueWidgetReceiver",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidgetReceiver.kt",
+      "source_location": "L8",
+      "id": "widget_revenuewidgetreceiver_revenuewidgetreceiver",
+      "community": 20,
+      "norm_label": "revenuewidgetreceiver"
+    },
+    {
+      "label": "RevenueWorker.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_sourish25_minebucks_worker_revenueworker_kt",
+      "community": 9,
+      "norm_label": "revenueworker.kt"
+    },
+    {
+      "label": "RevenueWorker",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L11",
+      "id": "worker_revenueworker_revenueworker",
+      "community": 9,
+      "norm_label": "revenueworker"
+    },
+    {
+      "label": ".doWork()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L16",
+      "id": "worker_revenueworker_revenueworker_dowork",
+      "community": 9,
+      "norm_label": ".dowork()"
+    },
+    {
+      "label": ".updateWidget()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L127",
+      "id": "worker_revenueworker_revenueworker_updatewidget",
+      "community": 9,
+      "norm_label": ".updatewidget()"
+    },
+    {
+      "label": ".sendRevenueNotification()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L131",
+      "id": "worker_revenueworker_revenueworker_sendrevenuenotification",
+      "community": 9,
+      "norm_label": ".sendrevenuenotification()"
+    },
+    {
+      "label": "AdManager.kt",
+      "file_type": "code",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L1",
+      "id": "app_src_prod_java_com_sourish25_minebucks_ads_admanager_kt",
+      "community": 11,
+      "norm_label": "admanager.kt"
+    },
+    {
+      "label": "PRIVACY_POLICY.md",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L1",
+      "id": "privacy_policy_md",
+      "community": 10,
+      "norm_label": "privacy_policy.md"
+    },
+    {
+      "label": "Privacy Policy for MineBucks",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L1",
+      "id": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "community": 10,
+      "norm_label": "privacy policy for minebucks"
+    },
+    {
+      "label": "1. Overview",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L5",
+      "id": "minebucks_privacy_policy_1_overview",
+      "community": 10,
+      "norm_label": "1. overview"
+    },
+    {
+      "label": "2. Information We Collect",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L9",
+      "id": "minebucks_privacy_policy_2_information_we_collect",
+      "community": 10,
+      "norm_label": "2. information we collect"
+    },
+    {
+      "label": "3. Third-Party Services (AdMob)",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L16",
+      "id": "minebucks_privacy_policy_3_third_party_services_admob",
+      "community": 10,
+      "norm_label": "3. third-party services (admob)"
+    },
+    {
+      "label": "4. Children\u2019s Privacy",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L26",
+      "id": "minebucks_privacy_policy_4_children_s_privacy",
+      "community": 10,
+      "norm_label": "4. children\u2019s privacy"
+    },
+    {
+      "label": "5. Contact Us",
+      "file_type": "document",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L30",
+      "id": "minebucks_privacy_policy_5_contact_us",
+      "community": 10,
+      "norm_label": "5. contact us"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 0,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "MineBucks",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "minebucks_readme_minebucks",
+      "community": 0,
+      "norm_label": "minebucks"
+    },
+    {
+      "label": "\ud83d\ude80 Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "id": "minebucks_readme_overview",
+      "community": 0,
+      "norm_label": "\ud83d\ude80 overview"
+    },
+    {
+      "label": "\u2728 Features Showcase",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "id": "minebucks_readme_features_showcase",
+      "community": 0,
+      "norm_label": "\u2728 features showcase"
+    },
+    {
+      "label": "\ud83d\udcca Unified Dashboard",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "id": "minebucks_readme_unified_dashboard",
+      "community": 0,
+      "norm_label": "\ud83d\udcca unified dashboard"
+    },
+    {
+      "label": "\ud83d\udcc8 Deep Analytics & Visualization",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L44",
+      "id": "minebucks_readme_deep_analytics_visualization",
+      "community": 0,
+      "norm_label": "\ud83d\udcc8 deep analytics & visualization"
+    },
+    {
+      "label": "\ud83c\udf10 Smart CurseForge Integration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "id": "minebucks_readme_smart_curseforge_integration",
+      "community": 0,
+      "norm_label": "\ud83c\udf10 smart curseforge integration"
+    },
+    {
+      "label": "\u26a1 Easy Setup & Customization",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "id": "minebucks_readme_easy_setup_customization",
+      "community": 0,
+      "norm_label": "\u26a1 easy setup & customization"
+    },
+    {
+      "label": "1. Project Origins & The Problem",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "id": "minebucks_readme_1_project_origins_the_problem",
+      "community": 0,
+      "norm_label": "1. project origins & the problem"
+    },
+    {
+      "label": "2. Engineering Journey & Technical Challenges",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "id": "minebucks_readme_2_engineering_journey_technical_challenges",
+      "community": 0,
+      "norm_label": "2. engineering journey & technical challenges"
+    },
+    {
+      "label": "2.1. The Modrinth API Dilemma",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L89",
+      "id": "minebucks_readme_2_1_the_modrinth_api_dilemma",
+      "community": 0,
+      "norm_label": "2.1. the modrinth api dilemma"
+    },
+    {
+      "label": "2.2. The CurseForge \"Black Box\"",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "id": "minebucks_readme_2_2_the_curseforge_black_box",
+      "community": 0,
+      "norm_label": "2.2. the curseforge \"black box\""
+    },
+    {
+      "label": "3. Other Implemented Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "id": "minebucks_readme_3_other_implemented_features",
+      "community": 0,
+      "norm_label": "3. other implemented features"
+    },
+    {
+      "label": "4. Usage Guide (Step-by-Step)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "id": "minebucks_readme_4_usage_guide_step_by_step",
+      "community": 0,
+      "norm_label": "4. usage guide (step-by-step)"
+    },
+    {
+      "label": "Step 1: Modrinth Configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "id": "minebucks_readme_step_1_modrinth_configuration",
+      "community": 0,
+      "norm_label": "step 1: modrinth configuration"
+    },
+    {
+      "label": "Step 2: CurseForge Configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L135",
+      "id": "minebucks_readme_step_2_curseforge_configuration",
+      "community": 0,
+      "norm_label": "step 2: curseforge configuration"
+    },
+    {
+      "label": "5. Future Roadmap",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L144",
+      "id": "minebucks_readme_5_future_roadmap",
+      "community": 0,
+      "norm_label": "5. future roadmap"
+    },
+    {
+      "label": "7. Technical Architecture & Libraries",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L152",
+      "id": "minebucks_readme_7_technical_architecture_libraries",
+      "community": 0,
+      "norm_label": "7. technical architecture & libraries"
+    },
+    {
+      "label": "Core Architecture",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "id": "minebucks_readme_core_architecture",
+      "community": 0,
+      "norm_label": "core architecture"
+    },
+    {
+      "label": "Key Libraries & Dependencies",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L163",
+      "id": "minebucks_readme_key_libraries_dependencies",
+      "community": 0,
+      "norm_label": "key libraries & dependencies"
+    },
+    {
+      "label": "Inner Workings",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L179",
+      "id": "minebucks_readme_inner_workings",
+      "community": 0,
+      "norm_label": "inner workings"
+    },
+    {
+      "label": "\ud83d\udc68\u200d\ud83c\udf93 A Note from the Developer",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L187",
+      "id": "minebucks_readme_a_note_from_the_developer",
+      "community": 0,
+      "norm_label": "\ud83d\udc68\u200d\ud83c\udf93 a note from the developer"
+    },
+    {
+      "label": "6. License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L198",
+      "id": "minebucks_readme_6_license",
+      "community": 0,
+      "norm_label": "6. license"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/foss/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_src_foss_java_com_sourish25_minebucks_ads_admanager_kt",
+      "target": "ads_admanager_admanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "ads_admanager_admanager",
+      "target": "ads_admanager_admanager_initialize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "ads_admanager_admanager",
+      "target": "ads_admanager_admanager_loadad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "ads_admanager_admanager",
+      "target": "ads_admanager_admanager_showad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "app_src_prod_java_com_sourish25_minebucks_ads_admanager_kt",
+      "target": "ads_admanager_admanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/prod/java/com/Sourish25/MineBucks/ads/AdManager.kt",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "ads_admanager_admanager_showad",
+      "target": "ads_admanager_admanager_loadad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_mainactivity_kt",
+      "target": "minebucks_mainactivity_mainactivity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity",
+      "target": "minebucks_mainactivity_mainactivity_oncreate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity",
+      "target": "minebucks_mainactivity_mainactivity_onnewintent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity",
+      "target": "minebucks_mainactivity_mainactivity_handledeeplink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_oncreate",
+      "target": "minebucks_mainactivity_mainactivity_handledeeplink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_oncreate",
+      "target": "theme_theme_minebuckstheme"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_oncreate",
+      "target": "ui_curseforgeloginscreen_curseforgeloginscreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_oncreate",
+      "target": "ui_settingsscreen_settingsscreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_oncreate",
+      "target": "ui_dashboardscreen_dashboardscreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_oncreate",
+      "target": "ui_onboardingscreen_onboardingscreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/MainActivity.kt",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "minebucks_mainactivity_mainactivity_onnewintent",
+      "target": "minebucks_mainactivity_mainactivity_handledeeplink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ModRevenueApplication.kt",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_modrevenueapplication_kt",
+      "target": "minebucks_modrevenueapplication_modrevenueapplication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ModRevenueApplication.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "minebucks_modrevenueapplication_modrevenueapplication",
+      "target": "minebucks_modrevenueapplication_modrevenueapplication_oncreate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_api_api_kt",
+      "target": "api_api_modrinthservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_api_api_kt",
+      "target": "api_api_modrinthservicev3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_api_api_kt",
+      "target": "api_api_currencyservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "api_api_modrinthservice",
+      "target": "api_api_modrinthservice_getauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "api_api_modrinthservice",
+      "target": "api_api_modrinthservice_getpayouts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "api_api_modrinthservice",
+      "target": "api_api_modrinthservice_getpayouthistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "api_api_modrinthservice",
+      "target": "api_api_modrinthservice_getprojects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "api_api_modrinthservice",
+      "target": "api_api_modrinthservice_getprojectanalytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "api_api_modrinthservicev3",
+      "target": "api_api_modrinthservicev3_getrevenueanalytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/api/Api.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "api_api_currencyservice",
+      "target": "api_api_currencyservice_getrates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_database_appdatabase_kt",
+      "target": "database_appdatabase_appdatabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_database_appdatabase_kt",
+      "target": "database_appdatabase_getdatabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/AppDatabase.kt",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "database_appdatabase_appdatabase",
+      "target": "database_appdatabase_appdatabase_revenuedao",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_database_revenuedao_kt",
+      "target": "database_revenuedao_revenuedao",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_insertsnapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_getrecentsnapshots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_getsnapshotssince",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_getfirstsnapshotofday",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_getlatestsnapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_deleteoldsnapshots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_deletehistoryforuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueDao.kt",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "database_revenuedao_revenuedao",
+      "target": "database_revenuedao_revenuedao_deleteall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/database/RevenueSnapshot.kt",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_database_revenuesnapshot_kt",
+      "target": "database_revenuesnapshot_revenuesnapshot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "worker_revenueworker_revenueworker_dowork",
+      "target": "database_revenuesnapshot_revenuesnapshot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthpayoutdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthproject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthanalytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthrevenueanalyticsresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthpayouthistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_modrinthpayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/model/Models.kt",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_model_models_kt",
+      "target": "model_models_currencyresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/network/NetworkModule.kt",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_network_networkmodule_kt",
+      "target": "network_networkmodule_modrinthclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_repository_datastoremanager_kt",
+      "target": "repository_datastoremanager_datastoremanager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_savemodrinthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_savecurseforgepoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_savecurseforgecookies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_saveusername",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_saveuseravatar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_savetargetcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_savethememode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/DataStoreManager.kt",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "repository_datastoremanager_datastoremanager",
+      "target": "repository_datastoremanager_datastoremanager_saveuserid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_repository_realrevenuedatasource_kt",
+      "target": "repository_realrevenuedatasource_realrevenuedatasource",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "repository_realrevenuedatasource_realrevenuedatasource",
+      "target": "repository_realrevenuedatasource_realrevenuedatasource_getmodrinthrevenue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "repository_realrevenuedatasource_realrevenuedatasource",
+      "target": "repository_realrevenuedatasource_realrevenuedatasource_getcurseforgerevenueinusd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "repository_realrevenuedatasource_realrevenuedatasource",
+      "target": "repository_realrevenuedatasource_realrevenuedatasource_getdebuglog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RealRevenueDataSource.kt",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "repository_realrevenuedatasource_realrevenuedatasource_getmodrinthrevenue",
+      "target": "repository_revenuerepository_revenueresult"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_repository_revenuedatasource_kt",
+      "target": "repository_revenuedatasource_revenuedatasource",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "repository_revenuedatasource_revenuedatasource",
+      "target": "repository_revenuedatasource_revenuedatasource_getmodrinthrevenue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueDataSource.kt",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "repository_revenuedatasource_revenuedatasource",
+      "target": "repository_revenuedatasource_revenuedatasource_getcurseforgerevenueinusd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_repository_revenuerepository_kt",
+      "target": "repository_revenuerepository_revenuerepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_data_repository_revenuerepository_kt",
+      "target": "repository_revenuerepository_revenueresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "repository_revenuerepository_revenuerepository",
+      "target": "repository_revenuerepository_revenuerepository_getmodrinthrevenue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "repository_revenuerepository_revenuerepository",
+      "target": "repository_revenuerepository_revenuerepository_getcurseforgerevenueinusd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "repository_revenuerepository_revenuerepository",
+      "target": "repository_revenuerepository_revenuerepository_getrawmodrinthresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "repository_revenuerepository_revenuerepository",
+      "target": "repository_revenuerepository_revenuerepository_convertcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/data/repository/RevenueRepository.kt",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "repository_revenuerepository_revenuerepository",
+      "target": "repository_revenuerepository_revenuerepository_getexchangerate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/CurseForgeLoginScreen.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_curseforgeloginscreen_kt",
+      "target": "ui_curseforgeloginscreen_browsertab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/CurseForgeLoginScreen.kt",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_curseforgeloginscreen_kt",
+      "target": "ui_curseforgeloginscreen_curseforgeloginscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "target": "ui_dashboardscreen_dashboardscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L372",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "target": "ui_dashboardscreen_greetingsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L406",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "target": "ui_dashboardscreen_totalrevenuecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L499",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "target": "ui_dashboardscreen_platformcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L560",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "target": "ui_dashboardscreen_wavygraphcanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L635",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_dashboardscreen_kt",
+      "target": "ui_dashboardscreen_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_dashboardscreen",
+      "target": "ui_dashboardscreen_greetingsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_dashboardscreen",
+      "target": "ui_dashboardscreen_totalrevenuecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L236",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_dashboardscreen",
+      "target": "ui_dashboardscreen_platformcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_dashboardscreen",
+      "target": "ui_revenuehistorygraph_revenuehistorygraph"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L320",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_dashboardscreen",
+      "target": "ui_revenuehistorylist_historyitem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_dashboardscreen",
+      "target": "ui_supportusbutton_supportusbutton"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L448",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_totalrevenuecard",
+      "target": "ui_dashboardscreen_wavygraphcanvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L463",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_totalrevenuecard",
+      "target": "ui_dashboardscreen_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/DashboardScreen.kt",
+      "source_location": "L551",
+      "weight": 1.0,
+      "source": "ui_dashboardscreen_platformcard",
+      "target": "ui_dashboardscreen_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "ui_revenuehistorylist_historyitem",
+      "target": "ui_dashboardscreen_formatcurrency"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_languagehelper_kt",
+      "target": "ui_languagehelper_languagehelper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "ui_languagehelper_languagehelper",
+      "target": "ui_languagehelper_languagehelper_setlanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/LanguageHelper.kt",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "ui_languagehelper_languagehelper",
+      "target": "ui_languagehelper_languagehelper_getcurrentlanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/OnboardingScreen.kt",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_onboardingscreen_kt",
+      "target": "ui_onboardingscreen_onboardingscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/OnboardingScreen.kt",
+      "source_location": "L219",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_onboardingscreen_kt",
+      "target": "ui_onboardingscreen_currencyoption",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/OnboardingScreen.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "ui_onboardingscreen_onboardingscreen",
+      "target": "ui_onboardingscreen_currencyoption",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "ui_settingsscreen_settingsscreen",
+      "target": "ui_onboardingscreen_currencyoption"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryGraph.kt",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenuehistorygraph_kt",
+      "target": "ui_revenuehistorygraph_revenuehistorygraph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenuehistorylist_kt",
+      "target": "ui_revenuehistorylist_revenuehistorylist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenuehistorylist_kt",
+      "target": "ui_revenuehistorylist_historyitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueHistoryList.kt",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "ui_revenuehistorylist_revenuehistorylist",
+      "target": "ui_revenuehistorylist_historyitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "target": "ui_revenueviewmodel_dailyrevenue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "target": "ui_revenueviewmodel_revenueuistate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "target": "ui_revenueviewmodel_revenueviewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "target": "ui_revenueviewmodel_settingsdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "target": "ui_revenueviewmodel_getdaystart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L442",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_revenueviewmodel_kt",
+      "target": "ui_revenueviewmodel_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_getgreeting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L259",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_nextweek",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_previousweek",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_refreshdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L370",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_clearerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L374",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_getdebuginfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L381",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savemodrinthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L388",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savecurseforgepoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L395",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savecurseforgecookies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L401",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_setcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L408",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_settheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L414",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_resetcurseforgesession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L423",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel",
+      "target": "ui_revenueviewmodel_revenueviewmodel_resetaccount",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L445",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_create",
+      "target": "ui_revenueviewmodel_revenueviewmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_savemodrinthtoken",
+      "target": "ui_revenueviewmodel_revenueviewmodel_refreshdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L391",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_savecurseforgepoints",
+      "target": "ui_revenueviewmodel_revenueviewmodel_refreshdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L404",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_setcurrency",
+      "target": "ui_revenueviewmodel_revenueviewmodel_refreshdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L436",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_resetaccount",
+      "target": "ui_revenueviewmodel_revenueviewmodel_refreshdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L430",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_resetaccount",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savemodrinthtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L418",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_resetcurseforgesession",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savecurseforgepoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L431",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_resetaccount",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savecurseforgepoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L419",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_resetcurseforgesession",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savecurseforgecookies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/RevenueViewModel.kt",
+      "source_location": "L432",
+      "weight": 1.0,
+      "source": "ui_revenueviewmodel_revenueviewmodel_resetaccount",
+      "target": "ui_revenueviewmodel_revenueviewmodel_savecurseforgecookies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_settingsscreen_kt",
+      "target": "ui_settingsscreen_settingsscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L372",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_settingsscreen_kt",
+      "target": "ui_settingsscreen_themeselectionbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SettingsScreen.kt",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "ui_settingsscreen_settingsscreen",
+      "target": "ui_settingsscreen_themeselectionbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/SupportUsButton.kt",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_supportusbutton_kt",
+      "target": "ui_supportusbutton_supportusbutton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Motion.kt",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_theme_motion_kt",
+      "target": "theme_motion_expressivemotion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/ui/theme/Theme.kt",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_ui_theme_theme_kt",
+      "target": "theme_theme_minebuckstheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/util/Constants.kt",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_util_constants_kt",
+      "target": "util_constants_constants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_widget_revenuewidget_kt",
+      "target": "widget_revenuewidget_revenuewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_widget_revenuewidget_kt",
+      "target": "widget_revenuewidget_updaterevenuewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "widget_revenuewidget_revenuewidget",
+      "target": "widget_revenuewidget_revenuewidget_provideglance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "widget_revenuewidget_revenuewidget",
+      "target": "widget_revenuewidget_revenuewidget_outlinedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "widget_revenuewidget_revenuewidget",
+      "target": "widget_revenuewidget_revenuewidget_revenuewidgetcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "widget_revenuewidget_updaterevenuewidget",
+      "target": "widget_revenuewidget_revenuewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "widget_revenuewidget_revenuewidget_provideglance",
+      "target": "widget_revenuewidget_revenuewidget_revenuewidgetcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidget.kt",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "widget_revenuewidget_revenuewidget_revenuewidgetcontent",
+      "target": "widget_revenuewidget_revenuewidget_outlinedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/widget/RevenueWidgetReceiver.kt",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_widget_revenuewidgetreceiver_kt",
+      "target": "widget_revenuewidgetreceiver_revenuewidgetreceiver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_src_main_java_com_sourish25_minebucks_worker_revenueworker_kt",
+      "target": "worker_revenueworker_revenueworker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "worker_revenueworker_revenueworker",
+      "target": "worker_revenueworker_revenueworker_dowork",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "worker_revenueworker_revenueworker",
+      "target": "worker_revenueworker_revenueworker_updatewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "worker_revenueworker_revenueworker",
+      "target": "worker_revenueworker_revenueworker_sendrevenuenotification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "worker_revenueworker_revenueworker_dowork",
+      "target": "worker_revenueworker_revenueworker_sendrevenuenotification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/Sourish25/MineBucks/worker/RevenueWorker.kt",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "worker_revenueworker_revenueworker_dowork",
+      "target": "worker_revenueworker_revenueworker_updatewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "privacy_policy_md",
+      "target": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "target": "minebucks_privacy_policy_1_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "target": "minebucks_privacy_policy_2_information_we_collect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "target": "minebucks_privacy_policy_3_third_party_services_admob",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "target": "minebucks_privacy_policy_4_children_s_privacy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRIVACY_POLICY.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "minebucks_privacy_policy_privacy_policy_for_minebucks",
+      "target": "minebucks_privacy_policy_5_contact_us",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "minebucks_readme_minebucks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_features_showcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_1_project_origins_the_problem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_2_engineering_journey_technical_challenges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_3_other_implemented_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_4_usage_guide_step_by_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_5_future_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_7_technical_architecture_libraries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "minebucks_readme_minebucks",
+      "target": "minebucks_readme_6_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "minebucks_readme_features_showcase",
+      "target": "minebucks_readme_unified_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "minebucks_readme_features_showcase",
+      "target": "minebucks_readme_deep_analytics_visualization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "minebucks_readme_features_showcase",
+      "target": "minebucks_readme_smart_curseforge_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "minebucks_readme_features_showcase",
+      "target": "minebucks_readme_easy_setup_customization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "minebucks_readme_2_engineering_journey_technical_challenges",
+      "target": "minebucks_readme_2_1_the_modrinth_api_dilemma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "minebucks_readme_2_engineering_journey_technical_challenges",
+      "target": "minebucks_readme_2_2_the_curseforge_black_box",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "minebucks_readme_4_usage_guide_step_by_step",
+      "target": "minebucks_readme_step_1_modrinth_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "minebucks_readme_4_usage_guide_step_by_step",
+      "target": "minebucks_readme_step_2_curseforge_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "minebucks_readme_7_technical_architecture_libraries",
+      "target": "minebucks_readme_core_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "minebucks_readme_7_technical_architecture_libraries",
+      "target": "minebucks_readme_key_libraries_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "minebucks_readme_7_technical_architecture_libraries",
+      "target": "minebucks_readme_inner_workings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "minebucks_readme_7_technical_architecture_libraries",
+      "target": "minebucks_readme_a_note_from_the_developer",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "898d5bbb6794c30e57a0b9d32521dd7f49227dcf"
+}

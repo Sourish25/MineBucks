@@ -1,0 +1,234 @@
+{
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\build.gradle.kts": {
+    "mtime": 1778202920.751148,
+    "hash": "dbe6ac2560a5ed0919e28f7b950a8c4d"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\settings.gradle.kts": {
+    "mtime": 1778202921.0243556,
+    "hash": "c3eb0b3040213d3daa123e4510f8a4e7"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\build.gradle.kts": {
+    "mtime": 1778202920.3799326,
+    "hash": "f237f43f80ff87c4e1772def31cc03fc"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\foss\\java\\com\\Sourish25\\MineBucks\\ads\\AdManager.kt": {
+    "mtime": 1778202920.3900263,
+    "hash": "7ed95e90ec9d77f8a26388bc948622ad"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\MainActivity.kt": {
+    "mtime": 1778202920.4227455,
+    "hash": "e3a9680a6032dcabc32042cb9a57f7cd"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ModRevenueApplication.kt": {
+    "mtime": 1778202920.424763,
+    "hash": "edbe17ef4af786730237ff8bac6431ab"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\api\\Api.kt": {
+    "mtime": 1778202920.4288015,
+    "hash": "6824504d327f2b0a7418b28435b46784"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\database\\AppDatabase.kt": {
+    "mtime": 1778202920.4308176,
+    "hash": "1ceeba0aa8eccd2c3e3f6bca4f01bb51"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\database\\RevenueDao.kt": {
+    "mtime": 1778202920.4328358,
+    "hash": "259d0f2cce72d5e947e814ef708cb0d2"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\database\\RevenueSnapshot.kt": {
+    "mtime": 1778202920.4345927,
+    "hash": "89ddfe699528f1c85b9d412cb4498b5c"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\model\\Models.kt": {
+    "mtime": 1778202920.4378116,
+    "hash": "6e4c0b2cb17995208b6c4bdf470d1340"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\network\\NetworkModule.kt": {
+    "mtime": 1778205522.385776,
+    "hash": "7e7bc7b85bed06a15eb9953aa16766b0"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\repository\\DataStoreManager.kt": {
+    "mtime": 1778202920.443859,
+    "hash": "30c274cc79f5477a49853219bee15588"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\repository\\RealRevenueDataSource.kt": {
+    "mtime": 1778202920.4458737,
+    "hash": "e9cbedb96a63aacace17233f35b40a4b"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\repository\\RevenueDataSource.kt": {
+    "mtime": 1778202920.4478893,
+    "hash": "729c2491e231cbf787aacf7aaf8e984c"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\data\\repository\\RevenueRepository.kt": {
+    "mtime": 1778202920.4499316,
+    "hash": "747e687fc9cc07bac7450f0901b0a009"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\CurseForgeLoginScreen.kt": {
+    "mtime": 1778202920.4718454,
+    "hash": "45f571e36db0f337347e640c08196059"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\DashboardScreen.kt": {
+    "mtime": 1778202920.4759622,
+    "hash": "134fc55028ff501bd980655c6838adae"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\LanguageHelper.kt": {
+    "mtime": 1778202920.4779773,
+    "hash": "82e2538acf837f028880969b8fb11dd6"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\OnboardingScreen.kt": {
+    "mtime": 1778202920.4799933,
+    "hash": "f379d1785f24a8d0d33265e876a4bbda"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\RevenueHistoryGraph.kt": {
+    "mtime": 1778202920.4820113,
+    "hash": "00c6492b2d333b889060a09fd9edc269"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\RevenueHistoryList.kt": {
+    "mtime": 1778202920.4860425,
+    "hash": "664aff83b2fe137c7ff04e3a4ea1b82b"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\RevenueViewModel.kt": {
+    "mtime": 1778202920.4880574,
+    "hash": "93141b84e53ff8388d76cca760f84a77"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\SettingsScreen.kt": {
+    "mtime": 1778202920.4900732,
+    "hash": "064e05491521905b33e3cc0c7b58e7fe"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\SupportUsButton.kt": {
+    "mtime": 1778202920.492089,
+    "hash": "81a62cd94d58f173194b8dc22e7c732c"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\theme\\Color.kt": {
+    "mtime": 1778202920.496117,
+    "hash": "8d6731a38054f1ac31eb535b49ab8b71"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\theme\\Motion.kt": {
+    "mtime": 1778202920.4978821,
+    "hash": "77580722ecdcff7e0e1c271731d11797"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\theme\\Shapes.kt": {
+    "mtime": 1778202920.4978821,
+    "hash": "3870ddd14aa8c58e59312d31987f7b9f"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\theme\\Theme.kt": {
+    "mtime": 1778202920.4999042,
+    "hash": "2080f66c65bc32ba11146b2c8441b6e1"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\ui\\theme\\Type.kt": {
+    "mtime": 1778202920.5019245,
+    "hash": "0ba97638657f71d31bc217f80c55cc86"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\util\\Constants.kt": {
+    "mtime": 1778202920.505463,
+    "hash": "c64d9e909980a382d7126e88d7179972"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\widget\\RevenueWidget.kt": {
+    "mtime": 1778202920.5074806,
+    "hash": "66705bd56681a112965cf0fb19fd039c"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\widget\\RevenueWidgetReceiver.kt": {
+    "mtime": 1778202920.5404775,
+    "hash": "6a12a0f7cf00fa539ed73543addbfbe8"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\java\\com\\Sourish25\\MineBucks\\worker\\RevenueWorker.kt": {
+    "mtime": 1778202920.5445094,
+    "hash": "a9db8a91e7092808175df68c178c2cac"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\prod\\java\\com\\Sourish25\\MineBucks\\ads\\AdManager.kt": {
+    "mtime": 1778202920.749385,
+    "hash": "6f37eecf9e0dc536a4b2f4453c06b044"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\PRIVACY_POLICY.md": {
+    "mtime": 1778202920.371343,
+    "hash": "9e52ec6f446698e0230e60555422d2e4"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\README.md": {
+    "mtime": 1778202920.3733587,
+    "hash": "1f6d8ac48edfffc028c1590a465614c0"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\app-ads.txt": {
+    "mtime": 1778202920.7531605,
+    "hash": "447f64e6752eb095debfad15498816d6"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\index.html": {
+    "mtime": 1778202920.7551794,
+    "hash": "d7306b797437e8090f2dbdfa12a52d85"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\full_description.txt": {
+    "mtime": 1778202920.898849,
+    "hash": "2c3c47d5c64102f5a62ee628bc8ab213"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\short_description.txt": {
+    "mtime": 1778202921.0177543,
+    "hash": "b3376f2bdacf36231bc8adcc08ee1a13"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\title.txt": {
+    "mtime": 1778202921.0177543,
+    "hash": "7b9ea9717f3c0bc06c3666ad995c9285"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\Revenueminecraftlogo.svg": {
+    "mtime": 1778202920.375374,
+    "hash": "c9a0e089902682b666e29f748b346265"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\app\\src\\main\\res\\drawable\\minebucks_logo.png": {
+    "mtime": 1778202920.5603166,
+    "hash": "b956ac1c727bff685db4aa7f23fd0fe8"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\bannermine.png": {
+    "mtime": 1778202920.7690427,
+    "hash": "149616b32e37e7846158a1d06400ad7b"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\built in browser.png": {
+    "mtime": 1778202920.8180006,
+    "hash": "6908dbdcd3d6bf2be3a6159df91d6ff7"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\finallogominebucks.png": {
+    "mtime": 1778202920.8223693,
+    "hash": "b956ac1c727bff685db4aa7f23fd0fe8"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\Graph and analytic.png": {
+    "mtime": 1778202920.765264,
+    "hash": "8111f004bb769351726d6554029da95a"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\homepage.png": {
+    "mtime": 1778202920.841142,
+    "hash": "dfb817efd7058a9bfcfc8795161c598d"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\settings.png": {
+    "mtime": 1778202920.8828661,
+    "hash": "711470024dbbe440f48fd4a02cbd31a9"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\docs\\screenshots\\welcome.png": {
+    "mtime": 1778202920.8884063,
+    "hash": "90dd51c39d9197c4e81795e74716c6b2"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\featureGraphic\\feature_graphic.png": {
+    "mtime": 1778202920.9044068,
+    "hash": "149616b32e37e7846158a1d06400ad7b"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\icon\\icon.png": {
+    "mtime": 1778202920.908958,
+    "hash": "b956ac1c727bff685db4aa7f23fd0fe8"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\phoneScreenshots\\1_homepage.png": {
+    "mtime": 1778202920.9556408,
+    "hash": "dfb817efd7058a9bfcfc8795161c598d"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\phoneScreenshots\\2_graph_analytics.png": {
+    "mtime": 1778202920.9637005,
+    "hash": "8111f004bb769351726d6554029da95a"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\phoneScreenshots\\3_browser.png": {
+    "mtime": 1778202921.0003848,
+    "hash": "6908dbdcd3d6bf2be3a6159df91d6ff7"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\phoneScreenshots\\4_welcome.png": {
+    "mtime": 1778202921.0064242,
+    "hash": "90dd51c39d9197c4e81795e74716c6b2"
+  },
+  "C:\\Users\\Sourish Maity\\Desktop\\Folder for folder\\CODING\\andriod apps\\minebucks\\fastlane\\metadata\\android\\en-US\\images\\phoneScreenshots\\5_settings.png": {
+    "mtime": 1778202921.0157342,
+    "hash": "711470024dbbe440f48fd4a02cbd31a9"
+  }
+}

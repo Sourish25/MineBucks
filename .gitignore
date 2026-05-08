@@ -93,3 +93,8 @@ Thumbs.db
 /.temp/
 /resize_icon.py
 /gradle-*.zip
+
+# Graphify temporary files
+.graphify_detect.json
+.graphify_python
+.claude/

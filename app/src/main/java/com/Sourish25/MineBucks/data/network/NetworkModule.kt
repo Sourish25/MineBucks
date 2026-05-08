@@ -13,7 +13,7 @@ object ModrinthClient {
     private val client = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("User-Agent", "ModRevenueTracker/1.0 (author@example.com)")
+                .addHeader("User-Agent", "MineBucks/1.0 (https://github.com/Sourish25/MineBucks)")
                 .build()
             chain.proceed(request)
         }
